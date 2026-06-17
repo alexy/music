@@ -1,0 +1,5 @@
+.DS_Store
+
+# Codex book derivatives
+codex/docs/book/build/
+codex/docs/book/dist/
