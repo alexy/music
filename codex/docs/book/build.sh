@@ -35,12 +35,20 @@ fi
 manual_name="$title_stem ($version)"
 stable_pdf="docs/book/dist/$title_stem.pdf"
 stable_epub="docs/book/dist/$title_stem.epub"
+stable_mobi="docs/book/dist/$title_stem.mobi"
+versioned_pdf="docs/book/dist/$manual_name.pdf"
+versioned_epub="docs/book/dist/$manual_name.epub"
+versioned_mobi="docs/book/dist/$manual_name.mobi"
 
 {
   printf 'manual_name: %s\n' "$manual_name"
   printf 'built_at: %s\n' "$pubdate"
   printf 'pdf_file: %s.pdf\n' "$title_stem"
   printf 'epub_file: %s.epub\n' "$title_stem"
+  printf 'mobi_file: %s.mobi\n' "$title_stem"
+  printf 'versioned_pdf: %s.pdf\n' "$manual_name"
+  printf 'versioned_epub: %s.epub\n' "$manual_name"
+  printf 'versioned_mobi: %s.mobi\n' "$manual_name"
 } > docs/book/dist/VERSION.md
 
 sed "s/{{MANUAL_NAME}}/$manual_name/g" docs/book/cover.md > "$tmpdir/cover.md"
@@ -68,4 +76,23 @@ pandoc "$tmpdir/cover.md" docs/book/manual.md \
   --css docs/book/epub.css \
   --epub-title-page=false
 
-printf 'Built %s and %s\n' "$stable_pdf" "$stable_epub"
+ebook_convert="$(
+  if command -v ebook-convert >/dev/null 2>&1; then
+    command -v ebook-convert
+  elif [[ -x /Applications/calibre.app/Contents/MacOS/ebook-convert ]]; then
+    printf '%s\n' /Applications/calibre.app/Contents/MacOS/ebook-convert
+  fi
+)"
+
+if [[ -z "$ebook_convert" ]]; then
+  echo "could not find ebook-convert for MOBI generation" >&2
+  exit 1
+fi
+
+"$ebook_convert" "$stable_epub" "$stable_mobi"
+
+cp "$stable_pdf" "$versioned_pdf"
+cp "$stable_epub" "$versioned_epub"
+cp "$stable_mobi" "$versioned_mobi"
+
+printf 'Built %s, %s, and %s\n' "$versioned_pdf" "$versioned_epub" "$versioned_mobi"

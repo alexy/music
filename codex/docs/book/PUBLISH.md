@@ -31,6 +31,11 @@ The build script:
    and numbered sections.
 7. Merges cover and body into `docs/book/dist/kiffness-mpk-mini-manual.pdf`.
 8. Builds `docs/book/dist/kiffness-mpk-mini-manual.epub`.
+9. Converts the EPUB to `docs/book/dist/kiffness-mpk-mini-manual.mobi`.
+10. Copies stable artifacts to versioned release files such as:
+   - `docs/book/dist/kiffness-mpk-mini-manual (0.1.0).pdf`
+   - `docs/book/dist/kiffness-mpk-mini-manual (0.1.0).epub`
+   - `docs/book/dist/kiffness-mpk-mini-manual (0.1.0).mobi`
 
 ## Validation
 
@@ -41,6 +46,7 @@ pdfinfo docs/book/dist/kiffness-mpk-mini-manual.pdf
 pdftotext -f 1 -l 1 docs/book/dist/kiffness-mpk-mini-manual.pdf -
 pdftotext -f 2 -l 2 docs/book/dist/kiffness-mpk-mini-manual.pdf -
 pdftoppm -png -f 1 -l 6 docs/book/dist/kiffness-mpk-mini-manual.pdf docs/book/build/page
+ls -lh docs/book/dist/kiffness-mpk-mini-manual\ \(0.1.0\).{pdf,epub,mobi}
 ```
 
 Expected:
@@ -48,6 +54,10 @@ Expected:
 - Page 1 is the unnumbered cover.
 - Page 2 contains the table of contents/body start.
 - Rendered PNG pages are legible, with no obvious overlap or clipping.
+- Versioned PDF, EPUB, and MOBI files exist in `docs/book/dist/` and are
+  intended to be checked into Git.
+- Stable nonversioned PDF, EPUB, and MOBI files are local build products and
+  are ignored by Git.
 
 ## Notes
 

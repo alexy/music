@@ -2,4 +2,11 @@
 
 # Codex book derivatives
 codex/docs/book/build/
-codex/docs/book/dist/
+codex/docs/book/dist/*.pdf
+codex/docs/book/dist/*.epub
+codex/docs/book/dist/*.mobi
+
+# Versioned release artifacts are tracked.
+!codex/docs/book/dist/*(*).pdf
+!codex/docs/book/dist/*(*).epub
+!codex/docs/book/dist/*(*).mobi
