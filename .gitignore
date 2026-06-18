@@ -1,5 +1,8 @@
 .DS_Store
 
+# Claude manual derivatives
+claude/__pycache__/
+
 # Codex book derivatives
 codex/docs/book/build/
 codex/docs/book/dist/*.pdf
