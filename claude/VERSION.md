@@ -22,6 +22,10 @@ changelog:
       routing) that were clipped at the right edge of the canvas.
   - 0.2.2: Fixed the MPK Mini diagram's keybed, which stopped well short
       of the device's right edge ("hanging" in the EPUB view); the keys
-      now span the same margins as the rest of the control surface. Also
-      fixed an overlapping-label bug where "3. Transport / Record" and
-      "4. Pads 1-8" text collided in the same figure.
+      now span the same margins as the rest of the control surface. Fixed
+      an overlapping-label bug where "3. Transport / Record" and "4. Pads
+      1-8" text collided in the same figure. Also widened the diagram's
+      canvas so the "6. USB-B port (rear)" label has room to sit fully in
+      white space instead of spilling over the device body and brushing
+      the "8" pad. Verified by rendering the diagram standalone (outside
+      the full PDF/EPUB build) before and after each fix.

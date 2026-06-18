@@ -30,7 +30,7 @@ def _label(d, x, y, text, size=7.5, color=INK, anchor="middle", bold=False):
 
 def mpk_mini_diagram():
     """Top-down labeled diagram of the Akai MPK Mini control surface."""
-    w, h = 480, 300
+    w, h = 520, 300
     d = Drawing(w, h)
 
     bx0, by0, bx1, by1 = 40, 40, 440, 230
