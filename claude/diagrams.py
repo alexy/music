@@ -16,8 +16,16 @@ GOOD = colors.HexColor("#2e7d32")
 
 
 def _label(d, x, y, text, size=7.5, color=INK, anchor="middle", bold=False):
-    d.add(String(x, y, text, fontSize=size, fillColor=color,
-                  textAnchor=anchor, fontName="Helvetica-Bold" if bold else "Helvetica"))
+    # Several call sites pass embedded "\n" to lay out a label on multiple
+    # lines. A reportlab String can't render a literal newline character
+    # (it shows up as a missing-glyph box), so split here and stack the
+    # lines vertically, centered on the requested y.
+    lines = text.split("\n")
+    line_h = size * 1.25
+    for i, ln in enumerate(lines):
+        yy = y + (len(lines) - 1) * line_h / 2 - i * line_h
+        d.add(String(x, yy, ln, fontSize=size, fillColor=color,
+                      textAnchor=anchor, fontName="Helvetica-Bold" if bold else "Helvetica"))
 
 
 def mpk_mini_diagram():
@@ -90,10 +98,12 @@ def mpk_mini_diagram():
     _label(d, kx0 + (n_white * key_w) / 2, by0 - 14, "5. Keybed – 25 mini keys (velocity-sensitive)", 8, INK, bold=True)
     d.add(Line(kx0 + (n_white * key_w) / 2, by0, kx0 + (n_white * key_w) / 2, by0 - 6, strokeColor=GREY))
 
-    # USB port (back, drawn as a small tab on the right edge)
+    # USB port (back, drawn as a small tab on the right edge). Labels are
+    # right-aligned to the canvas edge so they grow leftward and never run
+    # off the right side of the drawing.
     d.add(Rect(bx1 - 4, by1 - 60, 14, 10, fillColor=colors.HexColor("#cccccc"), strokeColor=INK))
-    _label(d, bx1 + 30, by1 - 55, "6. USB-B port\n(rear)", 7.5, INK, anchor="start")
-    d.add(String(bx1 + 30, by1 - 65, "(connects to Mac)", fontSize=7, fillColor=GREY))
+    _label(d, w - 4, by1 - 55, "6. USB-B port\n(rear)", 7.5, INK, anchor="end")
+    _label(d, w - 4, by1 - 65, "(connects to Mac)", 7, GREY, anchor="end")
 
     # Title
     _label(d, w / 2, h - 14, "Akai MPK Mini — Top View (mkII / mkIII / MK4 layout is similar)", 10, INK, bold=True)
@@ -103,20 +113,20 @@ def mpk_mini_diagram():
 
 def midi_signal_flow_diagram():
     """MPK Mini -> Mac -> DAW -> Instrument -> Audio out."""
-    w, h = 480, 150
+    w, h = 480, 175
     d = Drawing(w, h)
     boxes = [
         ("MPK Mini\n(MIDI controller)", 10),
         ("Mac\n(USB MIDI driver)", 110),
         ("DAW\n(Logic / Live / GarageBand)", 220),
-        ("Software\nInstrument", 340),
-        ("Speakers /\nHeadphones", 430),
+        ("Software\nInstrument", 335),
+        ("Speakers /\nHeadphones", 415),
     ]
     bw, bh = 90, 60
     y = 60
     centers = []
     for label, x in boxes:
-        bw_use = 90 if x != 430 else 60
+        bw_use = 90 if x != 415 else 60
         d.add(Rect(x, y, bw_use, bh, rx=8, ry=8, fillColor=LIGHT, strokeColor=ACCENT, strokeWidth=1.3))
         lines = label.split("\n")
         for i, ln in enumerate(lines):
@@ -246,9 +256,9 @@ def video_sync_diagram():
     x0 = 60
     x1 = 430
     d.add(Rect(x0, y_cam, x1 - x0, track_h, fillColor=colors.HexColor("#ffe9c6"), strokeColor=colors.HexColor("#b9852f")))
-    _label(d, 30, y_cam + track_h / 2, "Camera\naudio", 7.5, INK, anchor="end")
+    _label(d, 38, y_cam + track_h / 2, "Camera\naudio", 7.5, INK, anchor="end")
     d.add(Rect(x0, y_daw, x1 - x0, track_h, fillColor=LIGHT2, strokeColor=ACCENT))
-    _label(d, 30, y_daw + track_h / 2, "DAW\nrecording", 7.5, INK, anchor="end")
+    _label(d, 38, y_daw + track_h / 2, "DAW\nrecording", 7.5, INK, anchor="end")
 
     clap_x = x0 + 35
     d.add(Line(clap_x, y_cam, clap_x, y_daw + track_h, strokeColor=colors.HexColor("#c62828"), strokeWidth=1.5, strokeDashArray=[3, 2]))
@@ -273,7 +283,7 @@ def video_sync_diagram():
 
 def pad_bank_diagram():
     """16-pad grid (Bank A + Bank B) with sample-role labels."""
-    w, h = 480, 230
+    w, h = 540, 230
     d = Drawing(w, h)
     labels_a = ["Vocal\nchop 1", "Vocal\nchop 2", "Vocal\nchop 3", "Vocal\nchop 4",
                 "Kick\nloop", "Clap/Snare\nloop", "Hi-hat\nloop", "Perc\nloop"]
@@ -302,7 +312,7 @@ def pad_bank_diagram():
 
 def motu_m4_routing_diagram():
     """Two signal paths into the MOTU M4: UT87 -> Pre-73 -> Line In 2, and Shure 55 -> Mic In 1 direct."""
-    w, h = 480, 230
+    w, h = 560, 230
     d = Drawing(w, h)
 
     def box(x, y, bw, bh, label, fill=LIGHT, textcol=INK, fsize=8):
@@ -341,8 +351,8 @@ def motu_m4_routing_diagram():
     d.add(Line(mx + 60, (y_top + y_bot) / 2 + 50, mx + 110, (y_top + y_bot) / 2 + 50, strokeColor=colors.HexColor("#888899"), strokeWidth=1))
     _label(d, mx + mw / 2, my + 28, "USB-C to Mac", 8, colors.HexColor("#cccccc"))
     d.add(Rect(mx + mw - 16, my + mh / 2 - 6, 14, 12, fillColor=colors.HexColor("#cccccc"), strokeColor=INK))
-    arrow(mx + mw, my + mh / 2, 460, my + mh / 2, None)
-    _label(d, 463, my + mh / 2 + 14, "to Mac\n(USB-C)", 7, GREY, anchor="start")
+    arrow(mx + mw, my + mh / 2, 480, my + mh / 2, None)
+    _label(d, 483, my + mh / 2 + 14, "to Mac\n(USB-C)", 7, GREY, anchor="start")
 
     _label(d, w / 2, h - 14, "Two Mic Paths Into the MOTU M4", 10, INK, bold=True)
     _label(d, w / 2, 14, "UT87 → Pre-73 (sets the tone/gain) → M4 Line In; Shure 55 → M4 Mic In directly, no preamp needed.", 7.3, GREY)

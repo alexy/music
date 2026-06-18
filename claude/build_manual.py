@@ -33,6 +33,12 @@ toc_style = ParagraphStyle("Toc", parent=body, fontSize=10.5, leading=18)
 story = []
 CH_NUM = [0]
 
+# Structured, backend-agnostic record of every content event, in document
+# order. The PDF is built from `story` (reportlab flowables) as before; the
+# EPUB builder (build_epub.py) replays this list to generate matching HTML
+# with the same figures, so the two outputs never drift apart.
+EVENTS = []
+
 
 def add_chapter_break(num, title):
     story.append(PageBreak())
@@ -40,14 +46,17 @@ def add_chapter_break(num, title):
     story.append(Paragraph(title, h1))
     story.append(HRFlowable(width="100%", thickness=0.75, color=colors.HexColor("#cccccc")))
     story.append(Spacer(1, 8))
+    EVENTS.append(("chapter", num, title))
 
 
 def add_h2(text):
     story.append(Paragraph(text, h2))
+    EVENTS.append(("h2", text))
 
 
 def add_p(text):
     story.append(Paragraph(text, body))
+    EVENTS.append(("p", text))
 
 
 def add_bullets(items, numbered=False):
@@ -56,23 +65,28 @@ def add_bullets(items, numbered=False):
         bulletType="1" if numbered else "bullet", start="1" if numbered else "circle", leftIndent=10
     ))
     story.append(Spacer(1, 6))
+    EVENTS.append(("bullets", list(items), numbered))
 
 
 def add_note(text):
     story.append(Paragraph("<b>Tip:</b> " + text, note_style))
+    EVENTS.append(("note", text))
 
 
 def add_warn(text):
     story.append(Paragraph("<b>Watch out:</b> " + text, warn_style))
+    EVENTS.append(("warn", text))
 
 
 def add_figure(drawing, cap_text):
     story.append(Spacer(1, 6))
     story.append(drawing)
     story.append(Paragraph(cap_text, caption))
+    EVENTS.append(("figure", drawing, cap_text))
 
 
 def add_table(data, col_widths, header=True):
+    EVENTS.append(("table", [row[:] for row in data], header))
     t = Table(data, colWidths=col_widths)
     style = [
         ("FONTSIZE", (0, 0), (-1, -1), 9.3),
@@ -131,6 +145,13 @@ story.append(Paragraph(
     "This guide assumes no prior experience with MIDI, music software, audio recording, or the MPK Mini. "
     "Every chapter builds on the last — read in order the first time through.",
     caption
+))
+EVENTS.append((
+    "cover",
+    "Akai MPK Mini Mixing, Recording &amp; Video-Sync Manual",
+    "A complete beginner's guide — MIDI, your Mac, the MPK Mini, recording, mixing, and "
+    "syncing to video — for building layered remix videos in the style of The Kiffness",
+    [row[0] for row in ref_table_data[1:]],
 ))
 
 # ============================================================ TABLE OF CONTENTS
@@ -789,14 +810,15 @@ add_bullets([
 story.append(Spacer(1, 14))
 story.append(HRFlowable(width="100%", thickness=0.5, color=colors.HexColor("#cccccc")))
 story.append(Spacer(1, 6))
-story.append(Paragraph(
+_footer_text = (
     "Reference videos: “The Shira Choir x The Kiffness – Im Hashem Lo Yivneh Bayis (Psalm 127 Dance Remix)” "
     "(youtube.com/watch?v=EGmXAu8geVg), “The Kiffness – Ievan Polkka ft. Bilal Göregen (Club Remix)” "
     "(youtube.com/watch?v=CAyWN9ba9J8), and “The Kiffness x Ognjen & Sinisa – Insomnia (Balkan Club Remix)” "
     "(youtube.com/watch?v=hVJtPuuQK_s). This guide describes general production technique inspired by the "
-    "style of these videos; it is not affiliated with or endorsed by The Kiffness.",
-    caption
-))
+    "style of these videos; it is not affiliated with or endorsed by The Kiffness."
+)
+story.append(Paragraph(_footer_text, caption))
+EVENTS.append(("footer", _footer_text))
 
 
 def make_canvas_factory():
@@ -812,12 +834,17 @@ def make_canvas_factory():
     return NumberedCanvas
 
 
-doc = SimpleDocTemplate(
-    OUT, pagesize=letter,
-    topMargin=0.75 * inch, bottomMargin=0.7 * inch,
-    leftMargin=0.85 * inch, rightMargin=0.85 * inch,
-    title="Akai MPK Mini Mixing, Recording & Video-Sync Manual",
-    author="Generated for Alexy",
-)
-doc.build(story, canvasmaker=make_canvas_factory())
-print("done, pages built")
+def build_pdf():
+    doc = SimpleDocTemplate(
+        OUT, pagesize=letter,
+        topMargin=0.75 * inch, bottomMargin=0.7 * inch,
+        leftMargin=0.85 * inch, rightMargin=0.85 * inch,
+        title="Akai MPK Mini Mixing, Recording & Video-Sync Manual",
+        author="Generated for Alexy",
+    )
+    doc.build(story, canvasmaker=make_canvas_factory())
+    print("done, pages built")
+
+
+if __name__ == "__main__":
+    build_pdf()
