@@ -15,7 +15,7 @@ from ebooklib import epub
 import build_manual as bm
 
 OUT_DIR = "/sessions/upbeat-gifted-hamilton/mnt/com~apple~CloudDocs/music/kiffness/claude"
-VERSION = "0.2.1"
+VERSION = "0.2.2"
 BASENAME = "Akai_MPK_Mini_Mixing_Manual"
 OUT_PLAIN = os.path.join(OUT_DIR, f"{BASENAME}.epub")
 OUT_VERSIONED = os.path.join(OUT_DIR, f"{BASENAME} ({VERSION}).epub")

@@ -1,10 +1,10 @@
-manual_name: Akai MPK Mini Mixing Manual (0.2.1)
-version: 0.2.1
+manual_name: Akai MPK Mini Mixing Manual (0.2.2)
+version: 0.2.2
 built_at: 2026-06-18
 source_files: build_manual.py, diagrams.py, build_epub.py
 pdf_file: Akai_MPK_Mini_Mixing_Manual.pdf
 epub_file: Akai_MPK_Mini_Mixing_Manual.epub
-versioned_epub: Akai_MPK_Mini_Mixing_Manual (0.2.1).epub
+versioned_epub: Akai_MPK_Mini_Mixing_Manual (0.2.2).epub
 pages: 31
 chapters: 19
 figures: 9
@@ -20,3 +20,8 @@ changelog:
       missing-glyph boxes, and widened/repositioned several diagrams
       (MPK Mini overview, MIDI signal flow, 16-pad layout, MOTU M4
       routing) that were clipped at the right edge of the canvas.
+  - 0.2.2: Fixed the MPK Mini diagram's keybed, which stopped well short
+      of the device's right edge ("hanging" in the EPUB view); the keys
+      now span the same margins as the rest of the control surface. Also
+      fixed an overlapping-label bug where "3. Transport / Record" and
+      "4. Pads 1-8" text collided in the same figure.

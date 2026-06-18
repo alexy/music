@@ -60,8 +60,8 @@ def mpk_mini_diagram():
     for tx, lab in zip(tb_xs, tb_labels):
         d.add(Rect(tx - 9, tb_y - 9, 18, 18, rx=3, ry=3, fillColor=colors.HexColor("#444466"), strokeColor=WHITE))
         _label(d, tx, tb_y - 3, lab, 7, WHITE)
-    _label(d, (tb_xs[0] + tb_xs[-1]) / 2, by1 + 14, "3. Transport / Record", 8, INK, bold=True)
-    d.add(Line((tb_xs[0] + tb_xs[-1]) / 2, by1, (tb_xs[0] + tb_xs[-1]) / 2, by1 + 8, strokeColor=GREY))
+    _label(d, (tb_xs[0] + tb_xs[-1]) / 2, by1 + 24, "3. Transport / Record", 8, INK, bold=True)
+    d.add(Line((tb_xs[0] + tb_xs[-1]) / 2, by1, (tb_xs[0] + tb_xs[-1]) / 2, by1 + 18, strokeColor=GREY))
 
     # Pads grid (2 rows x 4 cols = 8 visible, representing Bank A/B of 16)
     pad_w, pad_h = 28, 26
@@ -79,12 +79,15 @@ def mpk_mini_diagram():
     _label(d, grid_x0 + (4 * (pad_w + pad_gap)) / 2 - pad_gap / 2, by1 + 14, "4. Pads 1–8 (Bank A/B = 16 total)", 8, INK, bold=True)
     d.add(Line(grid_x0 + 70, by1, grid_x0 + 70, by1 + 8, strokeColor=GREY))
 
-    # Keybed (bottom)
+    # Keybed (bottom) — fills the same left/right margin as the device
+    # outline (bx0+20 .. bx1-20) so the keys reach the right side of the
+    # control surface instead of stopping well short of it.
     key_y0 = 50
     key_h = 40
     n_white = 16
-    key_w = (bx1 - 60 - (bx0 + 20)) / n_white
     kx0 = bx0 + 20
+    kx1 = bx1 - 20
+    key_w = (kx1 - kx0) / n_white
     for i in range(n_white):
         d.add(Rect(kx0 + i * key_w, key_y0, key_w - 1, key_h, fillColor=WHITE, strokeColor=colors.HexColor("#333333")))
     # black keys (skip pattern)
