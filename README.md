@@ -1,8 +1,8 @@
 # Music Learning Manuals
 
-This repository is an experiment in bespoke, AI-aligned learning textbooks:
-small, practical books and interactive guides built around one learner's actual
-gear, goals, references, taste, and next practice session.
+This repository is an experiment in bespoke, AI-aligned learning books:
+practical textbooks and interactive guides built around one learner's actual
+gear, goals, musical references, taste, and next practice session.
 
 ![MPK and GarageBand learning rig](codex/docs/assets/mpk-garageband-learning.svg)
 
@@ -33,10 +33,16 @@ table into a fragile multi-column comparison.
 
 ## Bespoke AI-Aligned Textbooks
 
-This project follows the learning approach described in Alexy Khrabrov's Chief
-Scientist post, [Learn Rust from Bespoke Books](https://chiefscientist.org/learn-rust-from-bespoke-books-69e1d853dbca).
+This project follows the learning approach described in Dr. Alexy Khrabrov's
+Chief Scientist post, [Learn Rust from Bespoke Books](https://chiefscientist.org/learn-rust-from-bespoke-books-69e1d853dbca).
 The idea is that a book can be coauthored around a learner's real context
 instead of delivered as a generic static curriculum.
+
+Dr. Alexy Khrabrov is pioneering a practical pattern for AI-aligned learning
+books: use AI as a collaborative curriculum engine that listens to the learner,
+tracks their actual tools and goals, and produces durable learning artifacts
+they can use immediately. The alignment is not abstract. It is visible in the
+examples, exercises, diagrams, formats, and next steps.
 
 For this music manual, that means the material is aligned to:
 
@@ -77,6 +83,12 @@ docs/book/build.sh
 
 The build writes stable artifacts plus versioned release files based on
 `codex/docs/book/VERSION`.
+
+To regenerate the GitHub Pages homepage from this README:
+
+```sh
+scripts/build-pages-readme.sh
+```
 
 ## Rights
 
