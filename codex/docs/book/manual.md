@@ -1,6 +1,6 @@
 ---
-title: Make Remix Videos With an Akai MPK mini
-subtitle: A beginner manual for Kiffness-style video remixes on Mac
+title: Make Ableton Live Remix Videos With an Akai MPK mini
+subtitle: A beginner Ableton Live manual for Kiffness-style video remixes on Mac
 ---
 
 # Start Here: What You Are Learning
@@ -27,6 +27,254 @@ The three reference videos for study are:
 Respect copyright and permission. Use your own recordings, licensed samples,
 public-domain material, collaboration footage, or source clips you are allowed
 to remix. Learn the method, not unauthorized copying.
+
+# Kiffness Lessons
+
+This chapter turns the on-screen MPK layer captions from Kiffness videos into
+practice studies. Each lesson is not a promise that the original track used
+exactly these sounds or mappings. It is a beginner-friendly way to recreate the
+visible idea on an MPK mini: assign pads, play simple keys, move one or two
+knobs, and record the layers in an order the viewer can follow.
+
+Use the same default MPK map for every lesson unless a lesson says otherwise:
+
+| Control | Default job |
+|---|---|
+| Pad 1 | Kick or main downbeat |
+| Pad 2 | Snare, clap, or rim |
+| Pad 3 | Closed hat, ride, or shaker |
+| Pad 4 | Extra percussion or tom |
+| Pad 5 | Source chop or vocal hit |
+| Pad 6 | Harmony or response chop |
+| Pad 7 | One-shot effect or transition |
+| Pad 8 | Stop, mute, or outro hit |
+| Keys | Bass, chords, lead, piano, organ, pads |
+| Knob 1 | Track volume for the active part |
+| Knob 2 | Low-pass filter cutoff |
+| Knob 3 | Reverb send |
+| Knob 4 | Delay send |
+
+Film each study as short proof of process: source clip, first layer, second
+layer, then the payoff. The captions are useful because they teach the viewer
+what changed.
+
+## Hard Work
+
+Reference: The Kiffness x Sergeant Major Christian - "Hard Work"  
+<https://www.youtube.com/watch?v=5y5yRKhanLQ>
+
+On-screen layers: bass, keys, ride, snare, guitar, kick, toms, muted trumpet,
+open trumpet, trumpet stab, organ.
+
+Build this as a marching-band pop sketch.
+
+1. Set the project tempo by tapping along with the cadence.
+2. Put kick on Pad 1, snare on Pad 2, ride on Pad 3, and toms on Pad 4.
+3. Record a two-bar drum loop with kick and snare first; add ride only after
+   the groove feels steady.
+4. Play a short bass line on the keys. Use one octave and mostly root notes.
+5. Add keys or organ with simple stabs on the offbeats.
+6. Record guitar as a muted pluck sound if you do not have a real guitar.
+7. Put muted trumpet, open trumpet, and trumpet stab on separate software
+   instrument tracks, or use three presets from one brass plugin.
+8. Caption each new layer when it enters, then cut to the source cadence for
+   call and response.
+
+MPK focus: use pads for the military rhythm and keys for bass/brass. Use Knob 2
+to close the organ filter during the buildup, then open it on the final chorus.
+
+## Thai Pile Drivers
+
+Reference: The Kiffness X Thai Pile Drivers - Work Shanty  
+<https://www.youtube.com/watch?v=dlho15QNPbE>
+
+On-screen layers: fast tambourine, beat, bass, keys, pads.
+
+Build this as drum and bass from a work rhythm.
+
+1. Find the repeated work-hit rhythm in the source and loop one or two bars.
+2. Put kick on Pad 1, snare on Pad 2, and fast tambourine on Pad 3.
+3. Turn on Note Repeat for Pad 3 at 1/16 notes to make the tambourine fast and
+   even.
+4. Record the beat with a strong snare on beats 2 and 4.
+5. Play a short bass line on the keys. Keep it punchy and repetitive.
+6. Add keys with a bright pluck or piano patch.
+7. Add pads last with long chords underneath the source.
+
+MPK focus: Note Repeat is the lesson. The tambourine should feel mechanical
+enough to turn the work clip into a dance groove.
+
+## A Jazzy Glove Compartment
+
+Reference: The Kiffness x A Jazzy Glove Compartment  
+<https://www.youtube.com/watch?v=DtuZJrwkosY>
+
+On-screen layers: ride cymbal, bass, piano.
+
+Build this as a tiny jazz trio.
+
+1. Set a relaxed swing tempo.
+2. Put ride cymbal on Pad 3 and record a light swing pattern.
+3. Play walking bass on the lower keys. Use root, fifth, passing note, octave.
+4. Add piano chords on the middle keys. Two-note shell voicings are enough.
+5. Leave space for the source sound; do not overplay.
+
+MPK focus: velocity. Tap the ride softly and play bass notes at different
+strengths so the loop does not feel like a grid exercise.
+
+## Big Billy
+
+Reference: The Kiffness X Big Billy  
+<https://www.youtube.com/watch?v=T0P6MC8Ris8>
+
+On-screen layers: shaker, beat, bass.
+
+Build this as a simple cat-voice groove.
+
+1. Loop the source phrase until the downbeat feels obvious.
+2. Put shaker on Pad 3 and use Note Repeat at 1/8 or 1/16.
+3. Put kick and snare on Pads 1 and 2, then record the beat.
+4. Play a bass line that answers the cat phrase rather than covering it.
+5. Keep the arrangement sparse; the joke needs room.
+
+MPK focus: restraint. Three layers are enough if the source phrase is strong.
+
+## Alugalug Cat
+
+Reference: Alugalug Cat X The Kiffness  
+<https://www.youtube.com/watch?v=kG2JvYSqGR4>
+
+On-screen layers: beat, keys, bass, 1st harmony.
+
+Build this as a soulful singing-cat response.
+
+1. Chop the cat phrase into one main call and one shorter answer.
+2. Put kick, snare, and hat on Pads 1 to 3.
+3. Record a beat that leaves the call uncluttered.
+4. Add warm keys with two or three chords.
+5. Play bass under the chord roots.
+6. Sing or sample a first harmony and place it on a new track.
+
+MPK focus: use keys for harmony first, then bass. If you only have one take,
+record chords, duplicate the MIDI region, and simplify the copy into bass.
+
+## Oh Long Johnson
+
+Reference: Oh Long Johnson x The Kiffness  
+<https://www.youtube.com/watch?v=4efpoO5PWps>
+
+On-screen layers: snare, hi-hat, kick & snare, darbuka, bass & mute guitar,
+keys, trumpet, trumpet harmonies, 1st vocal harmony, pads, 2nd vocal harmony.
+
+Build this as a reggae/world groove with stacked responses.
+
+1. Put kick on Pad 1, snare on Pad 2, hi-hat on Pad 3, and darbuka on Pad 4.
+2. Record snare and hi-hat separately so the viewer can see the groove grow.
+3. Add kick & snare as the full drum payoff.
+4. Play bass on the lower keys and a muted guitar skank on the upper keys.
+5. Add keys as short offbeat stabs.
+6. Record trumpet as a simple melody, then duplicate it for harmonies.
+7. Add vocal harmony in two passes: first harmony, then second harmony.
+8. Add pads quietly under the final section.
+
+MPK focus: separate layers even when they could be recorded together. The video
+lesson is clearer when "snare," "hi-hat," and "kick & snare" are visible steps.
+
+## Pipeline Funk
+
+Reference: Armin Kupper - Pipeline Funk  
+<https://www.youtube.com/watch?v=Gmo5-STWF4M>
+
+On-screen layers: hi-hat, bass, cats, vibe, pads & vibe cat.
+
+Build this as a funk loop around a melodic source.
+
+1. Put hi-hat on Pad 3 and record a tight 1/16 pattern.
+2. Play a syncopated bass line on the keys.
+3. Put a small cat sample or vocal response on Pad 5.
+4. Add a vibraphone or bell patch for the "vibe" layer.
+5. Add soft pads underneath and blend them with the vibe sound.
+
+MPK focus: use Knob 3 for reverb on the vibe layer. It should shimmer without
+washing out the bass.
+
+## Lalala Dog
+
+Reference: The Kiffness x Lalala Dog  
+<https://www.youtube.com/watch?v=Wcl1Z0bBoBE>
+
+On-screen layers: beat, shaker, vox 1 & bells, vox 2 & organ, bass, outro.
+
+Build this as a bright vocal-pop loop.
+
+1. Make the beat first with kick and clap on Pads 1 and 2.
+2. Add shaker on Pad 3, preferably with Note Repeat.
+3. Record the first vocal response with bells. Use a bell preset on the keys.
+4. Record the second vocal response with organ chords.
+5. Add bass last so it locks to the full vocal rhythm.
+6. Put an outro hit or final sample on Pad 8.
+
+MPK focus: pair a vocal layer with an instrument layer. "Vox 1 & bells" and
+"vox 2 & organ" teach arrangement by pairing timbres.
+
+## Feira de Mangaio
+
+Reference: The Kiffness x Mariana Merenda - Feira de Mangaio  
+<https://www.youtube.com/watch?v=8IeU79NpcU8>
+
+On-screen layers: kick, clap x2, guitar, bass, trumpet, cowbell, shaker.
+
+Build this as a Brazilian-flavored acoustic dance study.
+
+1. Put kick on Pad 1, clap on Pad 2, cowbell on Pad 3, and shaker on Pad 4.
+2. Record kick alone first.
+3. Record clap x2 as two quick claps around the backbeat.
+4. Add guitar with a real guitar, a sampled guitar, or a short pluck patch.
+5. Play bass with short notes that move around the kick.
+6. Add trumpet as a simple answering phrase.
+7. Add cowbell and shaker only after the main groove works.
+
+MPK focus: make the percussion conversational. The cowbell and shaker should
+answer the vocal, not simply fill every empty space.
+
+## Waqoba Amaqatha
+
+Reference: The Kiffness X The Joy - Waqoba Amaqatha  
+<https://www.youtube.com/watch?v=dExvQB7CtFg>
+
+On-screen layers: shaker R, clap, pads, clap x2, clap x4.
+
+Build this as a vocal-group remix with escalating claps.
+
+1. Pan shaker slightly right for "shaker R" and record it with Pad 3.
+2. Record one clap on Pad 2.
+3. Add long pad chords on the keys.
+4. Record clap x2 as a two-hit pattern.
+5. Record clap x4 as a faster fill leading into the chorus.
+6. Keep the source vocals dominant; the MPK layers should frame them.
+
+MPK focus: use one sound three ways. A single clap becomes a groove, a double,
+and a four-hit fill through rhythm alone.
+
+## Axel F
+
+Reference: The Kiffness x Damat Drummer - Axel F / Crazy Frog  
+<https://www.youtube.com/watch?v=p6C-4LXTmPU>
+
+On-screen layers: bass, lead, sauce, synth, vibe, butterfly.
+
+Build this as an electronic novelty hook.
+
+1. Play the bass on lower keys with a short, rubbery synth preset.
+2. Play the lead on upper keys using a bright square or saw lead.
+3. Make "sauce" an effect macro: filter movement, delay throw, or pitch bend.
+4. Add a second synth layer with a wider sound.
+5. Add "vibe" as chords, bells, or a soft pad.
+6. Make "butterfly" a playful one-shot: a riser, pitch swoop, or chopped vocal.
+7. Record Knob 2 and the joystick during the sauce and butterfly moments.
+
+MPK focus: macro performance. This lesson is less about realistic instruments
+and more about making the controller look and sound alive.
 
 # The Kiffness Method
 
@@ -148,9 +396,9 @@ Start simple. Do not buy ten things before you can make one loop.
 1. Plug the MPK directly into the Mac over USB.
 2. Open Audio MIDI Setup in Applications > Utilities and confirm the device
    appears.
-3. Pick one DAW to start. This manual now treats GarageBand and FL Studio as
-   the two main paths. GarageBand is easiest on Mac; FL Studio is stronger for
-   pattern-based beat work and step sequencing.
+3. Pick one DAW path for the project. The interactive tutorials in this manual
+   use GarageBand only. Ableton Live and FL Studio are kept as separate
+   subsections so new DAWs can be added without widening comparison tables.
 4. Use wired headphones. Bluetooth latency will make timing feel broken.
 5. Create a project folder with `Source Video`, `Audio`, `Stems`, `Project`,
    `Exports`, and `Notes`.
@@ -168,7 +416,7 @@ Your rig has two separate worlds:
 
 - MIDI control: MPK mini to Mac over USB. This controls software instruments.
 - Audio recording: microphones and preamps into the MOTU M4, then into
-  GarageBand.
+  your DAW.
 
 Keep those worlds separate in your head. The MPK does not plug into the MOTU
 for this workflow. The MPK plugs into the Mac. The MOTU handles audio.
@@ -180,7 +428,7 @@ for this workflow. The MPK plugs into the Mac. The MOTU handles audio.
     #v(0.7em)
     #grid(columns: (1fr, 1fr, 1fr), gutter: 8pt,
       rect(fill: rgb("#246A73"), radius: 4pt, inset: 8pt)[#align(center)[#text(fill: white, weight: "bold")[MPK mini]#linebreak()#text(fill: white, size: 8pt)[USB MIDI to Mac]]],
-      rect(fill: rgb("#51A3A3"), radius: 4pt, inset: 8pt)[#align(center)[#text(fill: white, weight: "bold")[Mac]#linebreak()#text(fill: white, size: 8pt)[GarageBand project]]],
+      rect(fill: rgb("#51A3A3"), radius: 4pt, inset: 8pt)[#align(center)[#text(fill: white, weight: "bold")[Mac]#linebreak()#text(fill: white, size: 8pt)[Ableton Live Set]]],
       rect(fill: rgb("#2A9D8F"), radius: 4pt, inset: 8pt)[#align(center)[#text(fill: white, weight: "bold")[MOTU M4]#linebreak()#text(fill: white, size: 8pt)[audio in/out]]],
     )
     #v(0.8em)
@@ -217,7 +465,7 @@ Use this order every time until it becomes boring.
 3. Connect the mic.
 4. Connect Pre-73 output to M4 line input if using the Pre-73.
 5. Connect M4 to Mac over USB.
-6. Open GarageBand and select the M4 as input and output.
+6. Open Ableton Live and select the M4 as input and output.
 7. Turn on phantom only if the mic needs it, and only on the device feeding the
    mic.
 8. Bring gain up slowly while speaking or playing.
@@ -234,7 +482,7 @@ Gain staging means each device receives a strong signal without overload.
 | Pre-73 input gain | Raise until the mic feels present. More gain adds more preamp color. | Pre-73 meter should not live in overload. |
 | Pre-73 output | Use it as the level sent to the M4. Lower output if you drove the input for color. | M4 input meter. |
 | MOTU M4 line input | Prefer rear line input 3 or 4 for Pre-73 output. | Avoid red on the M4 meter. |
-| GarageBand track | Arm the correct input and record. | Peaks around -12 dB to -6 dB are healthy. |
+| Ableton audio track | Arm the correct Ext. In pair and record. | Peaks around -12 dB to -6 dB are healthy. |
 
 For a clean vocal, use moderate Pre-73 gain and enough output to feed the M4.
 For a more colored vocal, raise Pre-73 gain and lower Pre-73 output so the M4
@@ -242,14 +490,14 @@ still receives a safe level.
 
 ## Monitoring on the MOTU M4
 
-The M4 can let you hear inputs directly, before GarageBand latency. Use direct
+The M4 can let you hear inputs directly, before Ableton latency. Use direct
 monitoring when the delay bothers you while singing or playing.
 
 | Situation | Monitoring choice |
 |---|---|
-| Recording vocal through mic | Use M4 direct monitoring if GarageBand feels delayed. |
-| Playing MPK software instrument | Monitor through GarageBand; MIDI instruments must be heard from the software. |
-| Overdubbing voice over beat | Balance GarageBand playback and live input so both are comfortable. |
+| Recording vocal through mic | Use M4 direct monitoring if Ableton monitoring feels delayed. |
+| Playing MPK software instrument | Monitor through Ableton; MIDI instruments must be heard from the software. |
+| Overdubbing voice over beat | Balance Ableton playback and live input so both are comfortable. |
 | Mixing | Turn direct monitoring off if it doubles the input sound. |
 
 # Installing and Checking the MPK
@@ -260,39 +508,91 @@ notes.
 
 ## GarageBand
 
+GarageBand is the path used by the interactive tutorials in this manual. It is
+the simplest place to learn the MPK as a performance surface because it starts
+quickly, records software instruments cleanly, and keeps the timeline easy to
+read.
+
 1. Connect the MPK over USB.
-2. Open GarageBand and create an empty project.
-3. Choose Software Instrument.
-4. Play the MPK keys. If you hear the selected instrument, the basic path is
-   working.
-5. Open GarageBand > Settings > Audio/MIDI if you need to refresh MIDI devices.
+2. Open GarageBand and create an Empty Project.
+3. Create a Software Instrument track.
+4. Select the track and play the MPK keys. You should hear the selected patch.
+5. Choose a drum kit or electronic kit and press pads 1-8.
+6. Turn on the metronome and count-in before recording.
+7. Use Smart Controls for filter, tone, reverb, and delay. If a knob does not
+   map cleanly, use the mouse for that pass and keep moving.
 
-GarageBand is friendly for learning tracks, loops, software instruments, and
-basic recording. It is less ideal for advanced video sync and live performance
-mapping, but it is a good first week.
+### GarageBand With the MOTU M4
 
-## GarageBand With the MOTU M4
+Use this when you record voice, instruments, or a guide vocal.
 
-Use this as your first real setup checklist.
+| Step | GarageBand setting |
+|---|---|
+| 1 | Connect the M4 to the Mac and listen through the M4. |
+| 2 | Open GarageBand > Settings > Audio/MIDI. |
+| 3 | Set Input Device to the MOTU M4. |
+| 4 | Set Output Device to the MOTU M4. |
+| 5 | Create an Audio track for mic or line input. |
+| 6 | Select the correct input: 1/2 for front mic inputs, 3/4 for rear line inputs if available. |
+| 7 | Record a 10-second test and play it back before doing a real take. |
 
-1. Connect the M4 to the Mac.
-2. Connect headphones or monitors to the M4, not the Mac headphone jack.
-3. Open GarageBand > Settings > Audio/MIDI.
-4. Set Output Device to the MOTU M4.
-5. Set Input Device to the MOTU M4.
-6. Create an Empty Project.
-7. For a mic, choose the Audio track with the microphone icon.
-8. Open Details and choose the correct input:
-   - Input 1 or 2 for M4 front mic inputs.
-   - Input 3 or 4 for M4 rear line inputs fed by the Pre-73.
-9. Enable "I want to hear my instrument as I play and record" only if you are
-   not using M4 direct monitoring, or if you need to hear GarageBand effects.
-10. Record a 10-second test and play it back before doing a full take.
+### GarageBand Starter Layout
+
+Use one row per musical job. This pattern scales when you add a new DAW later:
+the DAW gets a subsection, and the table stays vertical.
+
+| Track | GarageBand place | MPK job |
+|---|---|---|
+| Source | Audio track or imported file | Listen, trim, and align to the grid. |
+| Drums | Software Instrument with electronic kit | Pads 1-4 play kick, snare/clap, hats, open hat. |
+| Bass | Software Instrument with synth bass | Lower keys play root/fifth/octave lines. |
+| Chords | Software Instrument with piano, organ, strings, or pad | Middle keys play stabs or long chords. |
+| Hook | Software Instrument with lead synth or sampler | Upper keys play answer phrases. |
+| FX | Smart Controls or audio regions | Knobs/mouse record filter, reverb, delay, risers. |
+
+GarageBand's limitation is that it is not a clip-launching DAW. Treat it as a
+pass-by-pass recorder: record a region, loop it, add the next track, and use
+the timeline as the arrangement.
+
+## Ableton Live
+
+Ableton Live is the strongest path when you want visible loop launching, source
+warping, deep MIDI mapping, and clip-to-arrangement performance capture.
+
+1. Connect the MPK over USB.
+2. Open Live and create a new Set.
+3. Open Settings > Link, Tempo & MIDI.
+4. In MIDI Ports, enable Track for the MPK input so keys and pads can play
+   instruments.
+5. Enable Remote for the MPK input so knobs and pads can be MIDI-mapped to Live
+   controls.
+6. Create a MIDI track, load Drum Rack, and play pads 1-8.
+7. Create another MIDI track, load a bass or piano instrument, and play the
+   keys.
+8. Press Cmd+M to enter MIDI Map Mode, click a visible control such as a track
+   volume or Auto Filter cutoff, move an MPK knob, then press Cmd+M again.
+
+### Ableton Live With the MOTU M4
+
+Use this as your Live setup checklist.
+
+| Step | Ableton Live setting |
+|---|---|
+| 1 | Connect the M4 to the Mac and listen through the M4. |
+| 2 | Open Live > Settings > Audio. |
+| 3 | Set Audio Input Device to the MOTU M4. |
+| 4 | Set Audio Output Device to the MOTU M4. |
+| 5 | Choose a low buffer while recording; raise it later if the project crackles. |
+| 6 | Enable the input channels you plan to use in Input Config. |
+| 7 | Create an Audio track. |
+| 8 | Choose Ext. In: 1/2 for front mic inputs, 3/4 for rear line inputs fed by the Pre-73. |
+| 9 | Set Monitor to Off for M4 direct monitoring, or Auto if you need Live effects. |
+| 10 | Arm the track, record a 10-second test, and play it back. |
 
 ```{=typst}
 #figure(
   rect(width: 100%, inset: 10pt, radius: 6pt, stroke: rgb("#D8D2C4"), fill: rgb("#FFFDF8"))[
-    #text(weight: "bold")[GarageBand input map]\
+    #text(weight: "bold")[Ableton Live input map]\
     #v(0.7em)
     #grid(columns: (1fr, 1fr, 1fr, 1fr), gutter: 6pt,
       rect(fill: rgb("#246A73"), radius: 4pt, inset: 7pt)[#align(center)[#text(fill: white, weight: "bold")[Input 1]#linebreak()#text(fill: white, size: 8pt)[M4 front mic/inst]]],
@@ -301,16 +601,34 @@ Use this as your first real setup checklist.
       rect(fill: rgb("#E9C46A"), radius: 4pt, inset: 7pt)[#align(center)[#text(weight: "bold")[Input 4]#linebreak()#text(size: 8pt)[rear line / Pre-73]]],
     )
   ],
-  caption: [In GarageBand, M4 hardware inputs appear as selectable track inputs.]
+  caption: [In Ableton Live, M4 hardware inputs appear as Ext. In channel choices.]
 )
 ```
 
-If the armed GarageBand track shows a meter but you hear nothing, check
-monitoring. If the M4 meter moves but GarageBand does not, the wrong track input
-is probably selected. If GarageBand records but playback comes from Mac
-speakers, the output device is not set to the M4.
+If the armed Ableton track shows a meter but you hear nothing, check Monitor
+and the M4's monitor mix. If the M4 meter moves but Ableton does not, the wrong
+Ext. In channel is probably selected. If Ableton records but playback comes from
+Mac speakers, the output device is not set to the M4.
 
-## FL Studio With the MPK and MOTU M4
+### Ableton Live Starter Layout
+
+Use Session View as the practice grid:
+
+| Track | Device or source | MPK job |
+|---|---|---|
+| 1 Source | Audio clip from the video or extracted WAV | Pads can launch source chops later. |
+| 2 Drums | Drum Rack | Pads 1-4 play kick, snare, hats, percussion. |
+| 3 Bass | Bass instrument | Keys play root/fifth lines. |
+| 4 Chords | Piano, organ, or pad instrument | Keys play stabs or long chords. |
+| 5 Chops | Simpler or Drum Rack with source slices | Pads 5-8 trigger hooks, fills, and one-shots. |
+| A Reverb | Return track with reverb | Knob controls send amount. |
+| B Delay | Return track with delay | Knob controls one-shot throws. |
+
+Record rough musical ideas as clips first. When the clips work, press the
+global record button and launch scenes or individual clips while Live captures
+the performance into Arrangement View.
+
+## FL Studio
 
 FL Studio works well if you like patterns, drum grids, quick MIDI editing, and
 clip-style arranging. On Mac, treat the M4 as the audio device and the MPK as a
@@ -332,76 +650,44 @@ For microphone recording in FL Studio on macOS, make sure macOS allows FL
 Studio to access the microphone/audio input. Then choose the correct M4 input
 on a Mixer insert before recording.
 
-```{=typst}
-#figure(
-  rect(width: 100%, inset: 10pt, radius: 6pt, stroke: rgb("#D8D2C4"), fill: rgb("#FFFDF8"))[
-    #text(weight: "bold")[GarageBand vs FL Studio routing]\
-    #v(0.7em)
-    #grid(columns: (1fr, 1fr), gutter: 10pt,
-      rect(fill: rgb("#246A73"), radius: 5pt, inset: 8pt)[
-        #text(fill: white, weight: "bold")[GarageBand]#linebreak()
-        #text(fill: white, size: 8pt)[Settings > Audio/MIDI -> M4]#linebreak()
-        #text(fill: white, size: 8pt)[Track input -> Input 1/2/3/4]#linebreak()
-        #text(fill: white, size: 8pt)[Software Instrument -> MPK]
-      ],
-      rect(fill: rgb("#E76F51"), radius: 5pt, inset: 8pt)[
-        #text(fill: white, weight: "bold")[FL Studio]#linebreak()
-        #text(fill: white, size: 8pt)[F10 Audio -> M4]#linebreak()
-        #text(fill: white, size: 8pt)[F10 MIDI -> enable MPK]#linebreak()
-        #text(fill: white, size: 8pt)[Mixer insert input -> M4 input]
-      ],
-    )
-  ],
-  caption: [Both DAWs use the same hardware, but the setup screens are different.]
-)
-```
+### FL Studio With the MOTU M4
 
-## GarageBand vs FL Studio: Which One for This Manual?
+| Step | FL Studio setting |
+|---|---|
+| 1 | Connect the M4 to the Mac and listen through the M4. |
+| 2 | Open Options > Audio settings, or press F10 and choose Audio. |
+| 3 | Select the MOTU M4/Core Audio device. |
+| 4 | Set a small buffer for recording; raise it later if the project crackles. |
+| 5 | Choose the correct M4 input on a Mixer insert before recording audio. |
+| 6 | Arm the Mixer insert, record a 10-second test, and play it back. |
 
-| Task | GarageBand | FL Studio |
+### FL Studio Starter Layout
+
+Think in patterns first and Playlist arrangement second:
+
+| Track or pattern | FL Studio place | MPK job |
 |---|---|---|
-| First vocal or mic recording | Easier. Audio tracks are straightforward. | Works, but routing through Mixer inserts takes more setup. |
-| MPK keys for piano/synth | Very easy with Software Instrument tracks. | Easy after MIDI input is enabled. |
-| Finger-drummed beat | Good enough for learning. | Excellent with Channel Rack and patterns. |
-| Pattern variations | More timeline-oriented. | Very strong: Pattern 1, Pattern 2, Pattern 3. |
-| Knob automation | Possible through Smart Controls/automation. | Strong through linking controls and automation clips. |
-| Video sync | Basic. Often finish video elsewhere. | Usually finish video elsewhere; export audio/stems. |
+| Source | Audio clip in Playlist | Trim and align to the song grid. |
+| Drums | Channel Rack, FPC, or drum sampler | Pads 1-4 play kick, snare/clap, hats, open hat. |
+| Bass | Instrument channel routed to Mixer | Lower keys play root/fifth/octave lines. |
+| Chords | Instrument channel or FLEX patch | Middle keys play stabs or long chords. |
+| Hook | Synth, sampler, or audio clip | Upper keys or pads trigger answer phrases. |
+| FX | Automation clips and Mixer effects | Link controls or draw filter, reverb, delay moves. |
 
-Recommendation: start the mic/MOTU/Pre-73 setup in GarageBand because it is
-clearer. Build drum-pattern fluency in FL Studio because the Channel Rack makes
-pad sequencing feel natural. You can export stems from either DAW for video
-editing.
+FL Studio's strength is pattern variation. Make Pattern 1 drums, Pattern 2 bass,
+Pattern 3 chords, then arrange those patterns in the Playlist.
 
-## Logic Pro
+# DAW Path Summary
 
-Logic is the grown-up version of the GarageBand idea. Use it when you want
-better mixing, Flex Time, automation, video import, and export control.
+Each DAW now has its own subsection and its own vertical tables. Add a new DAW
+by copying this pattern: setup checklist, audio-interface checklist, starter
+layout, then a short note about that DAW's strongest workflow.
 
-1. Create a Software Instrument track.
-2. Choose a drum kit, synth bass, piano, or sampler.
-3. Press Record and capture MIDI from the MPK.
-4. Use the Piano Roll to fix notes.
-5. Use Smart Controls or MIDI Learn to assign knobs.
-
-## Ableton Live
-
-Ableton is strong for looping, clips, warping, and performance. If your main
-goal is live building like a visible remix performance, Ableton is worth
-learning.
-
-1. Enable the MPK as a MIDI input in Settings > Link/Tempo/MIDI.
-2. Create a MIDI track with Drum Rack or an instrument.
-3. Arm the track and play.
-4. Use Session View for loops and Arrangement View for the final timeline.
-5. Use Warp on source clips to lock them to tempo.
-
-## MPC Beats
-
-Akai's setup path uses MPC Beats and the included software bundle. Akai's own
-setup article explains registration, the inMusic Software Center, installing
-MPC Beats, AIR plugins, sample packs, and enabling the MPK input. The key idea:
-the controller should appear in MIDI/Sync preferences, and its input should be
-enabled for track/control use.
+| DAW | Best reason to use it |
+|---|---|
+| GarageBand | Fastest beginner path and the only DAW used by the interactive tutorials. |
+| Ableton Live | Best for clip launching, MIDI mapping, warping, and visible loop performance. |
+| FL Studio | Best for pattern-based arranging, Channel Rack drums, and quick variations. |
 
 Do one sanity test in every DAW: open one piano instrument and play the keys. If
 that works, the MPK is alive. Then test pads with a drum kit. Then test a knob
@@ -656,37 +942,87 @@ perform over 16 bars. Use it slowly at first, then make it musical.
 
 The first time, record this as separate passes. Later, perform more of it live.
 
-## Where the Sequence Lives in Each DAW
+## DAW Versions of the 16 Bars
 
-| Musical part | GarageBand place | FL Studio place |
+Use the same music plan in every DAW, but keep the instructions vertical. A new
+DAW should become a new subsection below, not another column in a wide table.
+
+### GarageBand Version of the 16 Bars
+
+GarageBand records the sequence as timeline regions. This is the model used by
+the interactive tutorials.
+
+| Musical part | GarageBand place | Performance move |
 |---|---|---|
-| Source clip audio | Audio track on the timeline | Audio clip in Playlist or sampler/audio channel |
-| Kick/snare/hats | Drum Kit Designer or sampler instrument track | Channel Rack drum channels or FPC |
-| Bass | Software Instrument bass track | Channel Rack instrument routed to bass Mixer insert |
-| Chords/pads | Software Instrument track | Instrument channel routed to chords/pad Mixer insert |
-| Source chops | Sampler or audio regions | Slicer/Sampler/audio clips in Playlist |
-| Knob filter move | Smart Control/track automation | Link controller to plugin/filter, record automation or create automation clip |
-| Reverb/delay throw | Track send or plugin automation | Mixer send/effect automation clip |
-| Final arrangement | GarageBand timeline | FL Studio Playlist |
+| Source clip audio | Audio track in Tracks view | Trim the phrase, loop it, and align it to the bar grid. |
+| Kick/snare/hats | Software Instrument drum kit | Finger-drum pads 1-4 into a two-bar MIDI region. |
+| Bass | Software Instrument synth bass | Record a lower-key bass region. |
+| Chords/pads | Software Instrument piano, organ, strings, or pad | Record long chords or offbeat stabs. |
+| Source chops or hits | Audio regions or sampler-style instrument | Place hits at bar 8, 12, or 16. |
+| Knob/filter move | Smart Controls or automation | Record or draw one filter opening into the build. |
+| Reverb/delay throw | Smart Controls, track automation, or effect preset | Add only at section edges. |
+| Final arrangement | Tracks view timeline | Duplicate, mute, and trim regions into the final 16 bars. |
 
-## FL Studio Pattern Version of the 16 Bars
+GarageBand is not a clip launcher, so the MPK pads are musical events and
+camera cues. The arrangement itself lives in the timeline.
 
-If you choose FL Studio, think in patterns first and Playlist arrangement
-second.
+### Ableton Live Version of the 16 Bars
 
-| Pattern | Bars | Contains | Trigger/arrange |
+Think in clips first and Arrangement second. The clip grid is the rehearsal
+space; the Arrangement is the clean performance record.
+
+| Musical part | Ableton Live place | Performance move |
+|---|---|---|
+| Source clip audio | Audio clip in Session View, then Arrangement View | Warp the phrase so it loops against the metronome. |
+| Kick/snare/hats | Drum Rack on a MIDI track | Finger-drum pads 1-4 into a two-bar clip. |
+| Bass | MIDI track with a bass instrument | Record a short clip from the lower keys. |
+| Chords/pads | MIDI track with piano, organ, or pad | Record long chords or offbeat stabs. |
+| Source chops | Simpler, Drum Rack, or sliced audio clips | Trigger pads 5-8 for hooks and fills. |
+| Knob filter move | Auto Filter mapped to an MPK knob | Record the sweep into Arrangement automation. |
+| Reverb/delay throw | Return tracks A/B or track sends | Map sends to knobs and move them only at section edges. |
+| Final arrangement | Arrangement View | Capture Session launches, then edit the best take. |
+
+| Clip or scene | Bars | Contains | Trigger/arrange |
 |---|---|---|---|
-| Pattern 1 - Hats | 3-16 | P3 closed hats, optional P4 open hat | Put under most of the source loop. |
-| Pattern 2 - Core beat | 5-16 | P1 kick, P2 clap/snare, P3 hats | Enter when the groove starts. |
-| Pattern 3 - Bass | 5-16 | Root/fifth bass notes from MPK keys | Route to bass Mixer insert. |
-| Pattern 4 - Chords | 9-16 | Sustained chords or offbeat stabs | Fade or filter into build. |
-| Pattern 5 - Fills/chops | 8, 12, 16 | P5/P6/P7 fills, source hit, crash | Drop only at section edges. |
-| Automation clip - Filter | 9-13 | K5 low-pass opening | Draw or record curve into drop. |
-| Automation clip - Delay | 16 | K7 delay send throw | One short moment, then back to zero. |
+| Scene 1 - Source | 1-4 | Warped source phrase only | Let the premise breathe before adding drums. |
+| Scene 2 - Hats | 3-16 | P3 closed hats, optional P4 open hat | Launch with Global Quantization at 1 Bar. |
+| Scene 3 - Core beat | 5-16 | P1 kick, P2 clap/snare, P3 hats | Record a Drum Rack clip, then duplicate it. |
+| Scene 4 - Bass | 5-16 | Root/fifth bass notes from MPK keys | Keep the clip short and loopable. |
+| Scene 5 - Chords | 9-16 | Sustained chords or offbeat stabs | Fade or filter into the build. |
+| Scene 6 - Fills/chops | 8, 12, 16 | P5/P6/P7 fills, source hit, crash | Trigger only at section edges. |
+| Automation - Filter | 9-13 | Low-pass opening | Map Auto Filter cutoff and record the sweep. |
+| Automation - Delay | 16 | Delay send throw | Move the send up for one beat, then back down. |
 
-In FL Studio, route drums, bass, chords, and source audio to separate Mixer
-inserts early. That makes the M4-recorded mic, the source clip, and the MPK
-instruments much easier to balance.
+Set Global Quantization to 1 Bar while learning so clip launches land cleanly.
+Later, use shorter quantization for fills if the performance needs more
+immediacy.
+
+### FL Studio Version of the 16 Bars
+
+If you choose FL Studio instead, think in patterns first and Playlist
+arrangement second. Route drums, bass, chords, and source audio to separate
+Mixer inserts early so the M4-recorded mic, the source clip, and the MPK
+instruments are easier to balance.
+
+| Musical part | FL Studio place | Performance move |
+|---|---|---|
+| Source clip audio | Audio clip in Playlist | Trim, stretch, or slice the phrase to the bar grid. |
+| Kick/snare/hats | Channel Rack, FPC, or drum sampler | Finger-drum pads 1-4 into a drum pattern. |
+| Bass | Instrument channel routed to Mixer | Record lower-key bass into a pattern. |
+| Chords/pads | Instrument channel or FLEX patch | Record chord pattern or long pad notes. |
+| Source chops | Sampler channels or sliced audio | Trigger or place hits at pattern endings. |
+| Knob filter move | Linked control or automation clip | Record or draw the sweep into Playlist automation. |
+| Reverb/delay throw | Mixer effect automation | Automate send or wet level only at section edges. |
+| Final arrangement | Playlist | Place patterns and automation clips into the 16-bar form. |
+
+| Pattern or clip | Bars | Contains | Trigger/arrange |
+|---|---|---|---|
+| Pattern 1 - Drums | 5-16 | Kick, clap/snare, hats | Place in Playlist from the groove entrance onward. |
+| Pattern 2 - Bass | 5-16 | Root/fifth bass line | Keep short and duplicate. |
+| Pattern 3 - Chords | 9-16 | Pad or stabs | Bring in after the groove is clear. |
+| Pattern 4 - Fills | 8, 12, 16 | Crash, tom, source hit, riser | Place only at section edges. |
+| Automation - Filter | 9-13 | Low-pass opening | Draw the sweep as an automation clip. |
+| Automation - Delay | 16 | Delay throw | Raise for one beat, then return to dry. |
 
 # Rhythm, Tempo, and Sync
 
@@ -1072,6 +1408,384 @@ Four-week plan:
 - Week 3: video sync and camera angles.
 - Week 4: one finished 45 to 60 second remix.
 
+# Case Study: What Is Love Live Loop in GarageBand
+
+Reference: MunomaMusic - Haddaway - What Is Love (Live Loop Cover) \| Minilab 3  
+<https://www.youtube.com/watch?v=wK1V8v1UPZo>
+
+This reference is not a Kiffness source-clip remix. It is a straight live-loop
+cover: a controller, a DAW, a few synth sounds, and a camera angle that lets the
+viewer see the song being assembled. That makes it a perfect study for learning
+how to translate a performance from one controller and one DAW into your own
+setup.
+
+The original video lists Arturia Minilab 3, Ableton Live, Mini V3, Serum, and
+Ableton stock synths. Your version uses Akai MPK mini IV and GarageBand. The
+method is the same, but the workflow changes:
+
+| Original idea | Your translation |
+|---|---|
+| Minilab pads lighting as parts enter | MPK pads 1-8 trigger drums and section cues. |
+| Ableton clip/performance workflow | GarageBand records one track at a time into regions. |
+| Mini V/Serum synth sounds | GarageBand synth bass, classic synth, and pad patches. |
+| Top-down controller performance | Film your MPK from above, then add one angled desk shot. |
+| Live-loop build | Layer short MIDI regions until the full groove plays. |
+
+The song style is 1990s eurodance. Your beginner target is not a perfect cover;
+it is a recognizable practice arrangement with four jobs:
+
+1. A minor-key hook on the keys.
+2. A steady dance drum pattern on pads.
+3. A short synth bass line.
+4. A pad or chord layer that makes the chorus feel wide.
+
+## GarageBand Project Setup
+
+Create a new GarageBand project and choose Empty Project. Add a Software
+Instrument track. Set the tempo near 124 BPM, turn on the metronome, and turn
+on count-in. If 124 feels slightly off for your hands, use 122 or 126 while
+practicing, then return to 124 later.
+
+Use this track list:
+
+| Track | GarageBand sound | MPK job |
+|---|---|---|
+| 1 Drums | Electronic Drum Kit or Drum Machine Designer kit | Pads 1-4 play kick, clap/snare, hat, open hat. |
+| 2 Bass | Synth Bass patch | Lower keys play root, fifth, octave. |
+| 3 Chords | Classic Synth, Analog Pad, or Bright Pad | Middle keys play minor/major chord stabs. |
+| 4 Hook | Lead Synth, Classic Synth Lead, or a bright mono synth | Upper keys play the memorable answer phrase. |
+| 5 Sweep FX | Any synth patch with Smart Controls visible | Knobs or mouse record filter/reverb movement. |
+
+GarageBand on Mac does not work like Ableton Session View. Think in passes:
+record a two-bar or four-bar region, loop it, add the next track, and keep
+going. The viewer still experiences it as live looping if you film each pass
+cleanly.
+
+## MPK Mini IV Setup
+
+Connect the MPK mini IV directly to the Mac over USB-C. Open Audio MIDI Setup
+and confirm the device appears. In GarageBand, select a Software Instrument
+track and play a few keys. If you hear the selected patch, the MPK is working.
+
+Use one stable control map:
+
+| MPK control | Use in this study |
+|---|---|
+| Pad 1 | Kick on beats 1, 2, 3, 4 for four-on-the-floor. |
+| Pad 2 | Clap/snare on beats 2 and 4. |
+| Pad 3 | Closed hat on offbeats or eighth notes. |
+| Pad 4 | Open hat before section changes. |
+| Pad 5 | Crash or section accent. |
+| Pad 6 | Short vocal-style stab or synth hit. |
+| Pad 7 | Riser/noise hit if you add one. |
+| Pad 8 | Stop/accent ending. |
+| Keys low octave | Bass line. |
+| Keys middle octave | Chords. |
+| Keys high octave | Hook or lead answer. |
+| Knobs | Smart Controls: filter, resonance, reverb, delay, or track volume. |
+
+If GarageBand does not let a knob control the exact parameter you want, do not
+stall. Use GarageBand Smart Controls with the mouse for the first pass, then
+graduate to Logic Pro when you want deeper MIDI Learn. The musical study matters
+more than proving every knob map on day one.
+
+## A Beginner Arrangement
+
+Use a four-section build over 32 bars:
+
+| Bars | What the viewer sees | What you record |
+|---|---|---|
+| 1-4 | MPK keys alone | Hook idea or chord pulse, very sparse. |
+| 5-8 | Pads begin lighting | Kick, clap, and hat. |
+| 9-16 | Hands move to lower keys | Synth bass locks to the kick. |
+| 17-24 | Chords widen the sound | Pad/chord stabs under the hook. |
+| 25-32 | Full performance | Lead hook, drum fill, open filter, ending accent. |
+
+For the bass, begin with a root-fifth-octave shape. For the chords, use simple
+minor and major triads. If you already know the original progression, use it as
+a guide. If not, find a minor root that feels stable and build a practice loop
+around that; the point is controller fluency.
+
+## Recording Order in GarageBand
+
+Record in this order:
+
+1. Drums first. Make a two-bar region with kick, clap, and hats. Quantize only
+   enough to make the groove reliable.
+2. Bass second. Use short notes. The bass should agree with the kick more than
+   it should show off.
+3. Chords third. Leave room for the hook; wide pads can become blurry fast.
+4. Hook fourth. Play the smallest phrase that makes the song recognizable.
+5. Effects last. Open a filter or lift reverb only at transitions.
+
+After each pass, listen once before adding the next part. If a new layer makes
+the groove worse, mute it and fix the previous layer instead of stacking more
+sounds.
+
+## Video Capture Plan
+
+The reference video teaches through repetition: top-down hands, pads lighting,
+keys moving, then a wider desk angle near the end. Recreate that language with
+your own camera:
+
+| Shot | Use it for |
+|---|---|
+| Top-down MPK | Main proof that pads, keys, and wheels are performing the track. |
+| GarageBand screen | One short insert showing the five named tracks and loop regions. |
+| Angled desk shot | Final full-loop performance when the arrangement is complete. |
+| Close-up on pads | Drum entrance and ending accent. |
+| Close-up on keys | Bass and hook entrances. |
+
+Do not use the camera microphone for the final sound. Export the GarageBand mix
+and sync that audio to the video edit. A visible pad hit, key press, or count-in
+click gives you a sync anchor.
+
+## GarageBand Limits and Upgrade Path
+
+GarageBand is enough for this practice cover, but it is not a perfect live-loop
+substitute for Ableton Live. Its strength is simple recording and editing. Its
+weakness is hands-on clip launching and deep MIDI mapping. When this study
+starts to feel constrained, move the same project idea to Logic Pro Live Loops
+or Ableton Live.
+
+The successful GarageBand version is simple: five tracks, two or four bars per
+region, a visible MPK performance, and a clear build from thin to full. Finish
+that before chasing exact synth presets.
+
+# Case Study: Don't Cry Tonight John E.S Remix in GarageBand
+
+Reference: Savage & John.E.S - Don t cry tonight (The official remix)  
+<https://www.youtube.com/watch?v=zuHLHvZv4Ac>
+
+This reference is a full remix study rather than a controller live-loop demo.
+It is useful because it teaches a different skill: how to make an 1980s
+Italo-disco song feel modern while preserving the vocal drama, wide synths, and
+steady dance pulse.
+
+The video is built from performance and montage footage: stage lights, singer
+close-ups, keyboard shots, dancers, live-band inserts, and a graphic outro.
+Your GarageBand version should not try to recreate the exact video. Recreate
+the music language first, then film your own MPK performance as proof that you
+built the layers.
+
+To make the controls more concrete, borrow performance language from
+MPK-centric cover videos. An Akai MPK/GarageBand cover of "Song for Denise"
+shows the simplest version: small controller, GarageBand, phone camera, and a
+clear melody performance. MPK synthwave and 1980s cover videos such as
+"Nightcall," "Take On Me," "Don't You (Forget About Me)," and "Blinding Lights"
+show the controller role more clearly: pads for drums or section cues, keys for
+bass and hook, and visible hands to prove the arrangement is playable.
+
+Use those MPK videos for control behavior. Use the John E.S video for song
+shape, mood, and edit pacing.
+
+| Reference ingredient | GarageBand/MPK translation |
+|---|---|
+| Long official remix arrangement | Short 64-bar practice edit. |
+| 1980s vocal focus | Use a lead-vocal guide track, sung phrase, or legal vocal stand-in. |
+| Four-on-the-floor pulse | MPK pads record kick, snare/clap, hat, and open hat. |
+| Italo bass movement | MPK lower keys play octave bass and passing notes. |
+| Wide synth atmosphere | GarageBand pads, strings, or classic synth chords. |
+| Stage montage | Your edit cuts between MPK, GarageBand regions, and performance shots. |
+
+## Project Setup
+
+Create a new GarageBand project and set the tempo around 116-122 BPM. The exact
+tempo is less important than the feel: steady, mid-tempo dance music with a
+romantic synth-pop mood. Turn on metronome and count-in while recording.
+
+Use this track list:
+
+| Track | GarageBand sound | MPK job |
+|---|---|---|
+| 1 Kick | Electronic drum kit | Pad 1 plays four-on-the-floor. |
+| 2 Snare/Clap | Electronic drum kit or separate kit track | Pad 2 plays backbeat. |
+| 3 Hats | Electronic drum kit | Pads 3 and 4 play closed/open hats. |
+| 4 Italo Bass | Synth Bass | Lower keys play octave bass. |
+| 5 Chords | Classic Synth, Analog Pad, or Synth Strings | Middle keys hold emotional chords. |
+| 6 Lead Hook | Bright synth lead or bell synth | Upper keys play a short answer melody. |
+| 7 Vocal Guide | Audio track | Record your own guide phrase or use cleared material. |
+| 8 FX | Riser, sweep, reverb, delay | Knobs or Smart Controls shape transitions. |
+
+If you do not have a cleared vocal, hum or sing a placeholder phrase. Do not
+build your practice workflow around unauthorized vocal extraction. The lesson is
+arrangement and production, not copying a master recording.
+
+## MPK Mini IV Map
+
+Use the MPK as a compact Italo-disco band:
+
+| Control | Job | GarageBand target |
+|---|---|---|
+| Pad A1 | Kick on every beat. | Kick track or drum-kit kick. |
+| Pad A2 | Snare or clap on beats 2 and 4. | Snare/clap track. |
+| Pad A3 | Closed hat eighth notes. | Hat track. |
+| Pad A4 | Open hat before section changes. | Hat track. |
+| Pad A5 | Crash at chorus entry. | FX or drum-kit crash. |
+| Pad A6 | Toms or gated fill. | Drum fill region. |
+| Pad A7 | Noise sweep or riser. | FX track. |
+| Pad A8 | Ending hit or muted stop. | FX/stop accent. |
+| Pad B1 | Chorus launch marker. | Visual cue, duplicated chorus region. |
+| Pad B2 | Break marker. | Visual cue, muted kick section. |
+| Pad B3 | Delay throw cue. | FX automation pass. |
+| Pad B4 | Final tag cue. | Ending region. |
+| Lower keys | Octave bass line. | Italo Bass track. |
+| Middle keys | Minor/major chord pads. | Chords track. |
+| Upper keys | Lead answer phrase. | Lead Hook track. |
+| Pitch wheel | Occasional lead bend only. | Lead Hook expression. |
+| Mod wheel | Brightness/vibrato on lead or pad. | Smart Control/tone if available. |
+| Knobs | Filter, tone, reverb, delay, level. | Smart Controls or mouse-recorded automation. |
+
+The bass is the center of the style. Start with a root-octave pattern and add
+passing notes only when the kick and clap already feel solid.
+
+## Better Controls From the MPK References
+
+The most useful lesson from MPK-centric videos is that the controller should
+look organized. Do not make the viewer guess what your hands are doing. Split
+the MPK into zones:
+
+| Zone | Controls | What the viewer understands |
+|---|---|---|
+| Drum zone | Pads A1-A4 | The beat is being played by hand. |
+| Section zone | Pads A5-A8 or Bank B pads | Crashes, risers, breaks, and ending hits mark the arrangement. |
+| Bass zone | Lower keys | The dance engine is being performed, not just pasted in. |
+| Hook zone | Upper keys | The recognizable melody or answer phrase is playable. |
+| Color zone | Wheels and knobs | Filter, reverb, delay, and brightness create the remix lift. |
+
+GarageBand cannot launch clips like Ableton, so use pads as recordable musical
+events and visible section cues. The actual section changes happen in the
+GarageBand timeline. When you film, cut to the pad at the same moment the
+region or automation change happens.
+
+Use this knob plan even if you record some moves with the mouse:
+
+| Knob | Target | Move |
+|---|---|---|
+| K1 | Bass level | Fade bass in during bars 9-16. |
+| K2 | Pad filter cutoff | Open slowly through bars 25-32. |
+| K3 | Pad or vocal reverb | Lift only at phrase endings. |
+| K4 | Delay send | Throw the last word or lead note into the break. |
+| K5 | Lead brightness | Push the hook forward in the chorus. |
+| K6 | FX/riser level | Bring up before bar 33. |
+| K7 | Drum bus level | Pull down during the break, return for final chorus. |
+| K8 | Master mood macro | Later, map in Logic; in GarageBand treat this as a reminder. |
+
+## A 64-Bar Practice Arrangement
+
+Official remixes are long. Your learning version should be short enough to
+finish:
+
+| Bars | Section | What to build |
+|---|---|---|
+| 1-8 | Intro | Kick, hat, filtered pad, tiny lead hint. |
+| 9-16 | Groove | Bass enters with clap/snare. |
+| 17-24 | Verse feel | Vocal guide or lead phrase enters, drums stay restrained. |
+| 25-32 | Pre-chorus | Open filter, add pad width, small snare fill. |
+| 33-48 | Chorus | Full kick/clap/hats, bass, chords, lead answer, reverb lift. |
+| 49-56 | Break | Remove kick, leave pad and vocal/lead. |
+| 57-64 | Final chorus/tag | Full groove returns; end with delay throw or stop hit. |
+
+This is the point where GarageBand is friendly: each section can be a row of
+regions in the timeline. Duplicate regions, mute what does not belong, then add
+one new performance layer at a time.
+
+## Drum Feel
+
+Record drums in separate passes:
+
+1. Kick on every beat.
+2. Clap or snare on beats 2 and 4.
+3. Closed hat eighth notes.
+4. Open hat at the end of every second or fourth bar.
+5. A tom, crash, or riser before the chorus.
+
+Quantize the kick and clap fairly tightly. Leave hats slightly lighter in
+velocity so they do not scrape across the whole mix. If the groove feels flat,
+change hat velocity before changing the whole pattern.
+
+## Bass and Harmony
+
+For an Italo-style bass line, use one octave and a few strong notes:
+
+| Beat | Bass move |
+|---|---|
+| 1 | Root note. |
+| 1 and | Octave or repeated root. |
+| 2 | Fifth or root. |
+| 3 | Root or octave. |
+| 4 and | Passing note into the next bar. |
+
+Chords should be emotional but not busy. Use long pad chords in the intro and
+break. Use shorter stabs or sidechain-like volume movement in the chorus if the
+pad crowds the vocal.
+
+## Vocal or Lead Stand-In
+
+The reference is vocal-centered, so your practice version needs something in
+the vocal role. Use one of these:
+
+| Option | Use when |
+|---|---|
+| Sing your own phrase | Best for learning arrangement legally. |
+| Play a lead synth phrase | Good if you do not want to sing yet. |
+| Use a licensed vocal loop | Good for a polished practice demo. |
+| Use the original vocal privately only | Acceptable for personal study; do not publish it without rights. |
+
+Keep the vocal or lead phrase dry enough to understand. Add reverb throws only
+at line endings.
+
+## Mix Shape
+
+Bring the mix up in this order:
+
+1. Vocal or lead guide.
+2. Kick.
+3. Bass.
+4. Clap/snare.
+5. Hats.
+6. Chords and pads.
+7. Lead answer.
+8. Reverb, delay, risers, and outro effects.
+
+For this style, the kick and bass can be strong, but the vocal mood must stay
+in front. High-pass pads and leads so they do not cloud the bass. Use delay as
+a phrase-ending event, not as a permanent wash.
+
+## Video Plan
+
+Use the reference video's visual grammar without copying its footage:
+
+| Shot | Use it for |
+|---|---|
+| Red/blue light or simple backdrop | Intro atmosphere. |
+| MPK top-down | Drum and bass programming evidence. |
+| GarageBand screen | Section layout and named tracks. |
+| Keyboard close-up | Lead hook or pad chords. |
+| Vocal/performance shot | Verse and chorus focus. |
+| Wide desk shot | Final chorus with all layers active. |
+| Text/graphic outro | Title card, credits, or project name. |
+
+Export the GarageBand audio first. Then cut the video to the rendered mix so
+the visuals follow the groove. A visible Pad 1 kick hit at bar 33 is a clean
+sync point for the chorus.
+
+## Reference Stack for This Study
+
+Use these references together:
+
+| Reference | What to borrow |
+|---|---|
+| John E.S official remix video | Mood, stage montage, vocal focus, long remix energy. |
+| MPK/GarageBand "Song for Denise" cover | Minimal desk setup: MPK, GarageBand, phone camera. |
+| MPK synthwave "Nightcall" style cover | Retro bass, dark pad mood, visible loop performance. |
+| MPK "Take On Me" and "Don't You" covers | 1980s lead-hook confidence on mini keys. |
+| MPK "Blinding Lights" covers | Modern 1980s-style drums, bass, and live-loop energy. |
+
+The finished exercise is your own short, playable remix study. It should feel
+informed by the John E.S track, but the MPK footage should teach how your hands
+control the groove.
+
 # Troubleshooting
 
 | Symptom | Likely fix |
@@ -1108,6 +1822,13 @@ Primary reference videos:
 - <https://www.youtube.com/watch?v=EGmXAu8geVg>
 - <https://www.youtube.com/watch?v=CAyWN9ba9J8>
 - <https://www.youtube.com/watch?v=hVJtPuuQK_s>
+- <https://www.youtube.com/watch?v=wK1V8v1UPZo>
+- <https://www.youtube.com/watch?v=zuHLHvZv4Ac>
+- <https://m.youtube.com/watch?v=64XFe3BpOGY>
+- <https://www.youtube.com/watch?v=TvhlfWXRQzk>
+- <https://www.youtube.com/watch?v=K3yjSSj1w7w>
+- <https://www.youtube.com/watch?v=4-IxomkVi-g>
+- <https://www.youtube.com/watch?v=TQWX7uOTFN8>
 
 Akai references used for setup and controller behavior:
 
@@ -1117,8 +1838,18 @@ Akai references used for setup and controller behavior:
 
 Hardware and DAW references used for the expanded setup:
 
+- Ableton Live MIDI settings: <https://help.ableton.com/hc/en-us/articles/209774205-Live-s-MIDI-Settings>
+- Ableton Live MIDI and key remote control: <https://www.ableton.com/en/manual/midi-and-key-remote-control/>
+- Ableton Live audio clips, tempo, and warping: <https://www.ableton.com/en/manual/audio-clips-tempo-and-warping/>
+- Ableton Live Session View: <https://www.ableton.com/en/manual/session-view/>
+- Ableton Live Arrangement View: <https://www.ableton.com/en/manual/arrangement-view/>
+- Ableton Live video: <https://www.ableton.com/en/live-manual/12/working-with-video/>
 - Apple Audio MIDI Setup for Mac: <https://support.apple.com/guide/audio-midi-setup/set-up-audio-devices-ams59f301fda/mac>
 - Apple MIDI Studio setup for Mac: <https://support.apple.com/guide/audio-midi-setup/set-up-midi-devices-ams875bae1e0/mac>
+- Apple GarageBand for Mac: Software Instruments: <https://education.apple.com/learning-center/T024638A-en_US>
+- Apple GarageBand for Mac: <https://www.apple.com/mac/garageband/>
+- Akai MPK mini IV product page: <https://www.akaipro.com/mpk-mini-4/>
+- Akai MPK mini IV user guide: <https://cdn.inmusicbrands.com/akai/mpk-mini-4/MPK%20mini%20IV%20-%20User%20Guide%20-%20v1.1.pdf>
 - MOTU M4 product page: <https://motu.com/products/m-series/m4>
 - MOTU M4 specifications: <https://motu.com/en-us/products/m-series/m4/specs/>
 - Golden Age Audio Pre-73 MKIII: <https://goldenageaudio.com/outboard-hardware/preamps/pre-73-mk-iii/>
@@ -1130,6 +1861,10 @@ Hardware and DAW references used for the expanded setup:
 
 Search terms for deeper study:
 
+- Ableton Live MPK mini Track Remote
+- Ableton Live Session View clip launch
+- Ableton Live Arrangement View video
+- Ableton Live MIDI Map Mode
 - GarageBand MIDI controller setup
 - FL Studio MIDI settings MPK mini
 - FL Studio audio recording MOTU M4

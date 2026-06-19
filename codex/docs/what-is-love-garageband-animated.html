@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What Is Love GarageBand Loop Tutorial</title>
+  <style>
+    :root {
+      --ink: #18202a;
+      --muted: #5e6875;
+      --paper: #f7f4ed;
+      --panel: #ffffff;
+      --line: #d7d0c2;
+      --teal: #246a73;
+      --green: #2a9d8f;
+      --gold: #e9c46a;
+      --coral: #e76f51;
+      --blue: #3d5a80;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font: 16px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 28px 18px 40px;
+    }
+    h1 {
+      margin: 0 0 6px;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.05;
+    }
+    .subtitle {
+      margin: 0 0 20px;
+      max-width: 820px;
+      color: var(--muted);
+    }
+    .stage {
+      display: grid;
+      grid-template-columns: minmax(320px, 1.2fr) minmax(300px, 0.8fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+    .surface, .side {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .mpk {
+      position: relative;
+      min-height: 420px;
+      border-radius: 8px;
+      background: #20252d;
+      padding: 22px;
+      box-shadow: inset 0 0 0 2px #10141a;
+      overflow: hidden;
+    }
+    .brand {
+      color: #d9e0e7;
+      font-weight: 700;
+      letter-spacing: 0;
+      margin-bottom: 14px;
+    }
+    .controls {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .knob {
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: radial-gradient(circle at 40% 35%, #697482, #252c35 58%, #0d1117);
+      border: 2px solid #0e1218;
+      position: relative;
+    }
+    .knob::after {
+      content: "";
+      position: absolute;
+      width: 3px;
+      height: 38%;
+      left: 50%;
+      top: 12%;
+      transform: translateX(-50%) rotate(var(--turn, -25deg));
+      transform-origin: 50% 100%;
+      background: #e9c46a;
+      border-radius: 2px;
+    }
+    .pads {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 9px;
+      margin-bottom: 24px;
+    }
+    .pad {
+      aspect-ratio: 1;
+      border: 2px solid #65707a;
+      border-radius: 6px;
+      color: #dce7ec;
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      background: #151a21;
+      transition: background .18s, border-color .18s, box-shadow .18s;
+    }
+    .pad.active {
+      background: var(--green);
+      border-color: #bff6eb;
+      box-shadow: 0 0 20px rgba(42, 157, 143, .8);
+      color: #061311;
+    }
+    .keys {
+      position: relative;
+      height: 155px;
+      display: grid;
+      grid-template-columns: repeat(15, 1fr);
+      gap: 3px;
+      align-items: stretch;
+    }
+    .key {
+      background: #f7f7f2;
+      border-radius: 0 0 5px 5px;
+      border: 1px solid #cfd3d6;
+      position: relative;
+      transition: background .18s, transform .18s;
+    }
+    .key.black::before {
+      content: "";
+      position: absolute;
+      width: 60%;
+      height: 58%;
+      left: 70%;
+      top: 0;
+      z-index: 2;
+      border-radius: 0 0 4px 4px;
+      background: #10141a;
+    }
+    .key.active { background: var(--gold); transform: translateY(4px); }
+    .timeline {
+      display: grid;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .track {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 8px;
+      align-items: center;
+    }
+    .label { font-weight: 700; color: var(--muted); }
+    .lane {
+      height: 24px;
+      border-radius: 4px;
+      background: #ece7db;
+      overflow: hidden;
+      position: relative;
+    }
+    .region {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: var(--x);
+      width: var(--w);
+      border-radius: 4px;
+      background: var(--c);
+      opacity: .25;
+      transition: opacity .2s;
+    }
+    .region.on { opacity: 1; }
+    .playhead {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: var(--play, 0%);
+      width: 3px;
+      background: #111;
+    }
+    .side h2 {
+      margin: 0 0 8px;
+      font-size: 22px;
+    }
+    .step-text { min-height: 118px; color: var(--muted); }
+    .controls-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+    button {
+      border: 0;
+      border-radius: 6px;
+      padding: 10px 14px;
+      font-weight: 700;
+      color: white;
+      background: var(--teal);
+      cursor: pointer;
+    }
+    button.secondary {
+      color: var(--ink);
+      background: var(--gold);
+    }
+    .steps {
+      display: grid;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .step {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 8px;
+      align-items: center;
+      padding: 8px;
+      border-radius: 6px;
+      background: #f2eee5;
+      color: var(--muted);
+    }
+    .step.current {
+      background: #dff3ef;
+      color: var(--ink);
+      font-weight: 700;
+    }
+    .num {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--blue);
+      color: white;
+      font-size: 13px;
+    }
+    @media (max-width: 840px) {
+      .stage { grid-template-columns: 1fr; }
+      .mpk { min-height: 360px; padding: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>What Is Love GarageBand Loop Tutorial</h1>
+    <p class="subtitle">An animated MPK mini IV and GarageBand map for rebuilding the live-loop cover workflow as five recordable layers: drums, bass, chords, hook, and FX.</p>
+    <section class="stage">
+      <div class="surface">
+        <div class="mpk" aria-label="Animated MPK mini IV controller">
+          <div class="brand">AKAI MPK mini IV</div>
+          <div class="controls" id="knobs"></div>
+          <div class="pads" id="pads"></div>
+          <div class="keys" id="keys"></div>
+        </div>
+        <div class="timeline" id="timeline"></div>
+      </div>
+      <aside class="side">
+        <h2 id="title">Setup</h2>
+        <div class="step-text" id="body"></div>
+        <div class="controls-row">
+          <button id="prev" type="button">Back</button>
+          <button id="next" type="button">Next</button>
+          <button class="secondary" id="play" type="button">Play</button>
+        </div>
+        <div class="steps" id="steps"></div>
+      </aside>
+    </section>
+  </main>
+  <script>
+    const steps = [
+      {
+        title: "Setup",
+        text: "Connect the MPK directly, create an Empty Project in GarageBand, add a Software Instrument track, set tempo near 124 BPM, then turn on metronome and count-in.",
+        pads: [], keys: [], knobs: [], regions: []
+      },
+      {
+        title: "Drums",
+        text: "Select an electronic drum kit. Record pads 1, 2, and 3 as kick, clap, and closed hat. Keep it to two bars before adding fills.",
+        pads: [1,2,3], keys: [], knobs: [], regions: ["Drums"]
+      },
+      {
+        title: "Bass",
+        text: "Select a synth bass patch. Use the lower keys for root, fifth, and octave. The bass should lock to the kick, not compete with the hook.",
+        pads: [1], keys: [1,5,8], knobs: [1], regions: ["Drums","Bass"]
+      },
+      {
+        title: "Chords",
+        text: "Select a classic synth or pad. Record short stabs or long minor-key chords. Keep the track volume lower than you expect.",
+        pads: [], keys: [5,8,12], knobs: [3], regions: ["Drums","Bass","Chords"]
+      },
+      {
+        title: "Hook",
+        text: "Select a bright lead synth and play the recognizable answer phrase in the upper octave. Use a tiny phrase and repeat it confidently.",
+        pads: [5], keys: [9,11,13,14], knobs: [4], regions: ["Drums","Bass","Chords","Hook"]
+      },
+      {
+        title: "FX and Export",
+        text: "Use Smart Controls for one filter opening, reverb lift, or delay throw. Export the GarageBand mix, then sync it to the top-down MPK video.",
+        pads: [5,7,8], keys: [9,11,13,14], knobs: [2,3,4], regions: ["Drums","Bass","Chords","Hook","FX"]
+      }
+    ];
+
+    const tracks = [
+      ["Drums", "#246a73", 8, 84],
+      ["Bass", "#2a9d8f", 28, 64],
+      ["Chords", "#e9c46a", 48, 44],
+      ["Hook", "#e76f51", 68, 24],
+      ["FX", "#3d5a80", 76, 16]
+    ];
+
+    let index = 0;
+    let playing = false;
+    let timer = null;
+
+    function build() {
+      const pads = document.getElementById("pads");
+      const knobs = document.getElementById("knobs");
+      const keys = document.getElementById("keys");
+      const timeline = document.getElementById("timeline");
+      for (let i = 1; i <= 8; i++) {
+        const k = document.createElement("div");
+        k.className = "knob";
+        k.dataset.n = i;
+        knobs.appendChild(k);
+      }
+      for (let i = 1; i <= 8; i++) {
+        const p = document.createElement("div");
+        p.className = "pad";
+        p.textContent = i;
+        p.dataset.n = i;
+        pads.appendChild(p);
+      }
+      for (let i = 1; i <= 15; i++) {
+        const key = document.createElement("div");
+        key.className = "key" + ([1,2,4,5,6,8,9,11,12,13].includes(i) ? " black" : "");
+        key.dataset.n = i;
+        keys.appendChild(key);
+      }
+      tracks.forEach(([name, color, x, w]) => {
+        const row = document.createElement("div");
+        row.className = "track";
+        row.innerHTML = `<div class="label">${name}</div><div class="lane"><div class="region" data-track="${name}" style="--x:${x}%;--w:${w}%;--c:${color}"></div><div class="playhead"></div></div>`;
+        timeline.appendChild(row);
+      });
+      const stepList = document.getElementById("steps");
+      steps.forEach((s, i) => {
+        const el = document.createElement("div");
+        el.className = "step";
+        el.dataset.i = i;
+        el.innerHTML = `<div class="num">${i + 1}</div><div>${s.title}</div>`;
+        el.addEventListener("click", () => setStep(i));
+        stepList.appendChild(el);
+      });
+    }
+
+    function setStep(next) {
+      index = (next + steps.length) % steps.length;
+      const s = steps[index];
+      document.getElementById("title").textContent = s.title;
+      document.getElementById("body").textContent = s.text;
+      document.querySelectorAll(".pad").forEach(el => el.classList.toggle("active", s.pads.includes(Number(el.dataset.n))));
+      document.querySelectorAll(".key").forEach(el => el.classList.toggle("active", s.keys.includes(Number(el.dataset.n))));
+      document.querySelectorAll(".knob").forEach(el => {
+        const active = s.knobs.includes(Number(el.dataset.n));
+        el.style.setProperty("--turn", active ? "35deg" : "-25deg");
+      });
+      document.querySelectorAll(".region").forEach(el => el.classList.toggle("on", s.regions.includes(el.dataset.track)));
+      document.querySelectorAll(".step").forEach(el => el.classList.toggle("current", Number(el.dataset.i) === index));
+      document.querySelectorAll(".playhead").forEach(el => el.style.setProperty("--play", `${Math.min(92, index * 16)}%`));
+    }
+
+    function togglePlay() {
+      playing = !playing;
+      document.getElementById("play").textContent = playing ? "Pause" : "Play";
+      if (playing) {
+        timer = setInterval(() => setStep(index + 1), 1800);
+      } else {
+        clearInterval(timer);
+      }
+    }
+
+    build();
+    setStep(0);
+    document.getElementById("prev").addEventListener("click", () => setStep(index - 1));
+    document.getElementById("next").addEventListener("click", () => setStep(index + 1));
+    document.getElementById("play").addEventListener("click", togglePlay);
+  </script>
+</body>
+</html>

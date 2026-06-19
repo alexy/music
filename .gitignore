@@ -5,6 +5,7 @@ claude/__pycache__/
 
 # Codex book derivatives
 codex/docs/book/build/
+codex/references/
 codex/docs/book/dist/*.pdf
 codex/docs/book/dist/*.epub
 codex/docs/book/dist/*.mobi

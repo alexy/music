@@ -91,8 +91,19 @@ fi
 
 "$ebook_convert" "$stable_epub" "$stable_mobi"
 
-cp "$stable_pdf" "$versioned_pdf"
-cp "$stable_epub" "$versioned_epub"
-cp "$stable_mobi" "$versioned_mobi"
+copy_artifact() {
+  local src="$1"
+  local dst="$2"
+
+  if [[ "$src" -ef "$dst" ]]; then
+    return 0
+  fi
+
+  cp "$src" "$dst"
+}
+
+copy_artifact "$stable_pdf" "$versioned_pdf"
+copy_artifact "$stable_epub" "$versioned_epub"
+copy_artifact "$stable_mobi" "$versioned_mobi"
 
 printf 'Built %s, %s, and %s\n' "$versioned_pdf" "$versioned_epub" "$versioned_mobi"

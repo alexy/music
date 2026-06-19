@@ -10,6 +10,7 @@ This folder mirrors the Pandoc/Typst publishing shape used by
 - Metadata: `docs/book/metadata.yaml`
 - Build script: `docs/book/build.sh`
 - EPUB stylesheet: `docs/book/epub.css`
+- Changelog: `CHANGELOG.md`
 - Final artifacts: `docs/book/dist/`
 
 ## Build
@@ -37,6 +38,21 @@ The build script:
    - `docs/book/dist/kiffness-mpk-mini-manual (0.1.0).epub`
    - `docs/book/dist/kiffness-mpk-mini-manual (0.1.0).mobi`
 
+## Version Bumps
+
+When bumping `docs/book/VERSION`, update `CHANGELOG.md` in the same change.
+Keep entries retroactive when needed so the versioned artifacts in
+`docs/book/dist/` have matching release notes.
+
+Use this order:
+
+1. Update `CHANGELOG.md` with the new version, date, changes, and built
+   artifacts.
+2. Update `docs/book/VERSION`.
+3. Run `docs/book/build.sh`.
+4. Verify `docs/book/dist/VERSION.md` names the same version.
+5. Verify the versioned PDF, EPUB, and MOBI exist.
+
 ## Validation
 
 After building, inspect the generated PDF:
@@ -58,6 +74,7 @@ Expected:
   intended to be checked into Git.
 - Stable nonversioned PDF, EPUB, and MOBI files are local build products and
   are ignored by Git.
+- `CHANGELOG.md` has an entry for the version in `docs/book/VERSION`.
 
 ## Notes
 
