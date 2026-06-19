@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Don't Cry Tonight GarageBand Remix Tutorial</title>
+  <style>
+    :root {
+      --ink: #171b22;
+      --muted: #606a76;
+      --paper: #f5f1ea;
+      --panel: #fff;
+      --line: #d8d0c2;
+      --red: #c44536;
+      --cyan: #2a9d8f;
+      --blue: #3d5a80;
+      --gold: #e9c46a;
+      --violet: #6d597a;
+      --dark: #20242d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font: 16px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: radial-gradient(circle at 20% 0%, #f4d8d0 0, var(--paper) 34%, #e9edf2 100%);
+    }
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 28px 18px 40px;
+    }
+    h1 {
+      margin: 0 0 6px;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.05;
+    }
+    .subtitle {
+      max-width: 850px;
+      margin: 0 0 20px;
+      color: var(--muted);
+    }
+    .stage {
+      display: grid;
+      grid-template-columns: minmax(330px, 1.15fr) minmax(300px, .85fr);
+      gap: 18px;
+    }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .visual {
+      display: grid;
+      gap: 16px;
+    }
+    .scene {
+      min-height: 245px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #141820, #293241 55%, #641e2b);
+      position: relative;
+      overflow: hidden;
+      color: white;
+      padding: 18px;
+    }
+    .light {
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      filter: blur(16px);
+      opacity: .75;
+    }
+    .light.red { background: #f25f5c; right: -30px; top: -30px; }
+    .light.blue { background: #4cc9f0; left: -35px; bottom: -50px; }
+    .scene-title {
+      position: relative;
+      z-index: 1;
+      font-weight: 800;
+      font-size: 24px;
+    }
+    .meters {
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      bottom: 18px;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 8px;
+      align-items: end;
+      height: 110px;
+    }
+    .bar {
+      min-height: 12px;
+      height: var(--h);
+      background: var(--c);
+      border-radius: 4px 4px 0 0;
+      opacity: .25;
+      transition: opacity .2s, height .2s;
+    }
+    .bar.on { opacity: 1; }
+    .mpk {
+      background: var(--dark);
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: inset 0 0 0 2px #10131a;
+    }
+    .brand {
+      color: #d9e0e7;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .pads {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .pad {
+      aspect-ratio: 1;
+      border-radius: 6px;
+      border: 2px solid #69717d;
+      display: grid;
+      place-items: center;
+      color: #e7eef6;
+      font-weight: 700;
+      background: #151922;
+    }
+    .pad.active {
+      background: var(--red);
+      border-color: #ffd0c8;
+      color: white;
+      box-shadow: 0 0 18px rgba(196, 69, 54, .8);
+    }
+    .keys {
+      display: grid;
+      grid-template-columns: repeat(16, 1fr);
+      gap: 3px;
+      height: 110px;
+    }
+    .key {
+      background: #f8f8f1;
+      border: 1px solid #ccd0d4;
+      border-radius: 0 0 5px 5px;
+      position: relative;
+    }
+    .key.black::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 65%;
+      width: 60%;
+      height: 58%;
+      border-radius: 0 0 4px 4px;
+      background: #10131a;
+      z-index: 2;
+    }
+    .key.active { background: var(--gold); transform: translateY(4px); }
+    .timeline {
+      display: grid;
+      gap: 8px;
+    }
+    .track {
+      display: grid;
+      grid-template-columns: 86px 1fr;
+      gap: 8px;
+      align-items: center;
+    }
+    .label {
+      font-weight: 700;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .lane {
+      position: relative;
+      height: 24px;
+      background: #eee8dc;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .region {
+      position: absolute;
+      inset: 0 auto 0 var(--x);
+      width: var(--w);
+      background: var(--c);
+      border-radius: 4px;
+      opacity: .22;
+      transition: opacity .2s;
+    }
+    .region.on { opacity: 1; }
+    .side h2 {
+      margin: 0 0 8px;
+      font-size: 22px;
+    }
+    .step-text {
+      min-height: 128px;
+      color: var(--muted);
+    }
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 14px 0;
+    }
+    button {
+      border: 0;
+      border-radius: 6px;
+      padding: 10px 14px;
+      background: var(--blue);
+      color: white;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    button.alt { background: var(--gold); color: var(--ink); }
+    .steps {
+      display: grid;
+      gap: 8px;
+    }
+    .step {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 8px;
+      align-items: center;
+      padding: 8px;
+      border-radius: 6px;
+      background: #f0ebe2;
+      color: var(--muted);
+    }
+    .step.current {
+      background: #f4ded8;
+      color: var(--ink);
+      font-weight: 700;
+    }
+    .num {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--red);
+      color: white;
+      font-size: 13px;
+    }
+    @media (max-width: 850px) {
+      .stage { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Don't Cry Tonight GarageBand Remix Tutorial</h1>
+    <p class="subtitle">An animated MPK mini IV map for building a short Italo-disco remix study in GarageBand: drums, octave bass, pads, lead or vocal guide, FX, and video montage. The John E.S video supplies the mood; MPK cover videos supply the control language.</p>
+    <section class="stage">
+      <div class="panel visual">
+        <div class="scene">
+          <div class="light red"></div>
+          <div class="light blue"></div>
+          <div class="scene-title" id="sceneTitle">Intro Mood</div>
+          <div class="meters" id="meters"></div>
+        </div>
+        <div class="mpk">
+          <div class="brand">AKAI MPK mini IV</div>
+          <div class="pads" id="pads"></div>
+          <div class="keys" id="keys"></div>
+        </div>
+        <div class="timeline" id="timeline"></div>
+      </div>
+      <aside class="panel side">
+        <h2 id="title">Project</h2>
+        <div class="step-text" id="body"></div>
+        <div class="buttons">
+          <button id="prev" type="button">Back</button>
+          <button id="next" type="button">Next</button>
+          <button class="alt" id="play" type="button">Play</button>
+        </div>
+        <div class="steps" id="steps"></div>
+      </aside>
+    </section>
+  </main>
+  <script>
+    const steps = [
+      { title: "Project", scene: "Intro Mood", text: "Set GarageBand around 116-122 BPM, create named tracks, and use a 64-bar practice layout. Keep the John E.S montage mood, but make your own MPK controls visible.", pads: [], keys: [], regions: [] },
+      { title: "Drum Zone", scene: "Four-on-the-floor", text: "Pads A1-A4 are the drum zone: kick, clap, closed hat, open hat. Film them close enough that the viewer understands the beat is hand-built.", pads: [1,2,3,4], keys: [], regions: ["Kick","Clap","Hats"] },
+      { title: "Bass Zone", scene: "Italo Bass", text: "Use lower keys for a root-octave bass line. This is the dance engine, so show your left hand clearly in the video.", pads: [1], keys: [2,6,9], regions: ["Kick","Clap","Hats","Bass"] },
+      { title: "Hook Zone", scene: "Wide Synth Pad", text: "Use middle keys for pads and upper keys for the hook. Borrow the confidence of 1980s MPK covers: the hook should be visually obvious.", pads: [], keys: [6,9,13], regions: ["Kick","Clap","Hats","Bass","Chords"] },
+      { title: "Section Cues", scene: "Vocal Focus", text: "Use pads A5-A8 or Bank B as section cues: crash, fill, riser, stop. GarageBand changes regions; the MPK gives the camera a readable moment.", pads: [5,6,7,8], keys: [10,12,14,15], regions: ["Kick","Clap","Hats","Bass","Chords","Lead"] },
+      { title: "FX and Video", scene: "Final Chorus", text: "Add one riser, one filter opening, and one delay throw. Film MPK, GarageBand, and performance shots, then sync to the exported mix.", pads: [5,7,8], keys: [10,12,14,15], regions: ["Kick","Clap","Hats","Bass","Chords","Lead","FX"] }
+    ];
+    const tracks = [
+      ["Kick", "#c44536", 0, 100],
+      ["Clap", "#e76f51", 13, 87],
+      ["Hats", "#e9c46a", 0, 100],
+      ["Bass", "#2a9d8f", 13, 87],
+      ["Chords", "#6d597a", 38, 62],
+      ["Lead", "#3d5a80", 26, 74],
+      ["FX", "#8ab17d", 38, 62]
+    ];
+    let index = 0;
+    let playing = false;
+    let timer = null;
+
+    function build() {
+      const pads = document.getElementById("pads");
+      const keys = document.getElementById("keys");
+      const meters = document.getElementById("meters");
+      const timeline = document.getElementById("timeline");
+      for (let i = 1; i <= 8; i++) {
+        const p = document.createElement("div");
+        p.className = "pad";
+        p.dataset.n = i;
+        p.textContent = i;
+        pads.appendChild(p);
+        const b = document.createElement("div");
+        b.className = "bar";
+        b.dataset.n = i;
+        b.style.setProperty("--h", `${18 + i * 9}px`);
+        b.style.setProperty("--c", i % 3 === 0 ? "#e9c46a" : i % 2 === 0 ? "#2a9d8f" : "#c44536");
+        meters.appendChild(b);
+      }
+      for (let i = 1; i <= 16; i++) {
+        const k = document.createElement("div");
+        k.className = "key" + ([1,2,4,5,7,8,10,11,13,14].includes(i) ? " black" : "");
+        k.dataset.n = i;
+        keys.appendChild(k);
+      }
+      tracks.forEach(([name, color, x, w]) => {
+        const row = document.createElement("div");
+        row.className = "track";
+        row.innerHTML = `<div class="label">${name}</div><div class="lane"><div class="region" data-track="${name}" style="--x:${x}%;--w:${w}%;--c:${color}"></div></div>`;
+        timeline.appendChild(row);
+      });
+      const stepList = document.getElementById("steps");
+      steps.forEach((s, i) => {
+        const el = document.createElement("div");
+        el.className = "step";
+        el.dataset.i = i;
+        el.innerHTML = `<div class="num">${i + 1}</div><div>${s.title}</div>`;
+        el.addEventListener("click", () => setStep(i));
+        stepList.appendChild(el);
+      });
+    }
+
+    function setStep(next) {
+      index = (next + steps.length) % steps.length;
+      const s = steps[index];
+      document.getElementById("title").textContent = s.title;
+      document.getElementById("sceneTitle").textContent = s.scene;
+      document.getElementById("body").textContent = s.text;
+      document.querySelectorAll(".pad").forEach(el => el.classList.toggle("active", s.pads.includes(Number(el.dataset.n))));
+      document.querySelectorAll(".key").forEach(el => el.classList.toggle("active", s.keys.includes(Number(el.dataset.n))));
+      document.querySelectorAll(".bar").forEach(el => el.classList.toggle("on", Number(el.dataset.n) <= Math.max(1, index + 2)));
+      document.querySelectorAll(".region").forEach(el => el.classList.toggle("on", s.regions.includes(el.dataset.track)));
+      document.querySelectorAll(".step").forEach(el => el.classList.toggle("current", Number(el.dataset.i) === index));
+    }
+
+    function togglePlay() {
+      playing = !playing;
+      document.getElementById("play").textContent = playing ? "Pause" : "Play";
+      if (playing) timer = setInterval(() => setStep(index + 1), 1900);
+      else clearInterval(timer);
+    }
+
+    build();
+    setStep(0);
+    document.getElementById("prev").addEventListener("click", () => setStep(index - 1));
+    document.getElementById("next").addEventListener("click", () => setStep(index + 1));
+    document.getElementById("play").addEventListener("click", togglePlay);
+  </script>
+</body>
+</html>
