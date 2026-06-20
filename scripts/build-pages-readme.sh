@@ -21,6 +21,12 @@ cp codex/docs/what-is-love-garageband-animated.html \
   docs/tutorials/what-is-love-garageband-animated.html
 cp codex/docs/dont-cry-tonight-garageband-animated.html \
   docs/tutorials/dont-cry-tonight-garageband-animated.html
+cp codex/docs/clint-eastwood-mpk-mini-animated.html \
+  docs/tutorials/clint-eastwood-mpk-mini-animated.html
+cp codex/docs/mpk-mini-mk3-garageband-loop-lab.html \
+  docs/tutorials/mpk-mini-mk3-garageband-loop-lab.html
+cp codex/docs/mpk-mini-mk3-ableton-loop-lab.html \
+  docs/tutorials/mpk-mini-mk3-ableton-loop-lab.html
 
 python3 - "$version" > "$tmpdir/pages-readme.md" <<'PY'
 from pathlib import Path
@@ -37,6 +43,9 @@ replacements = {
     f"codex/docs/book/dist/kiffness-mpk-mini-manual%20({version}).mobi": f"downloads/kiffness-mpk-mini-manual-{version}.mobi",
     "codex/docs/what-is-love-garageband-animated.html": "tutorials/what-is-love-garageband-animated.html",
     "codex/docs/dont-cry-tonight-garageband-animated.html": "tutorials/dont-cry-tonight-garageband-animated.html",
+    "codex/docs/clint-eastwood-mpk-mini-animated.html": "tutorials/clint-eastwood-mpk-mini-animated.html",
+    "codex/docs/mpk-mini-mk3-garageband-loop-lab.html": "tutorials/mpk-mini-mk3-garageband-loop-lab.html",
+    "codex/docs/mpk-mini-mk3-ableton-loop-lab.html": "tutorials/mpk-mini-mk3-ableton-loop-lab.html",
     "codex/docs/WhatIsLoveGarageBandFigures.md": "https://github.com/alexy/music/blob/master/codex/docs/WhatIsLoveGarageBandFigures.md",
     "codex/docs/DontCryTonightGarageBandFigures.md": "https://github.com/alexy/music/blob/master/codex/docs/DontCryTonightGarageBandFigures.md",
     "codex/CHANGELOG.md": "https://github.com/alexy/music/blob/master/codex/CHANGELOG.md",

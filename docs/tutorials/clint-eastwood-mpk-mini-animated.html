@@ -1,0 +1,637 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clint Eastwood MPK Mini Cover Tutorial</title>
+  <style>
+    :root {
+      --ink: #171b20;
+      --muted: #66717d;
+      --paper: #f4f1e8;
+      --panel: #fffdf8;
+      --line: #d6cfc0;
+      --red: #e23b32;
+      --teal: #197278;
+      --green: #2a9d8f;
+      --gold: #e9c46a;
+      --blue: #365b8c;
+      --violet: #6f5aa8;
+      --key: #f7f6f0;
+      --dark: #11161d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font: 16px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    main {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 24px 16px 38px;
+    }
+    h1 {
+      margin: 0 0 6px;
+      font-size: clamp(28px, 4vw, 46px);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+    .subtitle {
+      margin: 0 0 18px;
+      max-width: 920px;
+      color: var(--muted);
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(340px, 1.25fr) minmax(310px, .75fr);
+      gap: 16px;
+      align-items: start;
+    }
+    .surface, .side, .strip {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+    }
+    .surface { padding: 16px; }
+    .side { padding: 15px; }
+    .mpk {
+      position: relative;
+      overflow: hidden;
+      min-height: 430px;
+      padding: 18px;
+      border-radius: 8px;
+      background: #20252b;
+      box-shadow: inset 0 0 0 2px #0d1117;
+    }
+    .brand-row {
+      display: grid;
+      grid-template-columns: 130px 1fr 135px;
+      gap: 14px;
+      align-items: end;
+      margin-bottom: 12px;
+      color: #e7edf2;
+      font-weight: 750;
+    }
+    .red-knob {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, #ff6a61, var(--red) 56%, #8d1914);
+      box-shadow: 0 0 0 4px #161b22;
+    }
+    .screen {
+      justify-self: center;
+      width: 118px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 4px;
+      border: 2px solid #11161d;
+      background: #eaf6ff;
+      color: #213142;
+      font-size: 11px;
+      text-align: center;
+      line-height: 1.1;
+    }
+    .top {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      align-items: start;
+    }
+    .pads {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 9px;
+    }
+    .pad {
+      aspect-ratio: 1.05;
+      display: grid;
+      place-items: center;
+      border: 2px solid #3c4652;
+      border-radius: 6px;
+      background: #151a21;
+      color: #cbd5df;
+      font-size: 12px;
+      font-weight: 750;
+      transition: background .14s, box-shadow .14s, color .14s, transform .14s;
+    }
+    .pad.active {
+      color: #09110f;
+      background: var(--green);
+      box-shadow: 0 0 18px rgba(42, 157, 143, .8);
+      transform: translateY(2px);
+    }
+    .knobs {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 11px 12px;
+    }
+    .knob-wrap {
+      display: grid;
+      justify-items: center;
+      gap: 3px;
+      color: #d4dde5;
+      font-size: 11px;
+      font-weight: 650;
+    }
+    .knob {
+      width: min(58px, 100%);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      border: 2px solid #0b0f14;
+      background: radial-gradient(circle at 36% 30%, #68727e, #242b34 58%, #0c1016);
+      position: relative;
+    }
+    .knob::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 12%;
+      width: 3px;
+      height: 38%;
+      border-radius: 2px;
+      background: var(--gold);
+      transform: translateX(-50%) rotate(var(--turn, 0deg));
+      transform-origin: 50% 100%;
+    }
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 7px;
+      margin: 16px 0 8px;
+    }
+    .small-btn {
+      min-height: 30px;
+      border: 1px solid #3e4650;
+      border-radius: 4px;
+      display: grid;
+      place-items: center;
+      color: #d8e1e8;
+      background: #151a21;
+      font-size: 10px;
+      font-weight: 750;
+      text-align: center;
+      transition: background .14s, color .14s, transform .14s;
+    }
+    .small-btn.active {
+      color: white;
+      background: var(--red);
+      transform: translateY(1px);
+    }
+    .keys {
+      position: relative;
+      height: 158px;
+      display: grid;
+      grid-template-columns: repeat(25, 1fr);
+      gap: 2px;
+      align-items: stretch;
+    }
+    .key {
+      position: relative;
+      border: 1px solid #ccd2d8;
+      border-radius: 0 0 5px 5px;
+      background: var(--key);
+      transition: background .12s, transform .12s;
+    }
+    .key::after {
+      content: attr(data-note);
+      position: absolute;
+      left: 50%;
+      bottom: 5px;
+      transform: translateX(-50%);
+      color: #56616e;
+      font-size: 10px;
+      font-weight: 750;
+    }
+    .key.black::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 68%;
+      z-index: 2;
+      width: 64%;
+      height: 58%;
+      border-radius: 0 0 4px 4px;
+      background: #070a0e;
+    }
+    .key.black::after { display: none; }
+    .key.active {
+      background: var(--gold);
+      transform: translateY(4px);
+    }
+    .timeline {
+      display: grid;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .track {
+      display: grid;
+      grid-template-columns: 74px 1fr;
+      gap: 8px;
+      align-items: center;
+    }
+    .label {
+      color: var(--muted);
+      font-weight: 750;
+    }
+    .lane {
+      position: relative;
+      height: 24px;
+      overflow: hidden;
+      border-radius: 4px;
+      background: #e9e3d7;
+    }
+    .region {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: var(--x);
+      width: var(--w);
+      border-radius: 4px;
+      background: var(--c);
+      opacity: .26;
+      transition: opacity .16s;
+    }
+    .region.on { opacity: 1; }
+    .playhead {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: var(--play, 0%);
+      width: 3px;
+      background: #121820;
+    }
+    .side h2 {
+      margin: 0 0 8px;
+      font-size: 23px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 11px;
+    }
+    .pill {
+      padding: 5px 8px;
+      border-radius: 999px;
+      color: #27313c;
+      background: #ebe4d7;
+      font-size: 12px;
+      font-weight: 750;
+    }
+    .step-text {
+      min-height: 140px;
+      color: var(--muted);
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 12px;
+    }
+    button {
+      border: 0;
+      border-radius: 6px;
+      padding: 10px 13px;
+      color: white;
+      background: var(--teal);
+      font-weight: 750;
+      cursor: pointer;
+    }
+    button.secondary {
+      color: var(--ink);
+      background: var(--gold);
+    }
+    .steps {
+      display: grid;
+      gap: 7px;
+      margin-top: 13px;
+      max-height: 430px;
+      overflow: auto;
+      padding-right: 2px;
+    }
+    .step {
+      display: grid;
+      grid-template-columns: 38px 1fr;
+      gap: 8px;
+      align-items: center;
+      padding: 8px;
+      border-radius: 6px;
+      background: #f0eadf;
+      color: var(--muted);
+      cursor: pointer;
+    }
+    .step.current {
+      color: var(--ink);
+      background: #dff1ee;
+      font-weight: 750;
+    }
+    .num {
+      min-width: 34px;
+      height: 26px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: var(--blue);
+      font-size: 12px;
+      font-weight: 750;
+    }
+    .strip {
+      margin-top: 16px;
+      padding: 14px;
+    }
+    .strip h2 {
+      margin: 0 0 8px;
+      font-size: 20px;
+    }
+    .strip-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 11px;
+    }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 10px;
+      background: #fffaf0;
+    }
+    .card strong { display: block; margin-bottom: 4px; }
+    a { color: var(--teal); font-weight: 750; }
+    @media (max-width: 880px) {
+      .layout { grid-template-columns: 1fr; }
+      .brand-row { grid-template-columns: 70px 1fr 108px; }
+      .mpk { min-height: 390px; padding: 13px; }
+      .keys { height: 132px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Clint Eastwood MPK Mini Cover Tutorial</h1>
+    <p class="subtitle">A visual step sequencer for recreating Smith's Covers' 60-second Akai MPK Mini MK3 cover of "Gorillaz - Clint Eastwood": program setup, knobs, transport/buttons, pads, and exact key targets by phrase.</p>
+    <section class="layout">
+      <div class="surface">
+        <div class="mpk" aria-label="Animated Akai MPK Mini MK3 controller">
+          <div class="brand-row">
+            <div class="red-knob" aria-label="master encoder"></div>
+            <div>AKAI MPK mini MK3</div>
+            <div class="screen">Program 1<br>Clint Study</div>
+          </div>
+          <div class="top">
+            <div class="pads" id="pads"></div>
+            <div class="knobs" id="knobs"></div>
+          </div>
+          <div class="buttons" id="buttons"></div>
+          <div class="keys" id="keys"></div>
+        </div>
+        <div class="timeline" id="timeline"></div>
+      </div>
+      <aside class="side">
+        <h2 id="title">Setup</h2>
+        <div class="meta">
+          <span class="pill" id="time">0:00</span>
+          <span class="pill" id="sound">Init</span>
+          <span class="pill" id="tempo">92 BPM</span>
+        </div>
+        <div class="step-text" id="body"></div>
+        <div class="actions">
+          <button id="prev" type="button">Back</button>
+          <button id="next" type="button">Next</button>
+          <button class="secondary" id="play" type="button">Play Steps</button>
+          <button class="secondary" id="tap" type="button">Tap Current</button>
+        </div>
+        <div class="steps" id="steps"></div>
+      </aside>
+    </section>
+    <section class="strip" aria-label="performance setup notes">
+      <h2>Performance Setup</h2>
+      <div class="strip-grid">
+        <div class="card"><strong>Controller state</strong>Program 1, full-level off, arpeggiator off, note repeat off, sustain off. Leave the red encoder alone after loading the patch.</div>
+        <div class="card"><strong>Knob start</strong>K1 11 o'clock cutoff, K2 9 o'clock resonance, K3 noon attack, K4 1 o'clock release, K5 10 o'clock drive, K6 noon chorus, K7 11 o'clock delay, K8 9 o'clock reverb.</div>
+        <div class="card"><strong>Patch stack</strong>Use a melodica/organ lead on the keys, one low bass key, and eight pads mapped to kick, snare, hat, ghost hat, vocal stab, riser, delay hit, and stop/mute.</div>
+        <div class="card"><strong>Source</strong>Transcribed from the public Short <a href="https://www.youtube.com/shorts/d_VK75O173w">Gorillaz - Clint Eastwood (Akai MPK Mini MK3 Cover)</a>. This page does not embed the source audio or video.</div>
+      </div>
+    </section>
+  </main>
+  <script>
+    const keyNames = ["C2","C#2","D2","D#2","E2","F2","F#2","G2","G#2","A2","A#2","B2","C3","C#3","D3","D#3","E3","F3","F#3","G3","G#3","A3","A#3","B3","C4"];
+    const black = new Set(["C#2","D#2","F#2","G#2","A#2","C#3","D#3","F#3","G#3","A#3"]);
+    const buttons = ["OCT-","OCT+","FULL","NOTE","ARP","PROG"];
+    const tracks = [
+      ["Lead", "#365b8c", 0, 100],
+      ["Bass", "#197278", 8, 72],
+      ["Pads", "#2a9d8f", 22, 42],
+      ["FX", "#6f5aa8", 58, 24]
+    ];
+    const steps = [
+      {
+        title: "Setup",
+        time: "0:00",
+        sound: "Program",
+        text: "Load the lead/bass/pad program. Press PROG once, confirm Program 1, then leave octave at center. Knobs start at the positions shown below; the clip does not visibly ride the knobs during the take.",
+        keys: [], pads: [], buttons: ["PROG"], knobs: {1:-18,2:-54,3:0,4:26,5:-34,6:0,7:-20,8:-54}, regions: []
+      },
+      {
+        title: "Opening Hook A",
+        time: "0:01",
+        sound: "Melodica lead",
+        text: "Right hand plays the first hook cell: G#2, A#2, B2, A#2, then G#2. Keep the notes short and even, like a played sample rather than a legato keyboard line.",
+        keys: ["G#2","A#2","B2"], pads: [], buttons: [], knobs: {1:-18,2:-54,3:0,4:26,5:-34,6:0,7:-20,8:-54}, regions: ["Lead"]
+      },
+      {
+        title: "Opening Hook B",
+        time: "0:05",
+        sound: "Melodica lead",
+        text: "Answer the phrase down the keyboard: F#2, D#2, F#2, G#2. The visible hand stays in the left-middle octave; do not jump up yet.",
+        keys: ["D#2","F#2","G#2"], pads: [], buttons: [], knobs: {1:-18,2:-54,3:0,4:26,5:-34,6:0,7:-20,8:-54}, regions: ["Lead"]
+      },
+      {
+        title: "Low Anchor",
+        time: "0:09",
+        sound: "Bass key",
+        text: "Drop the left hand to D#2 as the anchor, then return to G#2. Treat D#2 as the low bass button even if your software patch splits bass and lead internally.",
+        keys: ["D#2","G#2"], pads: [], buttons: [], knobs: {1:-18,2:-54,3:0,4:26,5:-34,6:0,7:-20,8:-54}, regions: ["Lead","Bass"]
+      },
+      {
+        title: "Pad Entry",
+        time: "0:13",
+        sound: "Drum pads",
+        text: "Move both hands to the pads. Hit Pad 1 for kick on beat 1, Pad 2 for snare/clap on beat 3, and Pad 3 for closed hat between them. Keep Pad 4 ready for the ghost hat.",
+        keys: [], pads: [1,2,3,4], buttons: ["FULL"], knobs: {1:-18,2:-54,3:0,4:26,5:-34,6:0,7:-20,8:-54}, regions: ["Pads"]
+      },
+      {
+        title: "Pad Fill",
+        time: "0:17",
+        sound: "Fill pads",
+        text: "Play the fill as 1, 3, 2, 3, 4, then land on Pad 2. The hands in the clip stay over the top pad area here; keep the keys silent.",
+        keys: [], pads: [1,2,3,4], buttons: [], knobs: {1:-18,2:-54,3:0,4:26,5:-34,6:0,7:-20,8:-54}, regions: ["Pads"]
+      },
+      {
+        title: "Sample Hits",
+        time: "0:21",
+        sound: "Vocal/FX pads",
+        text: "Use Pad 5 for the short voice stab, Pad 6 for the rising hit, then Pad 7 as the delay throw. Let each pad breathe; the performance reads because the hits are separated.",
+        keys: [], pads: [5,6,7], buttons: [], knobs: {1:-18,2:-54,3:0,4:26,5:-34,6:0,7:-20,8:-54}, regions: ["Pads","FX"]
+      },
+      {
+        title: "Right-Hand Return",
+        time: "0:25",
+        sound: "Lead reset",
+        text: "Return to the keys with the right hand. Press G#2 twice, then B2 and A#2. This resets the listener back into the Clint Eastwood hook after the pad break.",
+        keys: ["G#2","A#2","B2"], pads: [], buttons: [], knobs: {1:-18,2:-54,3:0,4:26,5:-34,6:0,7:-20,8:-54}, regions: ["Lead","Bass"]
+      },
+      {
+        title: "Middle Hook",
+        time: "0:30",
+        sound: "Lead plus bass",
+        text: "Alternate low D#2 with the hook notes: D#2, G#2, A#2, B2, A#2, G#2. Keep the left hand low and the right hand around the printed G#2/B2 labels.",
+        keys: ["D#2","G#2","A#2","B2"], pads: [], buttons: [], knobs: {1:-18,2:-54,3:0,4:26,5:-34,6:0,7:-20,8:-54}, regions: ["Lead","Bass"]
+      },
+      {
+        title: "Low Walkdown",
+        time: "0:36",
+        sound: "Bass walk",
+        text: "Walk down through G#2, F#2, D#2, then touch C#2 as the turnaround. This is the lowest visible key movement before the final return.",
+        keys: ["C#2","D#2","F#2","G#2"], pads: [], buttons: [], knobs: {1:-18,2:-54,3:0,4:26,5:-34,6:0,7:-20,8:-54}, regions: ["Lead","Bass"]
+      },
+      {
+        title: "Final Hook",
+        time: "0:43",
+        sound: "Lead phrase",
+        text: "Play the hook cleanly again: G#2, A#2, B2, A#2, G#2, F#2, D#2. This is the take's final full statement, so keep the rhythm steady instead of adding extra notes.",
+        keys: ["D#2","F#2","G#2","A#2","B2"], pads: [], buttons: [], knobs: {1:-18,2:-54,3:0,4:26,5:-34,6:0,7:-20,8:-54}, regions: ["Lead","Bass"]
+      },
+      {
+        title: "Outro Stop",
+        time: "0:53",
+        sound: "Mute/stop",
+        text: "Finish with the low D#2 anchor, tap Pad 8 as the stop/mute pad if your program uses one, and release both hands so the last delay tail is audible.",
+        keys: ["D#2"], pads: [8], buttons: [], knobs: {1:-18,2:-54,3:0,4:26,5:-34,6:0,7:-20,8:-54}, regions: ["Lead","Bass","FX"]
+      }
+    ];
+    let index = 0;
+    let playing = false;
+    let timer = null;
+    let audioContext = null;
+
+    function build() {
+      const pads = document.getElementById("pads");
+      for (let i = 1; i <= 8; i++) {
+        const pad = document.createElement("div");
+        pad.className = "pad";
+        pad.dataset.n = i;
+        pad.textContent = `PAD ${i}`;
+        pads.appendChild(pad);
+      }
+      const knobs = document.getElementById("knobs");
+      for (let i = 1; i <= 8; i++) {
+        const wrap = document.createElement("div");
+        wrap.className = "knob-wrap";
+        wrap.innerHTML = `<div class="knob" data-n="${i}"></div><div>K${i}</div>`;
+        knobs.appendChild(wrap);
+      }
+      const buttonWrap = document.getElementById("buttons");
+      buttons.forEach(name => {
+        const btn = document.createElement("div");
+        btn.className = "small-btn";
+        btn.dataset.name = name;
+        btn.textContent = name;
+        buttonWrap.appendChild(btn);
+      });
+      const keys = document.getElementById("keys");
+      keyNames.forEach(note => {
+        const key = document.createElement("div");
+        key.className = "key" + (black.has(note) ? " black" : "");
+        key.dataset.note = note;
+        key.setAttribute("aria-label", note);
+        keys.appendChild(key);
+      });
+      const timeline = document.getElementById("timeline");
+      tracks.forEach(([name, color, x, w]) => {
+        const row = document.createElement("div");
+        row.className = "track";
+        row.innerHTML = `<div class="label">${name}</div><div class="lane"><div class="region" data-track="${name}" style="--x:${x}%;--w:${w}%;--c:${color}"></div><div class="playhead"></div></div>`;
+        timeline.appendChild(row);
+      });
+      const list = document.getElementById("steps");
+      steps.forEach((step, i) => {
+        const item = document.createElement("div");
+        item.className = "step";
+        item.dataset.i = i;
+        item.innerHTML = `<div class="num">${step.time}</div><div>${step.title}</div>`;
+        item.addEventListener("click", () => setStep(i));
+        list.appendChild(item);
+      });
+    }
+
+    function setStep(next) {
+      index = (next + steps.length) % steps.length;
+      const step = steps[index];
+      document.getElementById("title").textContent = step.title;
+      document.getElementById("time").textContent = step.time;
+      document.getElementById("sound").textContent = step.sound;
+      document.getElementById("body").textContent = step.text;
+      document.querySelectorAll(".pad").forEach(el => el.classList.toggle("active", step.pads.includes(Number(el.dataset.n))));
+      document.querySelectorAll(".small-btn").forEach(el => el.classList.toggle("active", step.buttons.includes(el.dataset.name)));
+      document.querySelectorAll(".key").forEach(el => el.classList.toggle("active", step.keys.includes(el.dataset.note)));
+      document.querySelectorAll(".knob").forEach(el => {
+        const turn = step.knobs[Number(el.dataset.n)] ?? 0;
+        el.style.setProperty("--turn", `${turn}deg`);
+      });
+      document.querySelectorAll(".region").forEach(el => el.classList.toggle("on", step.regions.includes(el.dataset.track)));
+      document.querySelectorAll(".step").forEach(el => el.classList.toggle("current", Number(el.dataset.i) === index));
+      document.querySelectorAll(".playhead").forEach(el => el.style.setProperty("--play", `${Math.min(96, index * 8.7)}%`));
+    }
+
+    function noteToHz(note) {
+      const map = {"C":0,"C#":1,"D":2,"D#":3,"E":4,"F":5,"F#":6,"G":7,"G#":8,"A":9,"A#":10,"B":11};
+      const [, name, octave] = note.match(/^([A-G]#?)(\d)$/);
+      const midi = (Number(octave) + 1) * 12 + map[name];
+      return 440 * Math.pow(2, (midi - 69) / 12);
+    }
+
+    function tapCurrent() {
+      audioContext ||= new AudioContext();
+      const now = audioContext.currentTime;
+      const notes = steps[index].keys.length ? steps[index].keys : ["D#2"];
+      notes.slice(0, 5).forEach((note, i) => {
+        const osc = audioContext.createOscillator();
+        const gain = audioContext.createGain();
+        osc.type = "triangle";
+        osc.frequency.value = noteToHz(note);
+        gain.gain.setValueAtTime(0.0001, now + i * .16);
+        gain.gain.exponentialRampToValueAtTime(0.12, now + i * .16 + .02);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + i * .16 + .14);
+        osc.connect(gain).connect(audioContext.destination);
+        osc.start(now + i * .16);
+        osc.stop(now + i * .16 + .16);
+      });
+    }
+
+    function togglePlay() {
+      playing = !playing;
+      document.getElementById("play").textContent = playing ? "Pause" : "Play Steps";
+      if (playing) {
+        tapCurrent();
+        timer = setInterval(() => {
+          setStep(index + 1);
+          tapCurrent();
+        }, 2100);
+      } else {
+        clearInterval(timer);
+      }
+    }
+
+    build();
+    setStep(0);
+    document.getElementById("prev").addEventListener("click", () => setStep(index - 1));
+    document.getElementById("next").addEventListener("click", () => setStep(index + 1));
+    document.getElementById("play").addEventListener("click", togglePlay);
+    document.getElementById("tap").addEventListener("click", tapCurrent);
+  </script>
+</body>
+</html>

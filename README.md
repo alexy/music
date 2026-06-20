@@ -8,28 +8,27 @@ gear, goals, musical references, taste, and next practice session.
 
 ## Deliverables
 
-- [Latest PDF manual](codex/docs/book/dist/kiffness-mpk-mini-manual%20(0.2.1).pdf)
-- [Latest EPUB manual](codex/docs/book/dist/kiffness-mpk-mini-manual%20(0.2.1).epub)
-- [Latest MOBI manual](codex/docs/book/dist/kiffness-mpk-mini-manual%20(0.2.1).mobi)
+- [Latest PDF manual](codex/docs/book/dist/kiffness-mpk-mini-manual%20(0.3.0).pdf)
+- [Latest EPUB manual](codex/docs/book/dist/kiffness-mpk-mini-manual%20(0.3.0).epub)
+- [Latest MOBI manual](codex/docs/book/dist/kiffness-mpk-mini-manual%20(0.3.0).mobi)
+- [MPK Mini MK3 GarageBand Loop Lab](codex/docs/mpk-mini-mk3-garageband-loop-lab.html)
+- [MPK Mini MK3 Ableton Live Loop Lab](codex/docs/mpk-mini-mk3-ableton-loop-lab.html)
 - [What Is Love GarageBand animated tutorial](codex/docs/what-is-love-garageband-animated.html)
 - [Don't Cry Tonight GarageBand animated tutorial](codex/docs/dont-cry-tonight-garageband-animated.html)
+- [Clint Eastwood MPK Mini animated tutorial](codex/docs/clint-eastwood-mpk-mini-animated.html)
 - [What Is Love figure-by-figure settings guide](codex/docs/WhatIsLoveGarageBandFigures.md)
 - [Don't Cry Tonight figure-by-figure settings guide](codex/docs/DontCryTonightGarageBandFigures.md)
 - [Changelog](codex/CHANGELOG.md)
 
 ## What This Is
 
-The current book is an Akai MPK mini remix manual for learning how to build
-Kiffness-style and 1980s/synthwave-inspired remix videos on a Mac. It covers
-MIDI, DAW setup, source-clip preparation, MPK mapping, drum programming, bass
-and chord parts, arrangement, mixing, video sync, export settings, and practical
-case studies.
+The current book is an Akai MPK Mini MK3 loop manual for learning the actual
+controller surface: keys, pads, banks, knobs, note repeat, arpeggiator,
+joystick, programs, GarageBand loops, and Ableton Live clips.
 
-The interactive tutorials are intentionally GarageBand-only. The book itself
-also keeps Ableton Live and FL Studio as separate DAW paths, with each DAW
-getting its own setup checklist, audio-interface checklist, starter layout, and
-workflow notes. That keeps the manual easy to extend without turning every
-table into a fragile multi-column comparison.
+The interactive tutorials include both GarageBand and Ableton Live practice
+paths. GarageBand is treated as the simplest first loop environment; Ableton
+Live is treated as the clip-launching and MIDI-mapping environment.
 
 ## Bespoke AI-Aligned Textbooks
 
@@ -47,10 +46,11 @@ examples, exercises, diagrams, formats, and next steps.
 For this music manual, that means the material is aligned to:
 
 - the actual controller: Akai MPK mini IV;
-- the actual beginner DAW path: GarageBand;
+- the actual beginner DAW paths: GarageBand and Ableton Live;
 - the learner's musical references, including Kiffness-style remix videos,
-  MunomaMusic's "What Is Love" live-loop cover, and the Savage / John E.S
-  "Don't Cry Tonight" remix;
+  MunomaMusic's "What Is Love" live-loop cover, the Savage / John E.S
+  "Don't Cry Tonight" remix, and Smith's Covers' Akai MPK Mini "Clint
+  Eastwood" cover;
 - the actual workflow goal: make playable, filmable remix studies, not merely
   read about production;
 - the preferred output formats: PDF, EPUB, MOBI, Markdown guides, and animated

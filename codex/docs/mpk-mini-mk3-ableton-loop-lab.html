@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MPK Mini MK3 Ableton Live Loop Lab</title>
+  <style>
+    :root {
+      --ink: #17202a;
+      --muted: #62707d;
+      --paper: #f4f1e9;
+      --panel: #fffdf8;
+      --line: #d7d0c1;
+      --teal: #176d75;
+      --green: #2a9d8f;
+      --gold: #e9c46a;
+      --coral: #e76f51;
+      --blue: #3d5a80;
+      --violet: #6f5aa8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font: 16px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 26px 16px 42px;
+    }
+    h1 {
+      margin: 0 0 6px;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+    .subtitle {
+      margin: 0 0 18px;
+      max-width: 900px;
+      color: var(--muted);
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(330px, 1.1fr) minmax(320px, .9fr);
+      gap: 16px;
+      align-items: start;
+    }
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 15px;
+    }
+    .live {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      padding: 12px;
+      border-radius: 8px;
+      background: #20242b;
+      color: #edf2f7;
+    }
+    .track {
+      min-height: 330px;
+      display: grid;
+      grid-template-rows: auto repeat(4, 1fr) auto;
+      gap: 8px;
+    }
+    .track-title {
+      min-height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 5px;
+      background: #303945;
+      font-weight: 750;
+      font-size: 13px;
+    }
+    .clip {
+      display: grid;
+      place-items: center;
+      border: 2px solid #3e4854;
+      border-radius: 5px;
+      background: #151a21;
+      color: #cad4de;
+      font-weight: 750;
+      text-align: center;
+      transition: background .15s, color .15s, box-shadow .15s, transform .15s;
+    }
+    .clip.active {
+      color: #061311;
+      background: var(--green);
+      transform: translateY(2px);
+      box-shadow: 0 0 16px rgba(42, 157, 143, .75);
+    }
+    .armed {
+      min-height: 28px;
+      display: grid;
+      place-items: center;
+      border-radius: 5px;
+      color: white;
+      background: #4b5563;
+      font-size: 12px;
+      font-weight: 750;
+    }
+    .armed.on { background: var(--coral); }
+    .mpk {
+      margin-top: 14px;
+      border-radius: 8px;
+      padding: 13px;
+      background: #20252d;
+      color: #e8eef3;
+      box-shadow: inset 0 0 0 2px #0d1117;
+    }
+    .mpk-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 10px;
+    }
+    .pads, .knobs {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+    .pad {
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+      border: 2px solid #485360;
+      border-radius: 6px;
+      color: #d9e1e9;
+      background: #141a22;
+      font-size: 11px;
+      font-weight: 750;
+      text-align: center;
+    }
+    .pad.active { color: #08110f; background: var(--gold); }
+    .knob-wrap { display: grid; justify-items: center; gap: 3px; font-size: 11px; font-weight: 750; }
+    .knob {
+      width: min(52px, 100%);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      border: 2px solid #0b0f14;
+      background: radial-gradient(circle at 38% 32%, #717b86, #252c35 58%, #0c1016);
+      position: relative;
+    }
+    .knob::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 12%;
+      width: 3px;
+      height: 38%;
+      border-radius: 2px;
+      background: var(--gold);
+      transform: translateX(-50%) rotate(var(--turn, -25deg));
+      transform-origin: 50% 100%;
+    }
+    .side h2 { margin: 0 0 8px; font-size: 23px; }
+    .meta { display: flex; gap: 7px; flex-wrap: wrap; margin-bottom: 10px; }
+    .pill {
+      padding: 5px 8px;
+      border-radius: 999px;
+      color: #24303a;
+      background: #ebe4d8;
+      font-size: 12px;
+      font-weight: 750;
+    }
+    .step-text { min-height: 150px; color: var(--muted); }
+    .actions { display: flex; gap: 9px; flex-wrap: wrap; margin-top: 12px; }
+    button {
+      border: 0;
+      border-radius: 6px;
+      padding: 10px 13px;
+      color: white;
+      background: var(--teal);
+      font-weight: 750;
+      cursor: pointer;
+    }
+    button.secondary { color: var(--ink); background: var(--gold); }
+    .steps { display: grid; gap: 7px; margin-top: 13px; }
+    .step {
+      display: grid;
+      grid-template-columns: 32px 1fr;
+      gap: 8px;
+      align-items: center;
+      padding: 8px;
+      border-radius: 6px;
+      color: var(--muted);
+      background: #f0eadf;
+      cursor: pointer;
+    }
+    .step.current { color: var(--ink); background: #dff1ee; font-weight: 750; }
+    .num {
+      height: 25px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: var(--blue);
+      font-size: 12px;
+      font-weight: 750;
+    }
+    @media (max-width: 860px) {
+      .layout { grid-template-columns: 1fr; }
+      .live { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>MPK Mini MK3 Ableton Live Loop Lab</h1>
+    <p class="subtitle">A clip-based version of the MPK loop workflow: Drum Rack on pads, bass/chords/lead clips on keys, and K1-K8 mapped to device and mixer controls.</p>
+    <section class="layout">
+      <div class="panel">
+        <div class="live" id="live"></div>
+        <div class="mpk">
+          <strong>AKAI MPK mini MK3</strong>
+          <div class="mpk-grid"><div class="pads" id="pads"></div><div class="knobs" id="knobs"></div></div>
+        </div>
+      </div>
+      <aside class="panel side">
+        <h2 id="title">Preferences</h2>
+        <div class="meta"><span class="pill" id="mode">MIDI</span><span class="pill">92 BPM</span><span class="pill">Session View</span></div>
+        <div class="step-text" id="body"></div>
+        <div class="actions">
+          <button id="prev" type="button">Back</button>
+          <button id="next" type="button">Next</button>
+          <button class="secondary" id="play" type="button">Play Steps</button>
+        </div>
+        <div class="steps" id="steps"></div>
+      </aside>
+    </section>
+  </main>
+  <script>
+    const trackNames = ["Drums","Bass","Chords","Lead"];
+    const steps = [
+      {title:"Preferences", mode:"MIDI", text:"Open Live Preferences > Link/Tempo/MIDI. Enable Track for the MPK input so keys and pads record notes. Enable Remote when you want knobs or pads to control Live parameters.", clips:[], arm:[], pads:[], knobs:{}},
+      {title:"Control Surface", mode:"MK3 Setup", text:"If Ableton lists MPK mini MK3 under Control Surface, select it and set Input and Output to MPK mini 3. If it auto-fills those ports, leave them. On the controller, choose the Ableton program if it is loaded.", clips:[], arm:[], pads:[8], knobs:{}},
+      {title:"Drum Rack", mode:"Pads", text:"Load Drum Rack on Track 1. Put kick, snare, closed hat, and open hat in the cells reached by Pads 1-4. Move samples if the notes do not line up.", clips:["Drums-1"], arm:["Drums"], pads:[1,2,3,4], knobs:{}},
+      {title:"Record Drums", mode:"Clip", text:"Arm Drums, start the first clip slot, and record a one-bar pattern. Use Full Level if your snare is too soft; use Note Repeat for hats only after the groove is stable.", clips:["Drums-1"], arm:["Drums"], pads:[1,2,3], knobs:{}},
+      {title:"Bass Clip", mode:"Keys", text:"Create a bass MIDI track. Record a two-bar bass clip with lower keys. Keep the clip looping while you adjust the sound.", clips:["Drums-1","Bass-1"], arm:["Bass"], pads:[], knobs:{1:10}},
+      {title:"Chords Clip", mode:"Keys", text:"Create a chord track with Electric, Piano, or a warm pad. Record a four-bar chord clip that leaves room for the bass.", clips:["Drums-1","Bass-1","Chords-1"], arm:["Chords"], pads:[], knobs:{3:18,4:28}},
+      {title:"Lead Clip", mode:"Hook", text:"Create a lead track and record a short hook. Use the joystick for one bend at the end, not during every note.", clips:["Drums-1","Bass-1","Chords-1","Lead-1"], arm:["Lead"], pads:[], knobs:{1:35,7:28}},
+      {title:"Map Knobs", mode:"MIDI Map", text:"Enter MIDI Map Mode. Map K1 to Auto Filter Frequency, K2 to Resonance, K7 to Delay send, and K8 to Reverb or dry/wet. If nothing maps, Remote is probably off.", clips:["Drums-1","Bass-1","Chords-1","Lead-1"], arm:[], pads:[], knobs:{1:55,2:25,7:42,8:50}},
+      {title:"Sync Repeat", mode:"Clock", text:"Turn Sync on for the MPK output if you want Note Repeat to follow Live. Set the MPK repeat/clock source to external when available, then start Live playback before holding the hat pad.", clips:["Drums-1"], arm:["Drums"], pads:[3], knobs:{}},
+      {title:"Launch Pads", mode:"Clips", text:"Map Pads 5-7 to launch drum, bass, and chord clips. Map Pad 8 to stop a clip or stop all clips. This gives the MK3 a simple performance grid.", clips:["Drums-1","Bass-1","Chords-1"], arm:[], pads:[5,6,7,8], knobs:{1:55,8:50}},
+      {title:"Perform", mode:"Arrangement", text:"Launch drums, add bass, add chords, play or launch the lead, then record the Session performance into Arrangement View. Finish with a filter open and reverb tail.", clips:["Drums-1","Bass-1","Chords-1","Lead-1"], arm:[], pads:[5,6,7,8], knobs:{1:62,8:62}}
+    ];
+    let index = 0, playing = false, timer = null;
+    function build() {
+      live.innerHTML = trackNames.map(name => `<div class="track"><div class="track-title">${name}</div>${[1,2,3,4].map(i=>`<div class="clip" data-clip="${name}-${i}">${name}<br>${i}</div>`).join("")}<div class="armed" data-arm="${name}">ARM</div></div>`).join("");
+      pads.innerHTML = Array.from({length:8},(_,i)=>`<div class="pad" data-n="${i+1}">PAD ${i+1}</div>`).join("");
+      knobs.innerHTML = Array.from({length:8},(_,i)=>`<div class="knob-wrap"><div class="knob" data-n="${i+1}"></div><div>K${i+1}</div></div>`).join("");
+      steps.forEach((s,i)=>{ const el=document.createElement("div"); el.className="step"; el.dataset.i=i; el.innerHTML=`<div class="num">${i+1}</div><div>${s.title}</div>`; el.onclick=()=>setStep(i); document.getElementById("steps").appendChild(el); });
+    }
+    function setStep(i) {
+      index = (i + steps.length) % steps.length;
+      const s = steps[index];
+      title.textContent = s.title; mode.textContent = s.mode; body.textContent = s.text;
+      document.querySelectorAll(".clip").forEach(el=>el.classList.toggle("active", s.clips.includes(el.dataset.clip)));
+      document.querySelectorAll(".armed").forEach(el=>el.classList.toggle("on", s.arm.includes(el.dataset.arm)));
+      document.querySelectorAll(".pad").forEach(el=>el.classList.toggle("active", s.pads.includes(Number(el.dataset.n))));
+      document.querySelectorAll(".knob").forEach(el=>el.style.setProperty("--turn", `${s.knobs[Number(el.dataset.n)] ?? -25}deg`));
+      document.querySelectorAll(".step").forEach(el=>el.classList.toggle("current", Number(el.dataset.i) === index));
+    }
+    function toggle() {
+      playing = !playing; play.textContent = playing ? "Pause" : "Play Steps";
+      if (playing) timer = setInterval(()=>setStep(index+1), 2000); else clearInterval(timer);
+    }
+    build(); setStep(0);
+    prev.onclick = () => setStep(index - 1);
+    next.onclick = () => setStep(index + 1);
+    play.onclick = toggle;
+  </script>
+</body>
+</html>
