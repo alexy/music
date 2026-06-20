@@ -8,9 +8,9 @@ gear, goals, musical references, taste, and next practice session.
 
 ## Deliverables
 
-- [Latest PDF manual](codex/docs/book/dist/kiffness-mpk-mini-manual%20(0.3.0).pdf)
-- [Latest EPUB manual](codex/docs/book/dist/kiffness-mpk-mini-manual%20(0.3.0).epub)
-- [Latest MOBI manual](codex/docs/book/dist/kiffness-mpk-mini-manual%20(0.3.0).mobi)
+- [Latest PDF manual](codex/docs/book/dist/kiffness-mpk-mini-manual%20(0.3.1).pdf)
+- [Latest EPUB manual](codex/docs/book/dist/kiffness-mpk-mini-manual%20(0.3.1).epub)
+- [Latest MOBI manual](codex/docs/book/dist/kiffness-mpk-mini-manual%20(0.3.1).mobi)
 - [MPK Mini MK3 GarageBand Loop Lab](codex/docs/mpk-mini-mk3-garageband-loop-lab.html)
 - [MPK Mini MK3 Ableton Live Loop Lab](codex/docs/mpk-mini-mk3-ableton-loop-lab.html)
 - [What Is Love GarageBand animated tutorial](codex/docs/what-is-love-garageband-animated.html)
