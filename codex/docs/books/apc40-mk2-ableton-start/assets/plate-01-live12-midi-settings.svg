@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-label="plate-01-live12-midi-settings.svg">
+  <defs>
+    <style>
+      .title { font: 700 28px Arial, sans-serif; fill: #20242b; }
+      .subtitle { font: 400 16px Arial, sans-serif; fill: #6b7280; }
+      .label { font: 700 13px Arial, sans-serif; fill: #20242b; }
+      .small { font: 400 11px Arial, sans-serif; fill: #20242b; }
+      .tiny { font: 400 9px Arial, sans-serif; fill: #20242b; }
+      .white { fill: #fff; }
+      .mono { font: 700 10px Menlo, Consolas, monospace; fill: #20242b; }
+    </style>
+  </defs>
+  <rect width="100%" height="100%" fill="#f6f3eb"/>
+  <text x="34" y="42" class="title" text-anchor="start">Ableton Live 12 setup: Link, Tempo and MIDI</text><text x="36" y="66" class="subtitle" text-anchor="start">Set the APC40 MK2 as a native control surface before you touch mapping.</text>
+  
+    <rect x="34" y="86" width="1132" height="640" rx="10" fill="#ffffff" stroke="#b8b2a7" stroke-width="1"/>
+    <rect x="34" y="86" width="1132" height="42" rx="10" fill="#dedbd3" stroke="#b8b2a7" stroke-width="1"/>
+    <text x="60" y="113" class="label" text-anchor="start">Ableton Live 12 - Settings</text>
+    
+      <rect x="60" y="150" width="190" height="540" rx="8" fill="#f2f0eb" stroke="#b8b2a7" stroke-width="1"/>
+      <rect x="76" y="172" width="158" height="34" rx="5" fill="#ffffff" stroke="#b8b2a7" stroke-width="1"/><text x="88" y="194" class="small" text-anchor="start">Audio</text><rect x="76" y="220" width="158" height="34" rx="5" fill="#d7e8ff" stroke="#b8b2a7" stroke-width="1"/><text x="88" y="242" class="label" text-anchor="start">Link, Tempo and MIDI</text><rect x="76" y="268" width="158" height="34" rx="5" fill="#ffffff" stroke="#b8b2a7" stroke-width="1"/><text x="88" y="290" class="small" text-anchor="start">File Folder</text><rect x="76" y="316" width="158" height="34" rx="5" fill="#ffffff" stroke="#b8b2a7" stroke-width="1"/><text x="88" y="338" class="small" text-anchor="start">Record Warp Launch</text><rect x="76" y="364" width="158" height="34" rx="5" fill="#ffffff" stroke="#b8b2a7" stroke-width="1"/><text x="88" y="386" class="small" text-anchor="start">Library</text><rect x="76" y="412" width="158" height="34" rx="5" fill="#ffffff" stroke="#b8b2a7" stroke-width="1"/><text x="88" y="434" class="small" text-anchor="start">Licenses</text>
+      <text x="282" y="166" class="label" text-anchor="start">Control Surface</text>
+      <text x="530" y="166" class="label" text-anchor="start">Input</text>
+      <text x="778" y="166" class="label" text-anchor="start">Output</text>
+      <rect x="282" y="184" width="220" height="38" rx="5" fill="#fff" stroke="#2f80ed" stroke-width="1"/>
+      <rect x="530" y="184" width="220" height="38" rx="5" fill="#fff" stroke="#2f80ed" stroke-width="1"/>
+      <rect x="778" y="184" width="220" height="38" rx="5" fill="#fff" stroke="#2f80ed" stroke-width="1"/>
+      <text x="294" y="208" class="label" text-anchor="start">APC40 mkII</text>
+      <text x="542" y="208" class="label" text-anchor="start">APC40 mkII</text>
+      <text x="790" y="208" class="label" text-anchor="start">APC40 mkII</text>
+      <text x="282" y="272" class="label" text-anchor="start">MIDI Ports</text>
+      <text x="282" y="302" class="small" text-anchor="start">Port</text>
+      <text x="690" y="302" class="small" text-anchor="start">Track</text>
+      <text x="775" y="302" class="small" text-anchor="start">Sync</text>
+      <text x="858" y="302" class="small" text-anchor="start">Remote</text>
+      <rect x="282" y="322" width="660" height="34" rx="4" fill="#fbfff8" stroke="#b8b2a7" stroke-width="1"/>
+          <text x="300" y="344" class="small" text-anchor="start">Input: APC40 mkII</text>
+          <rect x="690" y="329" width="48" height="20" rx="4" fill="#3aa657" stroke="#111" stroke-width="1"/><text x="714" y="342" class="tiny" text-anchor="middle">On</text>
+          <rect x="775" y="329" width="48" height="20" rx="4" fill="#ddd" stroke="#111" stroke-width="1"/><text x="799" y="342" class="tiny" text-anchor="middle">Off</text>
+          <rect x="858" y="329" width="58" height="20" rx="4" fill="#3aa657" stroke="#111" stroke-width="1"/><text x="887" y="342" class="tiny" text-anchor="middle">On</text><rect x="282" y="368" width="660" height="34" rx="4" fill="#fbfff8" stroke="#b8b2a7" stroke-width="1"/>
+          <text x="300" y="390" class="small" text-anchor="start">Output: APC40 mkII</text>
+          <rect x="690" y="375" width="48" height="20" rx="4" fill="#3aa657" stroke="#111" stroke-width="1"/><text x="714" y="388" class="tiny" text-anchor="middle">On</text>
+          <rect x="775" y="375" width="48" height="20" rx="4" fill="#ddd" stroke="#111" stroke-width="1"/><text x="799" y="388" class="tiny" text-anchor="middle">Off</text>
+          <rect x="858" y="375" width="58" height="20" rx="4" fill="#3aa657" stroke="#111" stroke-width="1"/><text x="887" y="388" class="tiny" text-anchor="middle">On</text><rect x="282" y="414" width="660" height="34" rx="4" fill="#fff" stroke="#b8b2a7" stroke-width="1"/>
+          <text x="300" y="436" class="small" text-anchor="start">Input: APC40 mkII DAW</text>
+          <rect x="690" y="421" width="48" height="20" rx="4" fill="#ddd" stroke="#111" stroke-width="1"/><text x="714" y="434" class="tiny" text-anchor="middle">Off</text>
+          <rect x="775" y="421" width="48" height="20" rx="4" fill="#ddd" stroke="#111" stroke-width="1"/><text x="799" y="434" class="tiny" text-anchor="middle">Off</text>
+          <rect x="858" y="421" width="58" height="20" rx="4" fill="#ddd" stroke="#111" stroke-width="1"/><text x="887" y="434" class="tiny" text-anchor="middle">Off</text><rect x="282" y="460" width="660" height="34" rx="4" fill="#fff" stroke="#b8b2a7" stroke-width="1"/>
+          <text x="300" y="482" class="small" text-anchor="start">Output: APC40 mkII DAW</text>
+          <rect x="690" y="467" width="48" height="20" rx="4" fill="#ddd" stroke="#111" stroke-width="1"/><text x="714" y="480" class="tiny" text-anchor="middle">Off</text>
+          <rect x="775" y="467" width="48" height="20" rx="4" fill="#ddd" stroke="#111" stroke-width="1"/><text x="799" y="480" class="tiny" text-anchor="middle">Off</text>
+          <rect x="858" y="467" width="58" height="20" rx="4" fill="#ddd" stroke="#111" stroke-width="1"/><text x="887" y="480" class="tiny" text-anchor="middle">Off</text>
+      <rect x="282" y="560" width="790" height="84" rx="8" fill="#fff7de" stroke="#e0b54b" stroke-width="1"/>
+      <text x="306" y="590" class="label" text-anchor="start">Zero-to-one rule</text>
+      <text x="306" y="616" class="small" text-anchor="start">If clip grid and faders work already, do not create MIDI mappings yet.</text>
+      <text x="306" y="640" class="small" text-anchor="start">Use manual MIDI Map only after the native script is confirmed.</text>
+    
+  
+</svg>

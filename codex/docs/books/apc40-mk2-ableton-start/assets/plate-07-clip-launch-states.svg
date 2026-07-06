@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-label="plate-07-clip-launch-states.svg">
+  <defs>
+    <style>
+      .title { font: 700 28px Arial, sans-serif; fill: #20242b; }
+      .subtitle { font: 400 16px Arial, sans-serif; fill: #6b7280; }
+      .label { font: 700 13px Arial, sans-serif; fill: #20242b; }
+      .small { font: 400 11px Arial, sans-serif; fill: #20242b; }
+      .tiny { font: 400 9px Arial, sans-serif; fill: #20242b; }
+      .white { fill: #fff; }
+      .mono { font: 700 10px Menlo, Consolas, monospace; fill: #20242b; }
+    </style>
+  </defs>
+  <rect width="100%" height="100%" fill="#f6f3eb"/>
+  <text x="34" y="42" class="title" text-anchor="start">Clip launch states and what the lights mean</text><text x="36" y="66" class="subtitle" text-anchor="start">The lights tell you whether a slot is empty, queued, playing, or stopped.</text>
+  
+    <rect x="34" y="86" width="1132" height="640" rx="10" fill="#ffffff" stroke="#b8b2a7" stroke-width="1"/>
+    <rect x="34" y="86" width="1132" height="42" rx="10" fill="#dedbd3" stroke="#b8b2a7" stroke-width="1"/>
+    <text x="60" y="113" class="label" text-anchor="start">Ableton Live 12 - Clip States</text>
+    
+      <rect x="82" y="170" width="460" height="460" rx="12" fill="#20242b" stroke="#111" stroke-width="1"/>
+      <rect x="124" y="214" width="58" height="42" rx="4" fill="#343942" stroke="#111" stroke-width="1"/>
+         <text x="210" y="238" class="label" text-anchor="start">Empty slot</text>
+         <text x="210" y="260" class="small" text-anchor="start">No clip here. Pressing does nothing.</text><rect x="124" y="286" width="58" height="42" rx="4" fill="#2f80ed" stroke="#111" stroke-width="1"/>
+         <text x="210" y="310" class="label" text-anchor="start">Loaded, stopped</text>
+         <text x="210" y="332" class="small" text-anchor="start">Clip exists and can be launched.</text><rect x="124" y="358" width="58" height="42" rx="4" fill="#f4a62a" stroke="#111" stroke-width="1"/>
+         <text x="210" y="382" class="label" text-anchor="start">Queued</text>
+         <text x="210" y="404" class="small" text-anchor="start">Will launch on the next quantized beat/bar.</text><rect x="124" y="430" width="58" height="42" rx="4" fill="#3aa657" stroke="#111" stroke-width="1"/>
+         <text x="210" y="454" class="label" text-anchor="start">Playing</text>
+         <text x="210" y="476" class="small" text-anchor="start">Clip is running now.</text><rect x="124" y="502" width="58" height="42" rx="4" fill="#d84a3a" stroke="#111" stroke-width="1"/>
+         <text x="210" y="526" class="label" text-anchor="start">Stop queued</text>
+         <text x="210" y="548" class="small" text-anchor="start">This track will stop at the next boundary.</text>
+      <rect x="610" y="170" width="470" height="238" rx="8" fill="#fff" stroke="#b8b2a7" stroke-width="1"/>
+      <text x="640" y="206" class="label" text-anchor="start">Starter launch settings</text>
+      <text x="640" y="240" class="small" text-anchor="start">Global Quantization: 1 Bar</text>
+      <text x="640" y="268" class="small" text-anchor="start">Clip Launch Mode: Trigger</text>
+      <text x="640" y="296" class="small" text-anchor="start">Legato: Off for beginners</text>
+      <text x="640" y="324" class="small" text-anchor="start">Follow Actions: Off until the grid feels natural</text>
+      <text x="640" y="352" class="small" text-anchor="start">Warp: On for audio loops that must stay in tempo</text>
+      <rect x="610" y="450" width="470" height="118" rx="8" fill="#fff7de" stroke="#e0b54b" stroke-width="1"/>
+      <text x="640" y="486" class="label" text-anchor="start">Hands rule</text>
+      <text x="640" y="518" class="small" text-anchor="start">Right hand launches scenes.</text>
+      <text x="640" y="546" class="small" text-anchor="start">Left hand rides faders and mutes.</text>
+    
+  
+</svg>

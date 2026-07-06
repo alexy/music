@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-label="plate-17-tempo-warp.svg">
+  <defs>
+    <style>
+      .title { font: 700 28px Arial, sans-serif; fill: #20242b; }
+      .subtitle { font: 400 16px Arial, sans-serif; fill: #6b7280; }
+      .label { font: 700 13px Arial, sans-serif; fill: #20242b; }
+      .small { font: 400 11px Arial, sans-serif; fill: #20242b; }
+      .tiny { font: 400 9px Arial, sans-serif; fill: #20242b; }
+      .white { fill: #fff; }
+      .mono { font: 700 10px Menlo, Consolas, monospace; fill: #20242b; }
+    </style>
+  </defs>
+  <rect width="100%" height="100%" fill="#f6f3eb"/>
+  <text x="34" y="42" class="title" text-anchor="start">Tempo, metronome, count-in, quantization, warp</text><text x="36" y="66" class="subtitle" text-anchor="start">Five small settings that make the practice set feel professional.</text>
+  
+    <rect x="34" y="86" width="1132" height="640" rx="10" fill="#ffffff" stroke="#b8b2a7" stroke-width="1"/>
+    <rect x="34" y="86" width="1132" height="42" rx="10" fill="#dedbd3" stroke="#b8b2a7" stroke-width="1"/>
+    <text x="60" y="113" class="label" text-anchor="start">Ableton Live 12 - Control Bar and Clip Settings</text>
+    
+      <rect x="70" y="156" width="110" height="40" rx="6" fill="#eef2ff" stroke="#2f80ed" stroke-width="1"/>
+      <text x="125" y="182" class="title" text-anchor="middle">118.00</text>
+      <text x="200" y="170" class="small" text-anchor="start">1. Tempo: click and type 118, press Enter.</text>
+      <text x="200" y="192" class="small" text-anchor="start">Safe range for this study: 116-122 BPM.</text>
+      <rect x="70" y="222" width="56" height="34" rx="4" fill="#eee" stroke="#111" stroke-width="1"/><text x="98" y="242" class="tiny" text-anchor="middle">MET</text>
+      <text x="146" y="244" class="small" text-anchor="start">2. Metronome: on while drawing clips, off while performing.</text>
+      <rect x="70" y="282" width="110" height="34" rx="6" fill="#eef2ff" stroke="#2f80ed" stroke-width="1"/>
+      <text x="125" y="304" class="label" text-anchor="middle">1 Bar</text>
+      <text x="200" y="304" class="small" text-anchor="start">3. Global Quantization: keep at 1 Bar. Every launch waits for the next bar line.</text>
+      <rect x="70" y="342" width="480" height="120" rx="8" fill="#f2f0eb" stroke="#b8b2a7" stroke-width="1"/>
+      <text x="92" y="372" class="label" text-anchor="start">4. Count-In (Settings &gt; Record Warp Launch)</text>
+      <text x="92" y="398" class="small" text-anchor="start">Set Count-In to 1 Bar. When you record, Live</text>
+      <text x="92" y="420" class="small" text-anchor="start">clicks one bar of 4 beats before capturing.</text>
+      <text x="92" y="442" class="small" text-anchor="start">Your hands get ready instead of scrambling.</text>
+      <rect x="580" y="342" width="510" height="120" rx="8" fill="#f2f0eb" stroke="#b8b2a7" stroke-width="1"/>
+      <text x="602" y="372" class="label" text-anchor="start">5. Warp (audio clips only)</text>
+      <text x="602" y="398" class="small" text-anchor="start">If you drop in an audio loop (a riser, a noise</text>
+      <text x="602" y="420" class="small" text-anchor="start">sweep), enable Warp in Clip View so it follows</text>
+      <text x="602" y="442" class="small" text-anchor="start">your 118 BPM instead of its own speed.</text>
+      <rect x="70" y="494" width="1020" height="180" rx="8" fill="#fff7de" stroke="#e0b54b" stroke-width="1"/>
+      <text x="94" y="526" class="label" text-anchor="start">Why 1 Bar quantization is a beginner superpower</text>
+      <text x="94" y="554" class="small" text-anchor="start">You can press a scene button up to a bar early. Live holds the launch until the bar line, so nothing ever</text>
+      <text x="94" y="578" class="small" text-anchor="start">starts off-beat. Press early, then move your hand calmly to the faders. The machine keeps the time;</text>
+      <text x="94" y="602" class="small" text-anchor="start">you keep the intent. Later, try 1/4 quantization for fast clip juggling - but not in the first week.</text>
+      <text x="94" y="640" class="small" text-anchor="start">If a launch ever feels 'late', you did not miss - you pressed after the bar line. Count '1-2-3-4' and press on '4'.</text>
+    
+  
+</svg>

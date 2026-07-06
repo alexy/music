@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>APC40 MK2 Don't Cry Tonight Ableton Lab</title>
+  <style>
+    :root {
+      --ink: #17202a;
+      --muted: #62707d;
+      --paper: #f4f1e9;
+      --panel: #fffdf8;
+      --line: #d7d0c1;
+      --teal: #176d75;
+      --green: #2a9d8f;
+      --gold: #e9c46a;
+      --coral: #e76f51;
+      --blue: #3d5a80;
+      --violet: #6f5aa8;
+      --rose: #c2557f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font: 16px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    main { max-width: 1280px; margin: 0 auto; padding: 26px 16px 42px; }
+    h1 { margin: 0 0 6px; font-size: clamp(28px, 4vw, 44px); line-height: 1.05; }
+    .subtitle { margin: 0 0 18px; max-width: 980px; color: var(--muted); }
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(400px, 1.15fr) minmax(330px, .85fr);
+      gap: 16px;
+      align-items: start;
+    }
+    .panel { border: 1px solid var(--line); border-radius: 8px; background: var(--panel); padding: 14px; }
+
+    /* ------- Ableton Session View ------- */
+    .live {
+      padding: 10px;
+      border-radius: 8px;
+      background: #20242b;
+      color: #edf2f7;
+    }
+    .live-head { display: flex; gap: 10px; align-items: center; margin-bottom: 8px; font-size: 12px; }
+    .lcd {
+      padding: 4px 8px;
+      border-radius: 4px;
+      background: #10141a;
+      color: #ffd97a;
+      font-weight: 750;
+      font-family: Menlo, Consolas, monospace;
+      font-size: 12px;
+    }
+    .session {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr) 64px;
+      gap: 4px;
+    }
+    .thead {
+      min-height: 26px;
+      display: grid;
+      place-items: center;
+      border-radius: 4px;
+      background: #303945;
+      font-weight: 750;
+      font-size: 10.5px;
+      border-top: 3px solid var(--tc, #62707d);
+    }
+    .slot {
+      position: relative;
+      min-height: 30px;
+      display: grid;
+      place-items: center;
+      padding: 1px 2px;
+      border-radius: 4px;
+      background: #151a21;
+      border: 1px solid #2c333d;
+      color: #55606c;
+      font-size: 9px;
+      font-weight: 650;
+      text-align: center;
+      transition: background .18s, color .18s;
+    }
+    .slot.has { color: #cad4de; background: #232b35; border-color: #39434f; }
+    .slot.playing {
+      color: #06231d;
+      background: var(--green);
+      border-color: #d9fff6;
+      animation: pulse 1s infinite alternate;
+    }
+    .slot.newborn { color: #12100a; background: var(--gold); border-color: #fff2c8; }
+    @keyframes pulse { from { box-shadow: 0 0 2px rgba(42,157,143,.4);} to { box-shadow: 0 0 14px rgba(42,157,143,.95);} }
+    .scene-btn {
+      min-height: 30px;
+      display: grid;
+      place-items: center;
+      border-radius: 4px;
+      background: #2b323c;
+      color: #aeb9c4;
+      font-size: 9px;
+      font-weight: 750;
+      border: 1px solid #39434f;
+    }
+    .scene-btn.playing { background: var(--green); color: #06231d; }
+    .srow.inring .slot { outline: 1px solid rgba(231, 111, 81, .0); }
+    .session .ringed { box-shadow: inset 0 0 0 1px rgba(231, 111, 81, .55); }
+
+    /* ------- APC40 surface ------- */
+    .apc {
+      margin-top: 14px;
+      border-radius: 10px;
+      padding: 12px;
+      background: #1d222a;
+      color: #e8eef3;
+      box-shadow: inset 0 0 0 2px #0d1117;
+      font-size: 10px;
+    }
+    .apc-title { font-weight: 800; letter-spacing: .06em; font-size: 11px; color: #aab6c2; margin-bottom: 8px; }
+    .apc-main { display: grid; grid-template-columns: 1fr 168px; gap: 12px; }
+    .apc-grid { display: grid; grid-template-columns: repeat(8, 1fr) 54px; gap: 4px; }
+    .pad {
+      min-height: 24px;
+      border-radius: 3px;
+      background: #10151c;
+      border: 1px solid #343e49;
+      transition: background .18s;
+    }
+    .pad.lit-dim { background: #3a4a5e; }
+    .pad.lit { background: var(--green); border-color: #b8ffef; animation: pulse 1s infinite alternate; }
+    .pad.press { background: var(--gold); border-color: #fff2c8; }
+    .apc-scene {
+      min-height: 24px;
+      border-radius: 3px;
+      background: #2b323c;
+      border: 1px solid #39434f;
+      display: grid;
+      place-items: center;
+      color: #97a3b0;
+      font-size: 8px;
+      font-weight: 750;
+    }
+    .apc-scene.press { background: var(--gold); color: #12100a; }
+    .apc-scene.playing { background: var(--green); color: #06231d; }
+    .stopr {
+      min-height: 14px;
+      border-radius: 3px;
+      background: #262e38;
+      border: 1px solid #39434f;
+    }
+    .stopr.press { background: var(--coral); }
+    .act {
+      min-height: 18px;
+      display: grid;
+      place-items: center;
+      border-radius: 3px;
+      background: #d99a2b;
+      color: #241b05;
+      font-weight: 800;
+      font-size: 9px;
+      border: 1px solid #10151c;
+    }
+    .act.off { background: #262e38; color: #6c7987; }
+    .fader-row { display: grid; grid-template-columns: repeat(8, 1fr) 54px; gap: 4px; margin-top: 8px; }
+    .fader {
+      height: 74px;
+      position: relative;
+      display: grid;
+      justify-items: center;
+    }
+    .fader .rail { width: 4px; height: 100%; border-radius: 2px; background: #0c1016; }
+    .fader .cap {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: calc((1 - var(--v, .7)) * 56px);
+      width: 26px;
+      height: 12px;
+      border-radius: 3px;
+      background: #aab4bf;
+      border: 1px solid #05070a;
+      transition: top .5s;
+    }
+    .fader.moved .cap { background: var(--gold); }
+    .fader-label { text-align: center; font-size: 8px; font-weight: 750; color: #97a3b0; margin-top: 2px; }
+    .apc-right { display: grid; gap: 8px; align-content: start; }
+    .mode-row { display: flex; gap: 5px; }
+    .mini-btn {
+      flex: 1;
+      padding: 5px 2px;
+      text-align: center;
+      border-radius: 3px;
+      background: #262e38;
+      border: 1px solid #39434f;
+      color: #97a3b0;
+      font-weight: 750;
+      font-size: 8.5px;
+    }
+    .mini-btn.press { background: var(--gold); color: #12100a; }
+    .mini-btn.wide { flex: 1.4; }
+    .knobs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 7px; }
+    .knob-wrap { display: grid; justify-items: center; gap: 2px; font-size: 8px; font-weight: 750; color: #97a3b0; }
+    .knob {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      border: 2px solid #0b0f14;
+      background: radial-gradient(circle at 38% 32%, #717b86, #252c35 58%, #0c1016);
+      position: relative;
+    }
+    .knob::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 10%;
+      width: 2.5px;
+      height: 38%;
+      border-radius: 2px;
+      background: var(--gold);
+      transform: translateX(-50%) rotate(var(--turn, -40deg));
+      transform-origin: 50% 105%;
+    }
+    .arrows { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; }
+    .arrows .mini-btn { padding: 6px 2px; }
+    .arrows .blank { visibility: hidden; }
+    .xfade { display: grid; gap: 3px; }
+    .xfade .rail { height: 8px; border-radius: 4px; background: #0c1016; position: relative; }
+    .xfade .cap {
+      position: absolute;
+      top: -3px;
+      left: calc(var(--x, .5) * 100% - 9px);
+      width: 18px;
+      height: 14px;
+      border-radius: 3px;
+      background: #aab4bf;
+      border: 1px solid #05070a;
+      transition: left .5s;
+    }
+    .xfade-label { font-size: 8px; color: #6c7987; text-align: center; font-weight: 750; }
+
+    /* ------- Step player ------- */
+    .side h2 { margin: 0 0 8px; font-size: 22px; min-height: 52px; }
+    .meta { display: flex; gap: 7px; flex-wrap: wrap; margin-bottom: 10px; }
+    .pill {
+      padding: 5px 8px;
+      border-radius: 999px;
+      color: #24303a;
+      background: #ebe4d8;
+      font-size: 12px;
+      font-weight: 750;
+    }
+    .pill.phase { background: #d7ecdf; }
+    .step-text { min-height: 168px; color: var(--muted); }
+    .step-text b { color: var(--ink); }
+    .actions { display: flex; gap: 9px; flex-wrap: wrap; margin-top: 12px; }
+    button {
+      border: 0;
+      border-radius: 6px;
+      padding: 10px 13px;
+      color: white;
+      background: var(--teal);
+      font-weight: 750;
+      cursor: pointer;
+    }
+    button.secondary { color: var(--ink); background: var(--gold); }
+    .steps { display: grid; gap: 6px; margin-top: 13px; max-height: 520px; overflow-y: auto; }
+    .phase-head {
+      margin-top: 6px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+    .step {
+      display: grid;
+      grid-template-columns: 30px 1fr;
+      gap: 8px;
+      align-items: center;
+      padding: 7px 8px;
+      border-radius: 6px;
+      color: var(--muted);
+      background: #f0eadf;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .step.current { color: var(--ink); background: #dff1ee; font-weight: 750; }
+    .num {
+      height: 24px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: var(--blue);
+      font-size: 11.5px;
+      font-weight: 750;
+    }
+    .links { margin-top: 18px; }
+    .links h3 { margin: 0 0 6px; font-size: 16px; }
+    .links ul { margin: 0; padding-left: 1.1rem; color: var(--muted); font-size: 14px; }
+    .links a { color: var(--teal); font-weight: 650; }
+    @media (max-width: 940px) {
+      .layout { grid-template-columns: 1fr; }
+      .steps { max-height: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>APC40 MK2 Don't Cry Tonight Ableton Lab</h1>
+    <p class="subtitle">Rebuild the feel of the Savage &amp; John E.S "Don't Cry Tonight" remix as a legal practice set:
+      eight tracks, eight scenes, APC40 MK2 only, Ableton Live 12. Every step below animates the Session grid and the
+      APC surface exactly as the companion book describes. Use your own sounds; the reference stays on YouTube.</p>
+    <section class="layout">
+      <div class="panel">
+        <div class="live">
+          <div class="live-head">
+            <span class="lcd" id="lcd-tempo">118 BPM</span>
+            <span class="lcd">Q: 1 Bar</span>
+            <span class="lcd" id="lcd-view">SESSION</span>
+            <span class="lcd" id="lcd-note">&nbsp;</span>
+          </div>
+          <div class="session" id="session"></div>
+        </div>
+        <div class="apc">
+          <div class="apc-title">AKAI APC40 MK2 <span id="apc-ring-label" style="float:right; color:#e76f51;"></span></div>
+          <div class="apc-main">
+            <div>
+              <div class="apc-grid" id="apcgrid"></div>
+              <div class="fader-row" id="faders"></div>
+            </div>
+            <div class="apc-right">
+              <div class="mode-row">
+                <div class="mini-btn" data-b="pan">PAN</div>
+                <div class="mini-btn" data-b="sends">SENDS</div>
+                <div class="mini-btn" data-b="user">USER</div>
+              </div>
+              <div class="knobs" id="knobs"></div>
+              <div class="mode-row">
+                <div class="mini-btn wide" data-b="devlock">DEV LOCK</div>
+                <div class="mini-btn wide" data-b="clipdev">CLIP/DEV</div>
+              </div>
+              <div class="arrows">
+                <div class="mini-btn blank"></div>
+                <div class="mini-btn" data-b="up">&#9650;</div>
+                <div class="mini-btn blank"></div>
+                <div class="mini-btn" data-b="left">&#9664;</div>
+                <div class="mini-btn" data-b="down">&#9660;</div>
+                <div class="mini-btn" data-b="right">&#9654;</div>
+              </div>
+              <div class="mode-row">
+                <div class="mini-btn" data-b="play">PLAY</div>
+                <div class="mini-btn" data-b="rec">REC</div>
+                <div class="mini-btn" data-b="stopall">STOP ALL</div>
+              </div>
+              <div class="xfade">
+                <div class="rail" id="xfader"><div class="cap"></div></div>
+                <div class="xfade-label">A &nbsp;&nbsp; CROSSFADER &nbsp;&nbsp; B</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <aside class="panel side">
+        <h2 id="title">Plug in the APC</h2>
+        <div class="meta">
+          <span class="pill phase" id="phase">Setup</span>
+          <span class="pill" id="mode">Hardware</span>
+          <span class="pill">118 BPM &middot; A minor</span>
+        </div>
+        <div class="step-text" id="body"></div>
+        <div class="actions">
+          <button id="prev" type="button">Back</button>
+          <button id="next" type="button">Next</button>
+          <button class="secondary" id="play" type="button">Play Steps</button>
+        </div>
+        <div class="steps" id="steps"></div>
+        <div class="links">
+          <h3>Sources and companions</h3>
+          <ul>
+            <li>Reference mix (listen, don't rip): <a href="https://www.youtube.com/watch?v=zuHLHvZv4Ac" rel="noopener">Savage &amp; John.E.S - Don't cry tonight (5:47)</a></li>
+            <li>APC40 MK2 surface walkthrough: <a href="https://www.youtube.com/watch?v=hUo2xowjr0U" rel="noopener">Meta Mind Music (29:56)</a></li>
+            <li>Official operation overview: <a href="https://www.youtube.com/watch?v=IAWy2TVtXo8" rel="noopener">Akai Professional (12:45)</a></li>
+            <li>The full book with every detail: <em>APC40 MK2 Ableton Live 12 Getting Started</em> (PDF/EPUB/MOBI on the homepage).</li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+  </main>
+  <script>
+    const TRACKS = [
+      { n: "KICK", c: "#2a9d8f" }, { n: "CLAP", c: "#e9c46a" }, { n: "HATS", c: "#3d5a80" },
+      { n: "BASS", c: "#6f5aa8" }, { n: "CHORDS", c: "#c2557f" }, { n: "LEAD", c: "#e76f51" },
+      { n: "PAD", c: "#5f9ea0" }, { n: "FX", c: "#8a8f98" },
+    ];
+    const SCENES = ["INTRO", "GROOVE", "VERSE", "LIFT", "CHOR A", "CHOR B", "BREAK", "TAG/END"];
+    const PLAN = [
+      ["soft kick", "", "hat pulse", "", "filtered", "", "dark pad", "noise"],
+      ["4-on-floor", "backbeat", "8th hats", "octave", "low stab", "", "pad", "riser"],
+      ["kick", "clap", "hat lift", "bass", "chords", "lead", "pad", "delay"],
+      ["kick", "clap", "open hat", "bass", "filt open", "answer", "wide pad", "riser"],
+      ["full kick", "clap", "hats+open", "full bass", "wide chrd", "main hook", "wide pad", "crash"],
+      ["full kick", "clap fill", "hat fill", "bass var", "chrd var", "hook var", "pad high", "throw"],
+      ["", "", "hat ghost", "bass hold", "pad chord", "lead", "filt pad", "impact"],
+      ["kick end", "clap end", "hat end", "bass end", "chrd end", "final hook", "tail", "verb tail"],
+    ];
+    const key = (r, c) => r + "," + c;
+    const ALL_CELLS = [];
+    PLAN.forEach((row, r) => row.forEach((v, c) => { if (v) ALL_CELLS.push(key(r, c)); }));
+    const F = (o) => Object.assign({ KICK: .72, CLAP: .7, HATS: .68, BASS: .72, CHORDS: .62, LEAD: .66, PAD: .55, FX: .4, MASTER: .8 }, o);
+
+    // Each step: phase, title, mode, text, add (cells that appear), scene (playing row),
+    // ring (top row of APC window), faders, moved (fader names to highlight), mute, press
+    // (APC buttons), pressScene (APC scene slot 0-4), knobs {1..8: deg}, x (crossfader).
+    const steps = [
+      { ph: "Setup", t: "Plug in the APC", m: "Hardware", press: [],
+        x: "Put the APC40 MK2 flat on the desk, connect its USB cable <b>directly</b> to the computer (no hub), and flip the power switch. Do not connect the MPK or anything else. The APC is USB-powered: if nothing lights up, suspect the cable or port first." },
+      { ph: "Setup", t: "Live Settings: control surface", m: "Link, Tempo & MIDI",
+        x: "Open <b>Live &gt; Settings &gt; Link, Tempo and MIDI</b>. Set Control Surface, Input, and Output all to <b>APC40 mkII</b>. On the ports below, enable Track and Remote for the APC input and output; leave Sync off. If Live auto-filled these, leave them alone." },
+      { ph: "Setup", t: "Test: move the Session ring", m: "Bank arrows", press: ["right", "left"],
+        x: "Close Settings. In Session View, look for the <b>red ring</b> around an 8&times;5 block of slots &mdash; that is what the APC controls. Press the APC's Right then Left bank arrows: the ring must move. If it does not move, stop and fix recognition before anything else." },
+      { ph: "Setup", t: "Create the 8 tracks", m: "Session View",
+        x: "New Live Set, saved as <b>APC Dont Cry Tonight Practice 01</b>. Create eight tracks and name them KICK, CLAP, HATS, BASS, CHORDS, LEAD, PAD, FX. Color them by family &mdash; the APC grid mirrors clip colors, and a readable grid is easier to play. Create eight scenes named after the sections." },
+      { ph: "Setup", t: "Tempo 118, quantization 1 Bar", m: "Control bar",
+        x: "Click the tempo field and type <b>118</b>. Set Global Quantization to <b>1 Bar</b> &mdash; every launch waits for the next bar line, so you cannot be off-beat. In Settings &gt; Record Warp Launch, set Count-In to 1 Bar. Metronome on while building." },
+
+      { ph: "Build", t: "Load a 909 kit on 3 tracks", m: "Browser",
+        x: "In the browser click <b>Drums</b>, search <b>909</b>, preview kits by clicking, then drag your favorite onto KICK &mdash; and the same kit onto CLAP and HATS. Three tracks, one kit: each APC column now owns one drum job. Load a <b>Drift bass</b> preset on BASS and pads on CHORDS and PAD while you are here." },
+      { ph: "Build", t: "Draw the kick clip", m: "Piano roll", add: ["1,0"], scene: null, newborn: "1,0",
+        x: "Double-click the empty KICK slot in the GROOVE row. Clip View opens. Press <b>B</b> for Draw Mode and put notes at <b>C1</b> on steps 1, 5, 9, 13 &mdash; a kick on every beat. Launch it: four-on-the-floor at 118. That pulse is the spine of the whole remix." },
+      { ph: "Build", t: "Add the clap", m: "Piano roll", add: ["1,1"], newborn: "1,1",
+        x: "Same move on CLAP/GROOVE: find the clap note in the kit and draw steps <b>5 and 13</b> &mdash; beats 2 and 4. Launch the whole GROOVE scene from the APC and hear kick and clap lock." },
+      { ph: "Build", t: "Add the hats", m: "Piano roll", add: ["1,2"], newborn: "1,2", scene: 1, ring: 0,
+        x: "HATS/GROOVE: closed hat (F&#35;1) on every odd step &mdash; straight eighths. Open hat (A&#35;1) on steps <b>3, 7, 11, 15</b>: the disco &ldquo;and&rdquo; after every beat. This is the Italo engine room. Let it loop for a minute; boredom here is fuel later." },
+      { ph: "Build", t: "The octave bass", m: "A minor", add: ["1,3"], newborn: "1,3", scene: 1,
+        x: "BASS/GROOVE: eighth notes alternating <b>A1 and A2</b> &mdash; low A on the beat, the octave above on the off-beat. Launch GROOVE: the octave bounce against the kick is the sound that makes people say &ldquo;that&rsquo;s 80s&rdquo;. If bass drowns kick, pull the BASS fader down from the APC." },
+      { ph: "Build", t: "Chords: Am F C G", m: "4-bar clip", add: ["2,4", "1,4", "3,4", "4,4", "5,4"], newborn: "2,4",
+        x: "CHORDS/VERSE: make the clip 4 bars (drag the loop brace). One held chord per bar: <b>Am, F, C, G</b> (A2C3E3 / F2A2C3 / C3E3G3 / G2B2D3). Copy it to LIFT and both CHORUS rows with Cmd+C / Cmd+V. A short stab version goes to GROOVE." },
+      { ph: "Build", t: "The lead hook", m: "Less is more", add: ["2,5", "4,5", "6,5"], newborn: "2,5",
+        x: "LEAD/VERSE, 4 bars: a phrase of <b>5&ndash;9 notes from A minor in bar 4 only</b>. Bars 1&ndash;3 stay empty &mdash; a hook that speaks once per cycle sounds like an answer to the chords; one that never stops sounds like a smoke alarm. Copy to CHORUS A an octave up, one held stab to BREAK." },
+      { ph: "Build", t: "Pads: dark fifth to wide", m: "Texture", add: ["0,6", "4,6", "0,4"], newborn: "0,6",
+        x: "PAD/INTRO: a bare <b>A2+E3 fifth</b> held for 4 bars reads instantly as &ldquo;dark intro&rdquo;. PAD/CHORUS A: the full wide chord version. CHORDS/INTRO gets a filtered one-hit stab. These three cells carry all the emotional lighting." },
+      { ph: "Build", t: "The FX column", m: "Samples", add: ["0,7", "1,7", "3,7", "4,7", "6,7"], newborn: "3,7",
+        x: "Browser &gt; <b>Samples</b>: search riser, impact, noise, cymbal. Drag a noise loop to INTRO/FX, a short riser to GROOVE/FX, a long riser to LIFT/FX, a crash to CHORUS A/FX, an impact to BREAK/FX. Check <b>Warp is on</b> for loops so they follow 118 BPM." },
+      { ph: "Build", t: "Fill the rest by copying", m: "Cmd+drag", add: "rest",
+        x: "Everything left is a copy with one edit: INTRO drums are GROOVE minus beats 2+4 at low velocity, CHORUS B adds fills, BREAK keeps only ghost hats and a bass hold, TAG/END copies GROOVE. The book has the exact table. <b>Checkpoint: every scene makes sound.</b> Save, photograph the lit grid." },
+
+      { ph: "Returns", t: "Reverb and delay returns", m: "Return tracks",
+        x: "Create two return tracks: <b>A REVERB</b> (Hybrid Reverb) and <b>B DELAY</b> (Echo). These are shared effect pools: any track can send into them with one knob. Keep KICK and BASS mostly dry forever." },
+      { ph: "Returns", t: "Sends mode on the APC", m: "SENDS", press: ["sends"], knobs: { 5: 30, 6: 10, 7: 40 },
+        x: "Press <b>SENDS</b>: the eight channel knobs now control Send A (reverb) for the eight tracks. Add reverb to CHORDS, LEAD, PAD. Hold SENDS and press Track Selector 2 to switch the knobs to Send B (delay) &mdash; small delay on LEAD only." },
+      { ph: "Returns", t: "Macro rack + Device Lock", m: "D1-D8", press: ["devlock"], knobs: { 1: -20, 3: 0, 5: 20 },
+        x: "On FX, create an Audio Effect Rack: Auto Filter, Echo, Reverb, Utility, with macros <b>Pad Filter, Resonance, Delay Throw, Feedback, Reverb Bloom, Riser Level, Width, FX Trim</b> on D1&ndash;D8. Select the rack, press <b>Device Lock</b>: the APC device knobs now stay on it no matter what you click." },
+
+      { ph: "Perform", t: "Launch INTRO", m: "Scene 1", scene: 0, ring: 0, pressScene: 0, faders: F({ KICK: .3, CLAP: .3, HATS: .3, BASS: .25, PAD: .45, FX: .35 }), moved: ["PAD", "FX"], knobs: { 1: -40 },
+        x: "Metronome off. All faders low-ish, D1 (Pad Filter) closed. Press the APC <b>Scene 1</b> button. 1-Bar quantization means you can press early &mdash; Live waits for the bar line. Count 8 bars: noise, dark fifth, a hint of kick." },
+      { ph: "Perform", t: "Launch GROOVE, raise the rhythm", m: "Scene 2", scene: 1, ring: 0, pressScene: 1, faders: F({ LEAD: .4 }), moved: ["KICK", "CLAP", "HATS", "BASS"],
+        x: "Press <b>Scene 2</b> on the count of 4. As it drops, raise KICK, CLAP, HATS, then BASS with your left hand. Right hand stays near the scene buttons. Mute CLAP for one bar and bring it back &mdash; your first arrangement decision." },
+      { ph: "Perform", t: "Launch VERSE, feature the lead", m: "Scene 3", scene: 2, ring: 0, pressScene: 2, faders: F({ HATS: .6, LEAD: .74 }), moved: ["LEAD"],
+        x: "Press <b>Scene 3</b>. The lead phrase enters over a slightly restrained groove: HATS down a touch, LEAD up. Add a small Send B (delay) on LEAD so the phrase endings ring." },
+      { ph: "Perform", t: "Launch LIFT, open the filter", m: "Scene 4", scene: 3, ring: 0, pressScene: 3, faders: F({ PAD: .68, FX: .6 }), moved: ["PAD", "FX"], knobs: { 1: 25 },
+        x: "Press <b>Scene 4</b>. Open hats, long riser, and your one big gesture: <b>slowly open D1</b> (Pad Filter) across the whole 8 bars. Raise PAD and FX but do not bury the bass. Mute KICK on the last beat before the chorus." },
+      { ph: "Perform", t: "CHORUS A: everything up", m: "Scene 5", scene: 4, ring: 0, pressScene: 4, faders: F({ CHORDS: .78, LEAD: .8, PAD: .74, FX: .5 }), moved: ["CHORDS", "LEAD", "PAD"], knobs: { 1: 40, 5: 25 },
+        x: "Press <b>Scene 5</b> &mdash; the crash hits, full drums, full bass, wide chords, main hook. Bring CHORDS, LEAD, and PAD up together; add Reverb Bloom (D5). The chorus must feel like the roof opens. If it doesn't, the problem is the fader plan, not the clips." },
+      { ph: "Perform", t: "Down, Down, Down", m: "Move the window", scene: 4, ring: 3, press: ["down"],
+        x: "While CHORUS A plays its 8 bars: press the <b>Down arrow three times</b>. The ring moves one scene per press, so scenes 4&ndash;8 are now under the grid &mdash; watch the row labels shift on the APC. Rest your finger on the new bottom rows. The audience hears nothing; your hands relocated." },
+      { ph: "Perform", t: "CHORUS B + delay throw", m: "Scene 6", scene: 5, ring: 3, pressScene: 2, faders: F({ CHORDS: .78, LEAD: .8, PAD: .7, FX: .42 }), knobs: { 3: 45, 4: 30 }, moved: ["FX"],
+        x: "Launch <b>CHORUS B</b> (third visible row now). Fills and variations keep energy up. One trick only: push <b>D3/D4</b> (Delay Throw + Feedback) for a single bar at a phrase ending, then pull both back down. Mute BASS for one beat before the throw for drama." },
+      { ph: "Perform", t: "BREAK: strip it bare", m: "Scene 7", scene: 6, ring: 3, pressScene: 3, faders: F({ KICK: .3, CLAP: .3, HATS: .5, PAD: .68 }), mute: ["KICK", "CLAP"], knobs: { 5: 45 }, moved: ["PAD"],
+        x: "Launch <b>BREAK</b>. Kick and clap are gone (their slots are empty here &mdash; the arrangement does the muting), ghost hats and a bass hold carry the pulse, pad chord and lead float on Reverb Bloom (D5 up). Four to eight bars of air before the final lift." },
+      { ph: "Perform", t: "TAG/END: land it", m: "Scene 8", scene: 7, ring: 3, pressScene: 4, faders: F({ KICK: .55, BASS: .5, PAD: .6, FX: .5, LEAD: .7 }), knobs: { 5: 45, 7: 40 }, moved: ["KICK", "BASS"],
+        x: "Launch <b>TAG/END</b>: the hook one last time. Then fade KICK and BASS first, let PAD and FX tail with Reverb Bloom and Width (D5/D7) up, mute LEAD after its final phrase, and when only tails remain&hellip;" },
+      { ph: "Perform", t: "Stop All Clips", m: "Clean ending", press: ["stopall"], scene: null, ring: 3, faders: F({ KICK: .2, BASS: .2, PAD: .5, FX: .45 }),
+        x: "&hellip;press <b>Stop All Clips</b>. With 1-Bar quantization the stop lands on the bar line, so even the ending is in time. Run the whole eight-scene pass until it is boring. Boring means your hands know where the song is." },
+
+      { ph: "Record", t: "Arm Arrangement Record", m: "Capture", press: ["rec"], ring: 0,
+        x: "Save. Stop All Clips. Faders to their INTRO positions, D1 closed. Press <b>Arrangement Record</b> in Live's control bar (the APC Record button, if assigned) &mdash; Live will now log every scene launch, fader move, mute, send, and knob turn as automation." },
+      { ph: "Record", t: "Perform the 64 bars", m: "The take", press: ["play"], scene: 1, ring: 0, pressScene: 1, faders: F({}), moved: ["KICK", "BASS"],
+        x: "Press <b>Play</b> and perform the score: eight scenes in order, faders in every section, at least three mutes, one filter opening, one delay throw, one reverb tail. Mistakes are fine &mdash; a 60&ndash;90 second honest take beats a perfect take that never happens." },
+      { ph: "Record", t: "Listen back in Arrangement", m: "Tab", scene: null,
+        x: "Press Stop twice, then <b>Tab</b>: your whole performance sits in Arrangement View as clips and automation lanes. Listen all the way through once without touching anything. Save as <b>&hellip; Practice 01 - recorded</b>." },
+      { ph: "Record", t: "Export the WAV", m: "File > Export",
+        x: "Select bar 1 to the end, <b>File &gt; Export Audio/Video</b>: Master, 44100, WAV 16-bit, Normalize off. Name it <b>dct-apc-practice-take01.wav</b> and play it outside Ableton. That file is what this whole lab was building toward. Keep every take &mdash; take 5 will embarrass take 1, and hearing that distance is the best progress report there is." },
+    ];
+
+    // Precompute cumulative cell sets.
+    let have = new Set();
+    const preBuilt = ALL_CELLS; // steps before the build phase show the finished grid? No: start empty.
+    const cum = steps.map((s) => {
+      if (s.add === "rest") { have = new Set(ALL_CELLS); }
+      else if (s.add) { s.add.forEach((k) => have.add(k)); }
+      else if (s.ph !== "Setup" && s.ph !== "Build") { have = new Set(ALL_CELLS); }
+      return new Set(have);
+    });
+
+    const $ = (id) => document.getElementById(id);
+    let index = 0, playing = false, timer = null;
+
+    function build() {
+      const sess = $("session");
+      let html = TRACKS.map((t) => `<div class="thead" style="--tc:${t.c}">${t.n}</div>`).join("") + `<div class="thead">SCENE</div>`;
+      PLAN.forEach((row, r) => {
+        row.forEach((v, c) => {
+          html += `<div class="slot" data-k="${r},${c}" data-t="${TRACKS[c].n}">${v || "&nbsp;"}</div>`;
+        });
+        html += `<div class="scene-btn" data-s="${r}">${SCENES[r]}</div>`;
+      });
+      sess.innerHTML = html;
+
+      const grid = $("apcgrid");
+      let g = "";
+      for (let r = 0; r < 5; r++) {
+        for (let c = 0; c < 8; c++) g += `<div class="pad" data-r="${r}" data-c="${c}"></div>`;
+        g += `<div class="apc-scene" data-s="${r}">&nbsp;</div>`;
+      }
+      for (let c = 0; c < 8; c++) g += `<div class="stopr" data-stop="${c}"></div>`;
+      g += `<div class="stopr"></div>`;
+      for (let c = 0; c < 8; c++) g += `<div class="act" data-act="${TRACKS[c].n}">${c + 1}</div>`;
+      g += `<div class="act off">M</div>`;
+      grid.innerHTML = g;
+
+      $("faders").innerHTML = TRACKS.map((t) =>
+        `<div><div class="fader" data-f="${t.n}"><div class="rail"></div><div class="cap"></div></div><div class="fader-label">${t.n}</div></div>`
+      ).join("") + `<div><div class="fader" data-f="MASTER"><div class="rail"></div><div class="cap"></div></div><div class="fader-label">MASTER</div></div>`;
+
+      $("knobs").innerHTML = Array.from({ length: 8 }, (_, i) =>
+        `<div class="knob-wrap"><div class="knob" data-n="${i + 1}"></div><div>D${i + 1}</div></div>`
+      ).join("");
+
+      const stepsEl = $("steps");
+      let lastPh = "";
+      steps.forEach((s, i) => {
+        if (s.ph !== lastPh) {
+          lastPh = s.ph;
+          const h = document.createElement("div");
+          h.className = "phase-head";
+          h.textContent = { Setup: "Phase 1 · Setup", Build: "Phase 2 · Build the clips", Returns: "Phase 3 · Returns & macros", Perform: "Phase 4 · Perform", Record: "Phase 5 · Record & export" }[s.ph];
+          stepsEl.appendChild(h);
+        }
+        const el = document.createElement("div");
+        el.className = "step";
+        el.dataset.i = i;
+        el.innerHTML = `<div class="num">${i + 1}</div><div>${s.t}</div>`;
+        el.onclick = () => setStep(i);
+        stepsEl.appendChild(el);
+      });
+    }
+
+    function setStep(i) {
+      index = (i + steps.length) % steps.length;
+      const s = steps[index];
+      const cells = cum[index];
+      const ring = s.ring ?? 0;
+      const scene = s.scene ?? null;
+      const faders = s.faders || F({});
+      const mutes = s.mute || [];
+      const press = s.press || [];
+      const knobs = s.knobs || {};
+
+      $("title").textContent = (index + 1) + ". " + s.t;
+      $("phase").textContent = { Setup: "Setup", Build: "Build", Returns: "Returns", Perform: "Perform", Record: "Record" }[s.ph];
+      $("mode").textContent = s.m;
+      $("body").innerHTML = s.x;
+      $("lcd-view").textContent = s.ph === "Record" && /Arrangement|Export/.test(s.t) ? "ARRANGE" : "SESSION";
+      $("lcd-note").textContent = scene !== null ? "Playing: " + SCENES[scene] : "";
+      $("apc-ring-label").textContent = "ring: scenes " + (ring + 1) + "-" + (ring + 5);
+
+      document.querySelectorAll(".slot").forEach((el) => {
+        const k = el.dataset.k;
+        const r = Number(k.split(",")[0]);
+        const has = cells.has(k);
+        el.classList.toggle("has", has);
+        el.classList.toggle("newborn", s.newborn === k);
+        el.classList.toggle("playing", has && scene === r && !mutes.includes(el.dataset.t));
+        el.classList.toggle("ringed", r >= ring && r < ring + 5);
+      });
+      document.querySelectorAll(".scene-btn").forEach((el) => el.classList.toggle("playing", Number(el.dataset.s) === scene));
+
+      document.querySelectorAll(".pad").forEach((el) => {
+        const r = ring + Number(el.dataset.r), c = Number(el.dataset.c);
+        const has = r < 8 && cells.has(key(r, c));
+        const on = has && scene === r && !mutes.includes(TRACKS[c].n);
+        el.className = "pad" + (on ? " lit" : has ? " lit-dim" : "");
+      });
+      document.querySelectorAll(".apc-scene").forEach((el) => {
+        const r = ring + Number(el.dataset.s);
+        el.textContent = r < 8 ? SCENES[r] : "";
+        el.className = "apc-scene" + (Number(el.dataset.s) === s.pressScene ? " press" : (scene !== null && r === scene ? " playing" : ""));
+      });
+      document.querySelectorAll(".act[data-act]").forEach((el) => el.classList.toggle("off", mutes.includes(el.dataset.act)));
+      document.querySelectorAll(".fader[data-f]").forEach((el) => {
+        el.style.setProperty("--v", faders[el.dataset.f] ?? .7);
+        el.classList.toggle("moved", (s.moved || []).includes(el.dataset.f));
+      });
+      document.querySelectorAll(".knob").forEach((el) => el.style.setProperty("--turn", (knobs[Number(el.dataset.n)] ?? -40) + "deg"));
+      document.querySelectorAll(".mini-btn[data-b]").forEach((el) => el.classList.toggle("press", press.includes(el.dataset.b)));
+      $("xfader").style.setProperty("--x", s.xf ?? .5);
+
+      document.querySelectorAll(".step").forEach((el) => {
+        const cur = Number(el.dataset.i) === index;
+        el.classList.toggle("current", cur);
+        if (cur) el.scrollIntoView({ block: "nearest" });
+      });
+    }
+
+    function toggle() {
+      playing = !playing;
+      $("play").textContent = playing ? "Pause" : "Play Steps";
+      if (playing) timer = setInterval(() => setStep(index + 1), 3200);
+      else clearInterval(timer);
+    }
+
+    build();
+    const hashStep = Number((location.hash.match(/\d+/) || [0])[0]);
+    setStep(hashStep ? hashStep - 1 : 0);
+    $("prev").onclick = () => setStep(index - 1);
+    $("next").onclick = () => setStep(index + 1);
+    $("play").onclick = toggle;
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight") setStep(index + 1);
+      if (e.key === "ArrowLeft") setStep(index - 1);
+    });
+  </script>
+</body>
+</html>

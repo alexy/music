@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-label="plate-20-video-segment-map.svg">
+  <defs>
+    <style>
+      .title { font: 700 28px Arial, sans-serif; fill: #20242b; }
+      .subtitle { font: 400 16px Arial, sans-serif; fill: #6b7280; }
+      .label { font: 700 13px Arial, sans-serif; fill: #20242b; }
+      .small { font: 400 11px Arial, sans-serif; fill: #20242b; }
+      .tiny { font: 400 9px Arial, sans-serif; fill: #20242b; }
+      .white { fill: #fff; }
+      .mono { font: 700 10px Menlo, Consolas, monospace; fill: #20242b; }
+    </style>
+  </defs>
+  <rect width="100%" height="100%" fill="#f6f3eb"/>
+  <text x="34" y="42" class="title" text-anchor="start">Video segments mapped to book chapters</text><text x="36" y="66" class="subtitle" text-anchor="start">Watch small chunks right before the chapter that uses them. Use each video's chapter list to jump.</text>
+  <rect x="50" y="112" width="330" height="56" rx="8" fill="#eef2ff" stroke="#b8b2a7" stroke-width="1"/>
+        <text x="70" y="146" class="label" text-anchor="start">Meet Ableton Live 12</text>
+        <line x1="380" y1="140" x2="440" y2="140" stroke="#189a86" stroke-width="3"/>
+        <rect x="440" y="112" width="420" height="56" rx="8" fill="#fff" stroke="#b8b2a7" stroke-width="1"/>
+        <text x="460" y="136" class="label" text-anchor="start">MusicRadar Tech, Live 12 Session View</text>
+        <text x="460" y="156" class="small" text-anchor="start">opening overview segment</text><rect x="50" y="182" width="330" height="56" rx="8" fill="#eef2ff" stroke="#b8b2a7" stroke-width="1"/>
+        <text x="70" y="216" class="label" text-anchor="start">Cable, Power, Settings</text>
+        <line x1="380" y1="210" x2="440" y2="210" stroke="#189a86" stroke-width="3"/>
+        <rect x="440" y="182" width="420" height="56" rx="8" fill="#fff" stroke="#b8b2a7" stroke-width="1"/>
+        <text x="460" y="206" class="label" text-anchor="start">Akai official APC40 mkII video</text>
+        <text x="460" y="226" class="small" text-anchor="start">'Setup' portion at the start</text><rect x="50" y="252" width="330" height="56" rx="8" fill="#eef2ff" stroke="#b8b2a7" stroke-width="1"/>
+        <text x="70" y="286" class="label" text-anchor="start">Clip Grid Basics</text>
+        <line x1="380" y1="280" x2="440" y2="280" stroke="#189a86" stroke-width="3"/>
+        <rect x="440" y="252" width="420" height="56" rx="8" fill="#fff" stroke="#b8b2a7" stroke-width="1"/>
+        <text x="460" y="276" class="label" text-anchor="start">Meta Mind Music walkthrough</text>
+        <text x="460" y="296" class="small" text-anchor="start">'Clip/Session controls' chapter</text><rect x="50" y="322" width="330" height="56" rx="8" fill="#eef2ff" stroke="#b8b2a7" stroke-width="1"/>
+        <text x="70" y="356" class="label" text-anchor="start">Faders And Mutes</text>
+        <line x1="380" y1="350" x2="440" y2="350" stroke="#189a86" stroke-width="3"/>
+        <rect x="440" y="322" width="420" height="56" rx="8" fill="#fff" stroke="#b8b2a7" stroke-width="1"/>
+        <text x="460" y="346" class="label" text-anchor="start">Meta Mind Music walkthrough</text>
+        <text x="460" y="366" class="small" text-anchor="start">'Mixer controls' chapter</text><rect x="50" y="392" width="330" height="56" rx="8" fill="#eef2ff" stroke="#b8b2a7" stroke-width="1"/>
+        <text x="70" y="426" class="label" text-anchor="start">Device Knobs, Sends</text>
+        <line x1="380" y1="420" x2="440" y2="420" stroke="#189a86" stroke-width="3"/>
+        <rect x="440" y="392" width="420" height="56" rx="8" fill="#fff" stroke="#b8b2a7" stroke-width="1"/>
+        <text x="460" y="416" class="label" text-anchor="start">Meta Mind Music walkthrough</text>
+        <text x="460" y="436" class="small" text-anchor="start">'Device controls' chapter</text><rect x="50" y="462" width="330" height="56" rx="8" fill="#eef2ff" stroke="#b8b2a7" stroke-width="1"/>
+        <text x="70" y="496" class="label" text-anchor="start">Build The Practice Set</text>
+        <line x1="380" y1="490" x2="440" y2="490" stroke="#189a86" stroke-width="3"/>
+        <rect x="440" y="462" width="420" height="56" rx="8" fill="#fff" stroke="#b8b2a7" stroke-width="1"/>
+        <text x="460" y="486" class="label" text-anchor="start">Isotonik Studios set preparation</text>
+        <text x="460" y="506" class="small" text-anchor="start">whole video (9:40)</text><rect x="50" y="532" width="330" height="56" rx="8" fill="#eef2ff" stroke="#b8b2a7" stroke-width="1"/>
+        <text x="70" y="566" class="label" text-anchor="start">Performance Passes</text>
+        <line x1="380" y1="560" x2="440" y2="560" stroke="#189a86" stroke-width="3"/>
+        <rect x="440" y="532" width="420" height="56" rx="8" fill="#fff" stroke="#b8b2a7" stroke-width="1"/>
+        <text x="460" y="556" class="label" text-anchor="start">Random Noise workflow video</text>
+        <text x="460" y="576" class="small" text-anchor="start">any performance demo segment</text><rect x="50" y="602" width="330" height="56" rx="8" fill="#eef2ff" stroke="#b8b2a7" stroke-width="1"/>
+        <text x="70" y="636" class="label" text-anchor="start">Record To Arrangement</text>
+        <line x1="380" y1="630" x2="440" y2="630" stroke="#189a86" stroke-width="3"/>
+        <rect x="440" y="602" width="420" height="56" rx="8" fill="#fff" stroke="#b8b2a7" stroke-width="1"/>
+        <text x="460" y="626" class="label" text-anchor="start">Tony Tyson quick guide</text>
+        <text x="460" y="646" class="small" text-anchor="start">arrangement-on-the-fly segment</text>
+  <rect x="890" y="112" width="270" height="546" rx="10" fill="#fff7de" stroke="#e0b54b" stroke-width="1"/>
+  <text x="912" y="144" class="label" text-anchor="start">How to watch</text>
+  <text x="912" y="176" class="small" text-anchor="start">Watch the chunk once</text><text x="912" y="200" class="small" text-anchor="start">without touching gear.</text><text x="912" y="224" class="small" text-anchor="start"></text><text x="912" y="248" class="small" text-anchor="start">Do the chapter with</text><text x="912" y="272" class="small" text-anchor="start">your own hands.</text><text x="912" y="296" class="small" text-anchor="start"></text><text x="912" y="320" class="small" text-anchor="start">Rewatch only the part</text><text x="912" y="344" class="small" text-anchor="start">that surprised you.</text><text x="912" y="368" class="small" text-anchor="start"></text><text x="912" y="392" class="small" text-anchor="start">Never binge all the</text><text x="912" y="416" class="small" text-anchor="start">videos in one sitting -</text><text x="912" y="440" class="small" text-anchor="start">fingers learn faster</text><text x="912" y="464" class="small" text-anchor="start">than eyes.</text>
+</svg>

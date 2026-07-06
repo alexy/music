@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-label="plate-13-browser-load-instrument.svg">
+  <defs>
+    <style>
+      .title { font: 700 28px Arial, sans-serif; fill: #20242b; }
+      .subtitle { font: 400 16px Arial, sans-serif; fill: #6b7280; }
+      .label { font: 700 13px Arial, sans-serif; fill: #20242b; }
+      .small { font: 400 11px Arial, sans-serif; fill: #20242b; }
+      .tiny { font: 400 9px Arial, sans-serif; fill: #20242b; }
+      .white { fill: #fff; }
+      .mono { font: 700 10px Menlo, Consolas, monospace; fill: #20242b; }
+    </style>
+  </defs>
+  <rect width="100%" height="100%" fill="#f6f3eb"/>
+  <text x="34" y="42" class="title" text-anchor="start">Loading sounds from the browser</text><text x="36" y="66" class="subtitle" text-anchor="start">Every track in the Don't Cry Tonight set starts as a drag from the browser.</text>
+  
+    <rect x="34" y="86" width="1132" height="640" rx="10" fill="#ffffff" stroke="#b8b2a7" stroke-width="1"/>
+    <rect x="34" y="86" width="1132" height="42" rx="10" fill="#dedbd3" stroke="#b8b2a7" stroke-width="1"/>
+    <text x="60" y="113" class="label" text-anchor="start">Ableton Live 12 - Browser</text>
+    
+      <rect x="60" y="150" width="250" height="530" rx="8" fill="#f2f0eb" stroke="#b8b2a7" stroke-width="1"/>
+      <text x="76" y="178" class="label" text-anchor="start">Categories</text>
+      <rect x="76" y="194" width="218" height="30" rx="5" fill="#fff" stroke="#b8b2a7" stroke-width="1"/><text x="90" y="214" class="small" text-anchor="start">Sounds</text><rect x="76" y="234" width="218" height="30" rx="5" fill="#d7e8ff" stroke="#b8b2a7" stroke-width="1"/><text x="90" y="254" class="label" text-anchor="start">Drums</text><rect x="76" y="274" width="218" height="30" rx="5" fill="#fff" stroke="#b8b2a7" stroke-width="1"/><text x="90" y="294" class="small" text-anchor="start">Instruments</text><rect x="76" y="314" width="218" height="30" rx="5" fill="#fff" stroke="#b8b2a7" stroke-width="1"/><text x="90" y="334" class="small" text-anchor="start">Audio Effects</text><rect x="76" y="354" width="218" height="30" rx="5" fill="#fff" stroke="#b8b2a7" stroke-width="1"/><text x="90" y="374" class="small" text-anchor="start">Samples</text>
+      <text x="76" y="420" class="small" text-anchor="start">Search box: type what</text>
+      <text x="76" y="440" class="small" text-anchor="start">you want, e.g. '909'</text>
+      <rect x="76" y="452" width="218" height="30" rx="5" fill="#fff" stroke="#2f80ed" stroke-width="1"/>
+      <text x="90" y="472" class="mono" text-anchor="start">909  x</text>
+      <rect x="340" y="150" width="360" height="530" rx="8" fill="#fff" stroke="#b8b2a7" stroke-width="1"/>
+      <text x="360" y="178" class="label" text-anchor="start">Results</text>
+      <rect x="360" y="194" width="320" height="30" rx="5" fill="#dff7e4" stroke="#b8b2a7" stroke-width="1"/><text x="374" y="214" class="label" text-anchor="start">909 Core Kit.adg</text><rect x="360" y="234" width="320" height="30" rx="5" fill="#fff" stroke="#b8b2a7" stroke-width="1"/><text x="374" y="254" class="small" text-anchor="start">Kit-Core 909.adg</text><rect x="360" y="274" width="320" height="30" rx="5" fill="#fff" stroke="#b8b2a7" stroke-width="1"/><text x="374" y="294" class="small" text-anchor="start">909 Clap.aif</text><rect x="360" y="314" width="320" height="30" rx="5" fill="#fff" stroke="#b8b2a7" stroke-width="1"/><text x="374" y="334" class="small" text-anchor="start">909 Hats Closed.aif</text><rect x="360" y="354" width="320" height="30" rx="5" fill="#fff" stroke="#b8b2a7" stroke-width="1"/><text x="374" y="374" class="small" text-anchor="start">909 Hats Open.aif</text>
+      <text x="360" y="420" class="small" text-anchor="start">Preview: click once and Live</text>
+      <text x="360" y="440" class="small" text-anchor="start">auditions the sound. Double-click</text>
+      <text x="360" y="460" class="small" text-anchor="start">loads it onto the selected track.</text>
+      <line x1="700" y1="320" x2="790" y2="320" stroke="#189a86" stroke-width="3"/>
+      <text x="745" y="306" class="label" text-anchor="middle">drag</text>
+      <rect x="800" y="190" width="84" height="30" rx="5" fill="#dff7e4" stroke="#3aa657" stroke-width="1"/><text x="842" y="210" class="tiny" text-anchor="middle">KICK</text><rect x="896" y="190" width="84" height="30" rx="5" fill="#eef2ff" stroke="#b8b2a7" stroke-width="1"/><text x="938" y="210" class="tiny" text-anchor="middle">CLAP</text><rect x="992" y="190" width="84" height="30" rx="5" fill="#eef2ff" stroke="#b8b2a7" stroke-width="1"/><text x="1034" y="210" class="tiny" text-anchor="middle">HATS</text><rect x="800" y="310" width="84" height="30" rx="5" fill="#eef2ff" stroke="#b8b2a7" stroke-width="1"/><text x="842" y="330" class="tiny" text-anchor="middle">BASS</text><rect x="896" y="310" width="84" height="30" rx="5" fill="#eef2ff" stroke="#b8b2a7" stroke-width="1"/><text x="938" y="330" class="tiny" text-anchor="middle">CHORDS</text>
+      <rect x="730" y="380" width="400" height="120" rx="8" fill="#fff" stroke="#b8b2a7" stroke-width="1"/>
+      <text x="750" y="410" class="label" text-anchor="start">Starter picks for this book</text>
+      <text x="750" y="436" class="small" text-anchor="start">Drums: a 909-style kit on KICK, CLAP, HATS</text>
+      <text x="750" y="458" class="small" text-anchor="start">Bass: Instruments &gt; Drift &gt; a 'Bass' preset</text>
+      <text x="750" y="480" class="small" text-anchor="start">Chords/Pad: Drift or Analog 'Pad' preset</text>
+      <rect x="730" y="520" width="400" height="130" rx="8" fill="#fff7de" stroke="#e0b54b" stroke-width="1"/>
+      <text x="750" y="550" class="label" text-anchor="start">One kit, three tracks</text>
+      <text x="750" y="576" class="small" text-anchor="start">Load the same 909 kit on KICK, CLAP, and</text>
+      <text x="750" y="598" class="small" text-anchor="start">HATS. Each track plays different notes of it,</text>
+      <text x="750" y="620" class="small" text-anchor="start">so each APC column controls one drum job.</text>
+    
+  
+</svg>

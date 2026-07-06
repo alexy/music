@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-label="plate-12-ableton-first-launch.svg">
+  <defs>
+    <style>
+      .title { font: 700 28px Arial, sans-serif; fill: #20242b; }
+      .subtitle { font: 400 16px Arial, sans-serif; fill: #6b7280; }
+      .label { font: 700 13px Arial, sans-serif; fill: #20242b; }
+      .small { font: 400 11px Arial, sans-serif; fill: #20242b; }
+      .tiny { font: 400 9px Arial, sans-serif; fill: #20242b; }
+      .white { fill: #fff; }
+      .mono { font: 700 10px Menlo, Consolas, monospace; fill: #20242b; }
+    </style>
+  </defs>
+  <rect width="100%" height="100%" fill="#f6f3eb"/>
+  <text x="34" y="42" class="title" text-anchor="start">Your first look at Ableton Live 12</text><text x="36" y="66" class="subtitle" text-anchor="start">Six zones matter on day one. Everything in this book happens in these zones.</text>
+  
+    <rect x="34" y="86" width="1132" height="640" rx="10" fill="#ffffff" stroke="#b8b2a7" stroke-width="1"/>
+    <rect x="34" y="86" width="1132" height="42" rx="10" fill="#dedbd3" stroke="#b8b2a7" stroke-width="1"/>
+    <text x="60" y="113" class="label" text-anchor="start">Ableton Live 12 - Session View (press Tab if you see a horizontal timeline instead)</text>
+    
+      <rect x="60" y="144" width="88" height="30" rx="5" fill="#eef2ff" stroke="#2f80ed" stroke-width="1"/>
+      <text x="74" y="164" class="label" text-anchor="start">118 BPM</text>
+      <rect x="160" y="144" width="44" height="30" rx="4" fill="#3aa657" stroke="#111" stroke-width="1"/><text x="182" y="162" class="tiny" text-anchor="middle">PLAY</text>
+      <rect x="210" y="144" width="44" height="30" rx="4" fill="#eee" stroke="#111" stroke-width="1"/><text x="232" y="162" class="tiny" text-anchor="middle">STOP</text>
+      <rect x="260" y="144" width="44" height="30" rx="4" fill="#d84a3a" stroke="#111" stroke-width="1"/><text x="282" y="162" class="tiny" text-anchor="middle">REC</text>
+      <rect x="316" y="144" width="96" height="30" rx="5" fill="#eef2ff" stroke="#2f80ed" stroke-width="1"/>
+      <text x="330" y="164" class="label" text-anchor="start">Q: 1 Bar</text>
+      <text x="430" y="164" class="small" text-anchor="start">6. Control bar: tempo, transport, Global Quantization</text>
+      <rect x="60" y="190" width="200" height="496" rx="8" fill="#f2f0eb" stroke="#b8b2a7" stroke-width="1"/>
+      <text x="76" y="218" class="label" text-anchor="start">1. Browser</text>
+      <text x="88" y="250" class="small" text-anchor="start">Sounds</text><text x="88" y="280" class="label" text-anchor="start">Drums</text><text x="88" y="310" class="small" text-anchor="start">Instruments</text><text x="88" y="340" class="small" text-anchor="start">Audio Effects</text><text x="88" y="370" class="small" text-anchor="start">MIDI Effects</text><text x="88" y="400" class="small" text-anchor="start">Samples</text><text x="88" y="430" class="small" text-anchor="start">Clips</text>
+      <text x="76" y="480" class="small" text-anchor="start">Find kits, presets,</text>
+      <text x="76" y="500" class="small" text-anchor="start">and samples here.</text>
+      <text x="76" y="520" class="small" text-anchor="start">Drag them onto</text>
+      <text x="76" y="540" class="small" text-anchor="start">tracks.</text>
+      <rect x="292" y="190" width="116" height="34" rx="5" fill="#eef2ff" stroke="#b8b2a7" stroke-width="1"/><text x="350" y="212" class="label" text-anchor="middle">KICK</text><rect x="422" y="190" width="116" height="34" rx="5" fill="#eef2ff" stroke="#b8b2a7" stroke-width="1"/><text x="480" y="212" class="label" text-anchor="middle">CLAP</text><rect x="552" y="190" width="116" height="34" rx="5" fill="#eef2ff" stroke="#b8b2a7" stroke-width="1"/><text x="610" y="212" class="label" text-anchor="middle">HATS</text><rect x="682" y="190" width="116" height="34" rx="5" fill="#eef2ff" stroke="#b8b2a7" stroke-width="1"/><text x="740" y="212" class="label" text-anchor="middle">BASS</text>
+      <text x="858" y="212" class="label" text-anchor="start">2. Tracks (columns)</text>
+      <rect x="292" y="238" width="116" height="42" rx="5" fill="#dcfce7" stroke="#b8b2a7" stroke-width="1"/><text x="350" y="264" class="tiny" text-anchor="middle">clip</text><rect x="422" y="238" width="116" height="42" rx="5" fill="#dcfce7" stroke="#b8b2a7" stroke-width="1"/><text x="480" y="264" class="tiny" text-anchor="middle">clip</text><rect x="552" y="238" width="116" height="42" rx="5" fill="#dcfce7" stroke="#b8b2a7" stroke-width="1"/><text x="610" y="264" class="tiny" text-anchor="middle">clip</text><rect x="682" y="238" width="116" height="42" rx="5" fill="#f6f6f4" stroke="#b8b2a7" stroke-width="1"/><rect x="292" y="294" width="116" height="42" rx="5" fill="#f6f6f4" stroke="#b8b2a7" stroke-width="1"/><rect x="422" y="294" width="116" height="42" rx="5" fill="#f6f6f4" stroke="#b8b2a7" stroke-width="1"/><rect x="552" y="294" width="116" height="42" rx="5" fill="#f6f6f4" stroke="#b8b2a7" stroke-width="1"/><rect x="682" y="294" width="116" height="42" rx="5" fill="#f6f6f4" stroke="#b8b2a7" stroke-width="1"/><rect x="292" y="350" width="116" height="42" rx="5" fill="#f6f6f4" stroke="#b8b2a7" stroke-width="1"/><rect x="422" y="350" width="116" height="42" rx="5" fill="#f6f6f4" stroke="#b8b2a7" stroke-width="1"/><rect x="552" y="350" width="116" height="42" rx="5" fill="#f6f6f4" stroke="#b8b2a7" stroke-width="1"/><rect x="682" y="350" width="116" height="42" rx="5" fill="#f6f6f4" stroke="#b8b2a7" stroke-width="1"/><rect x="292" y="406" width="116" height="42" rx="5" fill="#f6f6f4" stroke="#b8b2a7" stroke-width="1"/><rect x="422" y="406" width="116" height="42" rx="5" fill="#f6f6f4" stroke="#b8b2a7" stroke-width="1"/><rect x="552" y="406" width="116" height="42" rx="5" fill="#f6f6f4" stroke="#b8b2a7" stroke-width="1"/><rect x="682" y="406" width="116" height="42" rx="5" fill="#f6f6f4" stroke="#b8b2a7" stroke-width="1"/>
+      <text x="858" y="262" class="small" text-anchor="start">3. Clip slots: one loop</text>
+      <text x="858" y="282" class="small" text-anchor="start">lives in one slot</text>
+      <rect x="1006" y="242" width="64" height="34" rx="4" fill="#242830" stroke="#111" stroke-width="1"/><text x="1038" y="262" class="tiny" text-anchor="middle">Scene 1</text><rect x="1006" y="298" width="64" height="34" rx="4" fill="#242830" stroke="#111" stroke-width="1"/><text x="1038" y="318" class="tiny" text-anchor="middle">Scene 2</text><rect x="1006" y="354" width="64" height="34" rx="4" fill="#242830" stroke="#111" stroke-width="1"/><text x="1038" y="374" class="tiny" text-anchor="middle">Scene 3</text><rect x="1006" y="410" width="64" height="34" rx="4" fill="#242830" stroke="#111" stroke-width="1"/><text x="1038" y="430" class="tiny" text-anchor="middle">Scene 4</text>
+      <text x="858" y="330" class="small" text-anchor="start">4. Scenes (rows):</text>
+      <text x="858" y="350" class="small" text-anchor="start">launch a whole row</text>
+      <rect x="292" y="474" width="520" height="34" rx="5" fill="#ffe9d6" stroke="#f4a62a" stroke-width="1"/>
+      <text x="552" y="496" class="small" text-anchor="middle">5. Master track: the final volume of everything</text>
+      <rect x="292" y="530" width="786" height="150" rx="8" fill="#fff7de" stroke="#e0b54b" stroke-width="1"/>
+      <text x="316" y="562" class="label" text-anchor="start">Two keys to memorize before anything else</text>
+      <text x="316" y="592" class="small" text-anchor="start">Tab switches Session View (grid) and Arrangement View (timeline). The APC drives the grid.</text>
+      <text x="316" y="616" class="small" text-anchor="start">Spacebar starts and stops playback. When lost, press Spacebar, breathe, and look at the grid.</text>
+      <text x="316" y="640" class="small" text-anchor="start">A DAW is just a program that plays loops and records what you do. Ableton is the DAW. The APC is the remote control.</text>
+    
+  
+</svg>

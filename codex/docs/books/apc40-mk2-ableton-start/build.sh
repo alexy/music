@@ -1,16 +1,19 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-cd "$(dirname "$0")/../.."
+cd "$(dirname "$0")/../../.."
 
-mkdir -p docs/book/dist docs/book/build
+book_dir="docs/books/apc40-mk2-ableton-start"
+mkdir -p "$book_dir/dist" "$book_dir/build"
+
+node "$book_dir/assets/generate-assets.mjs"
 
 tmpdir="$(mktemp -d)"
 trap 'rm -rf "$tmpdir"' EXIT
 
-version="$(tr -d '[:space:]' < docs/book/VERSION)"
+version="$(tr -d '[:space:]' < "$book_dir/VERSION")"
 if [[ -z "$version" ]]; then
-  echo "could not read docs/book/VERSION" >&2
+  echo "could not read $book_dir/VERSION" >&2
   exit 1
 fi
 
@@ -27,20 +30,20 @@ title_stem="$(
       print value
       exit
     }
-  ' docs/book/metadata.yaml
+  ' "$book_dir/metadata.yaml"
 )"
 
 if [[ -z "$title_stem" ]]; then
-  title_stem="kiffness-mpk-mini-manual"
+  title_stem="apc40-mk2-ableton-start"
 fi
 
 manual_name="$title_stem ($version_stamp)"
-stable_pdf="docs/book/dist/$title_stem.pdf"
-stable_epub="docs/book/dist/$title_stem.epub"
-stable_mobi="docs/book/dist/$title_stem.mobi"
-versioned_pdf="docs/book/dist/$manual_name.pdf"
-versioned_epub="docs/book/dist/$manual_name.epub"
-versioned_mobi="docs/book/dist/$manual_name.mobi"
+stable_pdf="$book_dir/dist/$title_stem.pdf"
+stable_epub="$book_dir/dist/$title_stem.epub"
+stable_mobi="$book_dir/dist/$title_stem.mobi"
+versioned_pdf="$book_dir/dist/$manual_name.pdf"
+versioned_epub="$book_dir/dist/$manual_name.epub"
+versioned_mobi="$book_dir/dist/$manual_name.mobi"
 
 {
   printf 'manual_name: %s\n' "$manual_name"
@@ -52,32 +55,37 @@ versioned_mobi="docs/book/dist/$manual_name.mobi"
   printf 'versioned_pdf: %s.pdf\n' "$manual_name"
   printf 'versioned_epub: %s.epub\n' "$manual_name"
   printf 'versioned_mobi: %s.mobi\n' "$manual_name"
-} > docs/book/dist/VERSION.md
+} > "$book_dir/dist/VERSION.md"
 
-sed "s/{{MANUAL_NAME}}/$manual_name/g" docs/book/cover.md > "$tmpdir/cover.md"
+sed "s/{{MANUAL_NAME}}/$manual_name/g" "$book_dir/cover.md" > "$tmpdir/cover.md"
+
+resource_path="$book_dir:$book_dir/assets"
 
 pandoc "$tmpdir/cover.md" \
   -o "$tmpdir/cover.pdf" \
-  --pdf-engine=typst
+  --pdf-engine=typst \
+  --resource-path="$resource_path"
 
-pandoc docs/book/manual.md \
+pandoc "$book_dir/manual.md" \
   -o "$tmpdir/body.pdf" \
   --pdf-engine=typst \
   --toc \
   --number-sections \
-  --metadata-file docs/book/metadata.yaml \
-  --metadata date="$pubdate"
+  --metadata-file "$book_dir/metadata.yaml" \
+  --metadata date="$pubdate" \
+  --resource-path="$resource_path"
 
 pdfunite "$tmpdir/cover.pdf" "$tmpdir/body.pdf" "$stable_pdf"
 
-pandoc "$tmpdir/cover.md" docs/book/manual.md \
+pandoc "$tmpdir/cover.md" "$book_dir/manual.md" \
   -o "$stable_epub" \
   --toc \
   --number-sections \
-  --metadata-file docs/book/metadata.yaml \
+  --metadata-file "$book_dir/metadata.yaml" \
   --metadata date="$pubdate" \
-  --css docs/book/epub.css \
-  --epub-title-page=false
+  --css "$book_dir/epub.css" \
+  --epub-title-page=false \
+  --resource-path="$resource_path"
 
 ebook_convert="$(
   if command -v ebook-convert >/dev/null 2>&1; then

@@ -1,0 +1,33 @@
+body {
+  font-family: serif;
+  line-height: 1.45;
+}
+
+code {
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #b8b8b8;
+  padding: 0.35em;
+  vertical-align: top;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+pre {
+  margin: 0.75em 0;
+  padding: 0.75em;
+  overflow-x: auto;
+  line-height: 1.12;
+}

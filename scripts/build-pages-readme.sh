@@ -4,7 +4,26 @@ set -euo pipefail
 repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$repo_root"
 
-version="$(tr -d '[:space:]' < codex/docs/book/VERSION)"
+# Version stamps follow the unified publishing convention:
+# <version>-<short-git-hash>, read from each book's dist/VERSION.md
+# (written by the book build scripts). Falls back to the bare VERSION
+# file for dists built before hash stamping existed.
+read_stamp() {
+  local marker="$1"
+  local fallback="$2"
+  local stamp=""
+  if [[ -f "$marker" ]]; then
+    stamp="$(awk -F': ' '$1 == "version_stamp" { print $2; exit }' "$marker")"
+  fi
+  if [[ -z "$stamp" ]]; then
+    stamp="$(tr -d '[:space:]' < "$fallback")"
+  fi
+  printf '%s\n' "$stamp"
+}
+
+version="$(read_stamp codex/docs/book/dist/VERSION.md codex/docs/book/VERSION)"
+apc_book_dir="codex/docs/books/apc40-mk2-ableton-start"
+apc_version="$(read_stamp "$apc_book_dir/dist/VERSION.md" "$apc_book_dir/VERSION")"
 tmpdir="$(mktemp -d)"
 trap 'rm -rf "$tmpdir"' EXIT
 
@@ -17,6 +36,12 @@ cp "codex/docs/book/dist/kiffness-mpk-mini-manual (${version}).epub" \
   "docs/downloads/kiffness-mpk-mini-manual-${version}.epub"
 cp "codex/docs/book/dist/kiffness-mpk-mini-manual (${version}).mobi" \
   "docs/downloads/kiffness-mpk-mini-manual-${version}.mobi"
+cp "$apc_book_dir/dist/apc40-mk2-ableton-start (${apc_version}).pdf" \
+  "docs/downloads/apc40-mk2-ableton-start-${apc_version}.pdf"
+cp "$apc_book_dir/dist/apc40-mk2-ableton-start (${apc_version}).epub" \
+  "docs/downloads/apc40-mk2-ableton-start-${apc_version}.epub"
+cp "$apc_book_dir/dist/apc40-mk2-ableton-start (${apc_version}).mobi" \
+  "docs/downloads/apc40-mk2-ableton-start-${apc_version}.mobi"
 cp codex/docs/what-is-love-garageband-animated.html \
   docs/tutorials/what-is-love-garageband-animated.html
 cp codex/docs/dont-cry-tonight-garageband-animated.html \
@@ -27,13 +52,16 @@ cp codex/docs/mpk-mini-mk3-garageband-loop-lab.html \
   docs/tutorials/mpk-mini-mk3-garageband-loop-lab.html
 cp codex/docs/mpk-mini-mk3-ableton-loop-lab.html \
   docs/tutorials/mpk-mini-mk3-ableton-loop-lab.html
+cp codex/docs/apc40-dont-cry-tonight-ableton-animated.html \
+  docs/tutorials/apc40-dont-cry-tonight-ableton-animated.html
 
-python3 - "$version" > "$tmpdir/pages-readme.md" <<'PY'
+python3 - "$version" "$apc_version" > "$tmpdir/pages-readme.md" <<'PY'
 from pathlib import Path
 import re
 import sys
 
 version = sys.argv[1]
+apc_version = sys.argv[2]
 text = Path("README.md").read_text()
 
 replacements = {
@@ -41,11 +69,15 @@ replacements = {
     f"codex/docs/book/dist/kiffness-mpk-mini-manual%20({version}).pdf": f"downloads/kiffness-mpk-mini-manual-{version}.pdf",
     f"codex/docs/book/dist/kiffness-mpk-mini-manual%20({version}).epub": f"downloads/kiffness-mpk-mini-manual-{version}.epub",
     f"codex/docs/book/dist/kiffness-mpk-mini-manual%20({version}).mobi": f"downloads/kiffness-mpk-mini-manual-{version}.mobi",
+    f"codex/docs/books/apc40-mk2-ableton-start/dist/apc40-mk2-ableton-start%20({apc_version}).pdf": f"downloads/apc40-mk2-ableton-start-{apc_version}.pdf",
+    f"codex/docs/books/apc40-mk2-ableton-start/dist/apc40-mk2-ableton-start%20({apc_version}).epub": f"downloads/apc40-mk2-ableton-start-{apc_version}.epub",
+    f"codex/docs/books/apc40-mk2-ableton-start/dist/apc40-mk2-ableton-start%20({apc_version}).mobi": f"downloads/apc40-mk2-ableton-start-{apc_version}.mobi",
     "codex/docs/what-is-love-garageband-animated.html": "tutorials/what-is-love-garageband-animated.html",
     "codex/docs/dont-cry-tonight-garageband-animated.html": "tutorials/dont-cry-tonight-garageband-animated.html",
     "codex/docs/clint-eastwood-mpk-mini-animated.html": "tutorials/clint-eastwood-mpk-mini-animated.html",
     "codex/docs/mpk-mini-mk3-garageband-loop-lab.html": "tutorials/mpk-mini-mk3-garageband-loop-lab.html",
     "codex/docs/mpk-mini-mk3-ableton-loop-lab.html": "tutorials/mpk-mini-mk3-ableton-loop-lab.html",
+    "codex/docs/apc40-dont-cry-tonight-ableton-animated.html": "tutorials/apc40-dont-cry-tonight-ableton-animated.html",
     "codex/docs/WhatIsLoveGarageBandFigures.md": "https://github.com/alexy/music/blob/master/codex/docs/WhatIsLoveGarageBandFigures.md",
     "codex/docs/DontCryTonightGarageBandFigures.md": "https://github.com/alexy/music/blob/master/codex/docs/DontCryTonightGarageBandFigures.md",
     "codex/CHANGELOG.md": "https://github.com/alexy/music/blob/master/codex/CHANGELOG.md",

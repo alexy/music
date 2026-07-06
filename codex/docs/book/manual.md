@@ -1,14 +1,14 @@
 ---
-title: Akai MPK Mini MK3 Loop Lab
-subtitle: Every knob, pad, key, and beginner loop workflow for GarageBand and Ableton Live
+title: Akai MPK Mini MK3 and APC40 MK2 Loop Lab
+subtitle: Controller workflows for MPK-only, APC-only, and combined GarageBand/Ableton rigs
 ---
 
 # Start Here
 
-This book is for learning the Akai MPK mini as a small performance instrument,
-not as a mysterious USB accessory. The goal is practical: plug it into a Mac,
-understand every control on the surface, and use it to make short loops in
-GarageBand and Ableton Live.
+This book is for learning the Akai MPK mini MK3 and Akai APC40 MK2 as practical
+performance controllers, not as mysterious USB accessories. The goal is simple:
+plug them into a Mac, understand what each surface is good at, and use either
+one, or both together, to make short loops in GarageBand and Ableton Live.
 
 The guide is grounded in these study references:
 
@@ -31,7 +31,9 @@ Those videos teach three different things. The cover videos show what the MPK
 looks like when someone has already mapped it and can perform confidently. The
 beginner videos explain the controls: pads, banks, note repeat, arpeggiator,
 octaves, knobs, and software setup. The Ableton tutorial shows the same hardware
-inside a clip-based DAW, where pads and knobs become a live-looping surface.
+inside a clip-based DAW, where pads and knobs become a live-looping surface. The
+APC40 MK2 extends that idea: it is less of a piano-style instrument and more of
+a dedicated Ableton session, clip, mixer, and performance surface.
 
 This book does not copy the source music, video frames, or transcripts. It turns
 the observed techniques into original practice routines you can do with your own
@@ -39,12 +41,13 @@ sounds.
 
 # The Mental Model
 
-The MPK mini sends MIDI. MIDI is not audio. When you press a key, tap a pad, move
-a joystick, or turn a knob, the MPK sends a message such as "note C2 on,"
-"controller 74 moved," or "pitch bend up." GarageBand or Ableton receives that
-message and decides what sound or command it should control.
+The MPK mini and APC40 both send MIDI. MIDI is not audio. When you press a key,
+tap a pad, move a joystick, launch a clip, move a fader, or turn a knob, the
+controller sends a message such as "note C2 on," "controller 74 moved," "clip
+launch pressed," or "pitch bend up." GarageBand or Ableton receives that message
+and decides what sound or command it should control.
 
-Think of the controller as four instruments in one:
+Think of the MPK mini as four instruments in one:
 
 | Surface | What it feels like | What it sends | Typical job |
 |---|---|---|---|
@@ -53,11 +56,26 @@ Think of the controller as four instruments in one:
 | Knobs | eight rotary controls | MIDI CC values | filter, volume, pan, sends, effects |
 | Buttons/joystick | performance controls | transport, octave, arp, bend, mod | range, timing, expression |
 
+Think of the APC40 MK2 as four Ableton performance zones:
+
+| Surface | What it feels like | What it sends | Typical job |
+|---|---|---|---|
+| Clip grid | live-loop board | clip/scene launch and status feedback | start, stop, record, and combine clips |
+| Faders | small mixer | MIDI CC values | track volume, sends, and performance fades |
+| Device knobs | macro controls | MIDI CC values | filter, reverb, delay, effect macros |
+| Transport/crossfader | DJ/live set controls | DAW control messages | play, stop, record, cue, transition |
+
 The important beginner lesson is that the same physical pad can do different
 things in different modes. In Drum or Notes mode it sends a note. In CC mode it
 sends a control-change message. In Program Change mode it changes presets or
 patches. In Ableton or GarageBand scripts on newer models, pads can also select
 tracks, arm tracks, mute, solo, launch clips, or stop clips.
+
+The second beginner lesson is role separation. The MPK is better when you need
+to play notes, finger-drum, use note repeat, or shape a synth part from the same
+small keyboard. The APC40 MK2 is better when you need to launch clips, mix
+tracks, arm/stop parts, and move through an Ableton session without staring at
+the computer.
 
 # Identifying Your MPK Mini
 
@@ -83,6 +101,129 @@ MK3 and MPK Mini Play MK3 tutorials overlap, but the Play model has internal
 sounds and a speaker. A plain MK3 relies on the Mac for sound. When a tutorial
 says "internal sound," translate that to "software instrument in GarageBand or
 Ableton" unless your unit is the Play version.
+
+# Identifying Your APC40 MK2
+
+The APC40 MK2 is designed around Ableton Live. Its main surface is the clip grid:
+five rows by eight columns for launching clips and scenes, with track controls,
+faders, knobs, transport buttons, and a crossfader around it. Unlike the MPK, it
+does not have piano keys and is not the obvious first choice for playing a bass
+line or melody from scratch.
+
+Use this translation when moving between generic Ableton tutorials and the
+APC40 MK2:
+
+| If the tutorial says | On the APC40 MK2 look for | Meaning |
+|---|---|---|
+| Clip slot | 5x8 clip grid button | Launch or record one clip |
+| Scene launch | right-side scene buttons | Launch a whole row of clips |
+| Track volume | vertical fader | Mix one track louder or softer |
+| Track activator | track on/off button | Mute or unmute the track |
+| Solo/Cue | Solo/Cue buttons | Isolate or monitor a track |
+| Device controls | eight device control knobs | Move macros or device parameters |
+| Sends | send control mode/knobs | Add delay, reverb, or other return effects |
+| Crossfader | bottom horizontal fader | Blend between A/B-assigned tracks |
+
+GarageBand does not have Ableton's clip-launching model, so the APC40 MK2 is
+much less natural there. You may be able to map some controls as generic MIDI,
+but the APC's main value appears in Ableton Live.
+
+# Controller Combinations
+
+Use one of these three rigs depending on what you are trying to practice. Do not
+try to make both controllers do everything. A clean division of jobs is easier
+to learn and easier to film.
+
+## APC Only
+
+Use APC-only when you already have loops, samples, or MIDI clips prepared and
+you want to practice arranging, mixing, muting, launching, and performing.
+
+Best in Ableton Live:
+
+| APC control | Job |
+|---|---|
+| Clip grid | launch drums, bass, chords, lead, and FX clips |
+| Scene buttons | move between intro, groove, break, drop, and ending |
+| Faders | balance track volumes while the loop plays |
+| Device knobs | open filters, increase reverb, or move effect macros |
+| Track stop/activator | create breaks and dropouts |
+| Crossfader | blend between two groups of tracks |
+
+APC-only starter set:
+
+1. Create eight Ableton tracks: drums, percussion, bass, chords, lead, vocal
+   chop, FX, and master resample.
+2. Put one to five clips on each track.
+3. Name the scenes Intro, Groove, Break, Drop, and End.
+4. Use the APC grid to launch scenes first.
+5. Then launch individual clips to make variations.
+6. Use faders for volume moves before mapping any fancy effects.
+
+APC-only is not ideal in GarageBand. If GarageBand is the DAW, treat the APC as
+an optional MIDI control surface for a few mapped parameters, not as the center
+of the workflow.
+
+## MPK Only
+
+Use MPK-only when you need to write or record the musical material yourself:
+drums, bass, chords, melodies, arpeggios, note repeat parts, and simple knob
+automation.
+
+Best in GarageBand or Ableton:
+
+| MPK control | Job |
+|---|---|
+| Keys | bass lines, chords, lead hooks |
+| Pads | drums, samples, clip launches, or one-shot FX |
+| Knobs | filter, reverb, delay, volume, pan, or macros |
+| Note Repeat | hats, rolls, and rhythmic fills |
+| Arpeggiator | pluck patterns and repeating chord textures |
+| Joystick | pitch bends and modulation gestures |
+
+MPK-only starter loop:
+
+1. Record drums with pads.
+2. Record bass on the lower keys.
+3. Record chords in the middle octave.
+4. Record a hook in the upper octave.
+5. Map K1 to filter cutoff and K8 to reverb or delay.
+6. Film the performance from above so pads, keys, and knobs are visible.
+
+MPK-only is the best first setup for GarageBand because GarageBand understands
+notes and software instruments more naturally than it understands clip-launch
+hardware.
+
+## Both
+
+Use both controllers when you want the MPK to create or perform parts and the
+APC40 MK2 to arrange, launch, and mix those parts. This is the most powerful
+Ableton setup because each controller keeps its natural job.
+
+Recommended division:
+
+| Job | Use the MPK mini MK3 | Use the APC40 MK2 |
+|---|---|---|
+| Drums | finger-drum or note-repeat hats | launch saved drum clips |
+| Bass/chords/lead | play notes and record clips | launch, stop, and arrange clips |
+| Effects | quick knob gestures | macro banks, sends, fades, crossfader |
+| Song form | perform fills and hooks | launch scenes and create transitions |
+| Mixing | emergency knob mapping | faders, mutes, solo/cue, track balance |
+
+Combined Ableton starter workflow:
+
+1. Connect both controllers before opening Ableton Live.
+2. In Preferences > Link/Tempo/MIDI, enable Track for the MPK input.
+3. Enable Remote for the MPK input if you want manual knob or pad mapping.
+4. Select the APC40 MK2 as an Ableton control surface if Live does not auto-detect it.
+5. Use the MPK to record drums, bass, chords, and lead into clips.
+6. Use the APC grid to launch those clips and scenes.
+7. Use APC faders for track volume and APC device knobs for macro changes.
+8. Keep the MPK pads free for drums/fills instead of duplicating the APC clip grid.
+
+Combined GarageBand workflow is possible but limited. Use the MPK as the main
+GarageBand instrument, and only map APC controls if a specific GarageBand Smart
+Control or mixer move is worth the setup time.
 
 # The Keys
 
@@ -377,7 +518,8 @@ performance controller here because Ableton can map pads and knobs directly.
 
 ## Setup
 
-1. Connect the MPK by USB.
+1. Connect the MPK by USB. If you are using the APC40 MK2 too, connect it
+   before opening Ableton.
 2. Open Ableton Live or Live Lite.
 3. Open Preferences > Link/Tempo/MIDI.
 4. In MIDI Ports, enable Track for the MPK mini input. This lets pads and keys
@@ -390,6 +532,9 @@ performance controller here because Ableton can map pads and knobs directly.
    your MPK already has one loaded.
 8. Enable Sync on the MPK output if you want Ableton to send clock for
    arpeggiator or note repeat.
+9. If Live does not auto-detect the APC40 MK2, choose it in Control Surface and
+   set the APC input and output ports. Its clip grid, faders, and device
+   controls should follow the selected Ableton session area.
 
 If you are using a newer MPK mini IV, Akai's Ableton guide describes selecting
 the MPK mini IV control surface and DAW port. For MK3, the reliable beginner
@@ -405,7 +550,7 @@ available, and use Sync only when you want tempo-locked Note Repeat.
 
 ## Four-Clip Starter Set
 
-Create four MIDI tracks:
+Create four MIDI tracks for MPK-only practice:
 
 | Track | Ableton device | MPK control | Clip length |
 |---|---|---|---|
@@ -413,6 +558,15 @@ Create four MIDI tracks:
 | Bass | Analog, Drift, or Wavetable bass | keys | 2 bars |
 | Chords | Electric, Piano, or Pad | keys | 4 bars |
 | Lead | synth lead | keys + joystick | 4 bars |
+
+For APC-only or combined practice, keep those four tracks and add four more:
+
+| Track | Ableton device/audio | APC job | Clip role |
+|---|---|---|---|
+| Percussion | Drum Rack or audio loops | clip launch + fader | extra groove |
+| Vocal Chop | Simpler or audio clips | clip launch | hook/stab |
+| FX | risers, impacts, noise | scene transitions | build and release |
+| Return/Master | delay, reverb, filter macros | knobs/crossfader | performance movement |
 
 ## Drum Rack Mapping
 
@@ -540,13 +694,24 @@ Practice checklist:
 | 13-15 | Arpeggiator | one pluck pattern |
 | 16-18 | GarageBand four-track loop | drums, bass, chords, hook |
 | 19-21 | Ableton four-clip set | clips and Drum Rack |
-| 22-24 | Pad launching | Pads 5-8 launch clips/samples |
-| 25-27 | Performance study | 60-second cover sketch |
+| 22-24 | APC-only launching | scenes, clip grid, faders, and mutes |
+| 25-27 | Combined MPK + APC performance | MPK records parts, APC launches and mixes |
 | 28-30 | Film and revise | one shareable top-down MPK video |
 
 # Final Project
 
-Make a 60-second loop video:
+Make a 60-second loop video in one of the three controller combinations.
+
+APC-only version:
+
+1. Start with an Ableton set that already has clips prepared.
+2. Launch the intro scene.
+3. Bring in drums, bass, chords, lead, and FX from the APC grid.
+4. Use faders for the main volume moves.
+5. Use device knobs or sends for one filter/reverb build.
+6. End by launching an ending scene or stopping tracks cleanly.
+
+MPK-only version:
 
 1. Start with the controller visible.
 2. Record drums with pads.
@@ -556,6 +721,16 @@ Make a 60-second loop video:
 6. Turn K1 for a filter opening.
 7. Use K8 for reverb on the final phrase.
 8. End with Pad 8 as a crash, mute, or stop.
+
+Combined version:
+
+1. Start with both controllers visible.
+2. Use the MPK to record or perform drums, bass, chords, and hook clips.
+3. Use the APC to launch scenes and stop tracks.
+4. Use APC faders for the big mix moves.
+5. Use MPK note repeat or joystick for a visible performance moment.
+6. Use APC device knobs or sends for the final transition.
+7. End with the APC scene/stop controls, not a mouse click.
 
 The finished video should prove that you know what every surface does. It does
 not need to be complicated. A clean four-track loop is better than a crowded
