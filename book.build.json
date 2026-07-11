@@ -1,0 +1,51 @@
+{
+  "$schema": "../firstpair/publishing/book.build.schema.json",
+  "schemaVersion": 1,
+  "bookRoot": "codex/docs/books/apc40-mk2-ableton-start",
+  "manuscript": "codex/docs/books/apc40-mk2-ableton-start/manual.md",
+  "metadata": "codex/docs/books/apc40-mk2-ableton-start/metadata.yaml",
+  "cover": "codex/docs/books/apc40-mk2-ableton-start/cover.md",
+  "css": "codex/docs/books/apc40-mk2-ableton-start/epub.css",
+  "stem": "apc40-mk2-ableton-start",
+  "author": "Alexy Khrabrov; Codex with ChatGPT 5.5",
+  "version": {
+    "source": "file",
+    "file": "codex/docs/books/apc40-mk2-ableton-start/VERSION"
+  },
+  "dist": "codex/docs/books/apc40-mk2-ableton-start/dist",
+  "buildDir": "codex/docs/books/apc40-mk2-ableton-start/build/firstpair",
+  "edition": "full",
+  "primaryFormat": "typst",
+  "mobi": true,
+  "tutorial": "docs/tutorials/apc40-dont-cry-tonight-ableton-animated.html",
+  "pandoc": {
+    "reader": "markdown+smart+raw_attribute+implicit_figures+table_captions+yaml_metadata_block",
+    "tocDepth": 2,
+    "numberSections": true,
+    "resourcePaths": [
+      "codex/docs/books/apc40-mk2-ableton-start",
+      "codex/docs/books/apc40-mk2-ableton-start/assets",
+      "${repoRoot}"
+    ]
+  },
+  "pdf": {
+    "separateCover": true
+  },
+  "epub": {
+    "titlePage": false
+  },
+  "html": {
+    "splitLevel": 1
+  },
+  "hooks": {
+    "prebuild": "node codex/docs/books/apc40-mk2-ableton-start/assets/generate-assets.mjs"
+  },
+  "sourceFiles": [
+    "codex/docs/books/apc40-mk2-ableton-start/manual.md",
+    "codex/docs/books/apc40-mk2-ableton-start/metadata.yaml",
+    "codex/docs/books/apc40-mk2-ableton-start/cover.md",
+    "codex/docs/books/apc40-mk2-ableton-start/epub.css",
+    "codex/docs/books/apc40-mk2-ableton-start/assets/generate-assets.mjs",
+    "docs/tutorials/apc40-dont-cry-tonight-ableton-animated.html"
+  ]
+}

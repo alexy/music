@@ -1,37 +1,68 @@
 # APC40 MK2 Ableton Book Publishing Runbook
 
-This book is separate from the MPK/APC combination manual. It lives under
-`docs/books/apc40-mk2-ableton-start/` and is focused on APC40 MK2 only.
+This is the source-owned build for `apc40-mk2-ableton-start`. The manuscript,
+metadata, 21 generated SVG plates, interactive tutorial, version, and canonical
+artifacts live in this repository. FirstPair owns public catalog and delivery.
 
 ## Build
 
-From `kiffness/codex`:
+The canonical configuration is the repository-root `book.build.json`. From the
+repository root, or from any directory through the wrapper, run:
 
 ```sh
-docs/books/apc40-mk2-ableton-start/build.sh
+codex/docs/books/apc40-mk2-ableton-start/build.sh
 ```
 
-The build script:
+The wrapper invokes FirstPair's pinned shared builder. It regenerates the SVG
+plates, builds and verifies Typst PDF, EPUB3, MOBI, single-file HTML, and split
+HTML readers, copies the tracked interactive tutorial into `dist/`, and writes
+stable and version-stamped artifact links plus `VERSION.md`.
 
-1. Regenerates the original SVG figure plates in `assets/`.
-2. Reads the version from `VERSION` and stamps it with the short git hash of
-   HEAD (`<version>-<short-git-hash>`, e.g. `0.2.0-dd45fa`), following the
-   unified publishing workflow convention. Override with `BOOK_VERSION_STAMP`.
-3. Reads `title_stem` from `metadata.yaml`.
-4. Writes `dist/VERSION.md` including the `version_stamp` field.
-5. Builds PDF, EPUB, and MOBI stable artifacts.
-6. Copies stable artifacts to versioned names such as
-   `apc40-mk2-ableton-start (0.2.0-dd45fa).pdf`.
+The version comes from `VERSION`; the build stamp is
+`<version>-<8-character-source-commit>`. The native Pandoc, Typst, Calibre,
+Poppler, Ghostscript, and related tools are checked against FirstPair's
+Homebrew-backed toolchain lock before the build begins.
 
-## Validation
-
-After building, verify:
+Resolve configuration without building:
 
 ```sh
-pdfinfo docs/books/apc40-mk2-ableton-start/dist/apc40-mk2-ableton-start.pdf
-pdftotext docs/books/apc40-mk2-ableton-start/dist/apc40-mk2-ableton-start.pdf - | rg "APC Only|Oh Long Johnson|Don't Cry Tonight|Link, Tempo"
-pdftoppm -png -f 1 -l 12 docs/books/apc40-mk2-ableton-start/dist/apc40-mk2-ableton-start.pdf docs/books/apc40-mk2-ableton-start/build/page
+codex/docs/books/apc40-mk2-ableton-start/build.sh --print-plan
 ```
 
-The visual plates are original diagrams and recreated setup panels. They are
-not copied YouTube frames, Ableton screenshots, or Akai product art.
+## Outputs
+
+The publish-complete directory is:
+
+```text
+codex/docs/books/apc40-mk2-ableton-start/dist/
+```
+
+It contains stable PDF, EPUB, MOBI, HTML, chapter HTML, the interactive Learn
+tutorial, versioned links, and `VERSION.md`. The build does not upload, deploy,
+or copy anything to iCloud.
+
+## Verification
+
+Verification is mandatory and runs as part of the shared build. It checks PDF
+geometry and rendered pages, EPUB metadata/content/resources, HTML content and
+resources, chapter packaging, version markers, and stable/versioned links.
+
+Useful manual probes after a build:
+
+```sh
+pdfinfo 'codex/docs/books/apc40-mk2-ableton-start/dist/apc40-mk2-ableton-start.pdf'
+pdftotext 'codex/docs/books/apc40-mk2-ableton-start/dist/apc40-mk2-ableton-start.pdf' - | rg "APC Only|Oh Long Johnson|Don't Cry Tonight|Link, Tempo"
+unzip -p 'codex/docs/books/apc40-mk2-ableton-start/dist/apc40-mk2-ableton-start.epub' EPUB/package.opf | rg 'APC40 MK2 Ableton Live 12 Getting Started'
+```
+
+For a non-mutating FirstPair integration probe:
+
+```sh
+cd "$HOME/src/firstpair"
+npm run library:publish -- "$HOME/src/music" \
+  --slug apc40-mk2-ableton-start \
+  --dry-run --no-build --no-smoke --no-deploy --no-icloud
+```
+
+Publishing is a separate outward-facing action governed by FirstPair's
+`AGENTS.md`; a successful source build never implies publication.

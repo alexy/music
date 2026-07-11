@@ -14,7 +14,7 @@
     ]
   ]
   #v(2.25em)
-  #text(size: 12pt)[{{MANUAL_NAME}}]
+  #text(size: 12pt)[{{KINDLE_NAME}}]
   #v(0.65em)
   #text(size: 11pt)[Alexy Khrabrov]
   #v(0.3em)
@@ -26,7 +26,7 @@
 <section epub:type="titlepage" style="text-align: center; page-break-after: always; padding-top: 7em;">
   <h1 style="font-size: 2.4em; margin-bottom: 0.2em;">APC40 MK2 Ableton Live 12 Getting Started</h1>
   <p style="font-size: 1.1em;">APC-only zero-to-one live-looping setup</p>
-  <p style="margin-top: 4em;">{{MANUAL_NAME}}</p>
+  <p style="margin-top: 4em;">{{KINDLE_NAME}}</p>
   <p>Alexy Khrabrov</p>
   <p><em>Codex with ChatGPT 5.5</em></p>
 </section>
