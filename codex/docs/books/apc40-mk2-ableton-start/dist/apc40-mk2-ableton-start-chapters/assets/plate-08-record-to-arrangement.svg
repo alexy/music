@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-label="plate-08-record-to-arrangement.svg">
+  <defs>
+    <style>
+      .title { font: 700 28px Arial, sans-serif; fill: #20242b; }
+      .subtitle { font: 400 16px Arial, sans-serif; fill: #6b7280; }
+      .label { font: 700 13px Arial, sans-serif; fill: #20242b; }
+      .small { font: 400 11px Arial, sans-serif; fill: #20242b; }
+      .tiny { font: 400 9px Arial, sans-serif; fill: #20242b; }
+      .white { fill: #fff; }
+      .mono { font: 700 10px Menlo, Consolas, monospace; fill: #20242b; }
+    </style>
+  </defs>
+  <rect width="100%" height="100%" fill="#f6f3eb"/>
+  <text x="34" y="42" class="title" text-anchor="start">Record an APC performance into Arrangement</text><text x="36" y="66" class="subtitle" text-anchor="start">Session View is for playing. Arrangement View captures the performance.</text>
+
+    <rect x="34" y="86" width="1132" height="640" rx="10" fill="#ffffff" stroke="#b8b2a7" stroke-width="1"/>
+    <rect x="34" y="86" width="1132" height="42" rx="10" fill="#dedbd3" stroke="#b8b2a7" stroke-width="1"/>
+    <text x="60" y="113" class="label" text-anchor="start">Ableton Live 12 - Record Performance</text>
+
+      <rect x="76" y="158" width="1020" height="98" rx="8" fill="#f4f4f5" stroke="#b8b2a7" stroke-width="1"/>
+      <rect x="104" y="190" width="70" height="34" rx="4" fill="#3aa657" stroke="#111" stroke-width="1"/><text x="139" y="210" class="tiny" text-anchor="middle">PLAY</text>
+      <rect x="190" y="190" width="88" height="34" rx="4" fill="#d84a3a" stroke="#111" stroke-width="1"/><text x="234" y="210" class="tiny" text-anchor="middle">ARR REC</text>
+      <rect x="294" y="190" width="106" height="34" rx="4" fill="#f4a62a" stroke="#111" stroke-width="1"/><text x="347" y="210" class="tiny" text-anchor="middle">SESSION REC</text>
+      <text x="436" y="212" class="small" text-anchor="start">Press Arrangement Record if you want Live to log scene launches, clip launches, fader moves, and mutes.</text>
+      <rect x="76" y="306" width="1020" height="280" rx="8" fill="#fff" stroke="#b8b2a7" stroke-width="1"/>
+      <text x="98" y="353" class="tiny" text-anchor="start">DRUMS</text>
+          <rect x="180" y="336" width="860" height="18" rx="3" fill="#dcfce7" stroke="#fff" stroke-width="1"/>
+          <rect x="180" y="336" width="80" height="18" rx="3" fill="#3aa657" stroke="#fff" stroke-width="1"/><text x="98" y="381" class="tiny" text-anchor="start">PERC</text>
+          <rect x="180" y="364" width="860" height="18" rx="3" fill="#dbeafe" stroke="#fff" stroke-width="1"/>
+          <rect x="224" y="364" width="80" height="18" rx="3" fill="#2f80ed" stroke="#fff" stroke-width="1"/><text x="98" y="409" class="tiny" text-anchor="start">BASS</text>
+          <rect x="180" y="392" width="860" height="18" rx="3" fill="#dcfce7" stroke="#fff" stroke-width="1"/>
+          <rect x="268" y="392" width="80" height="18" rx="3" fill="#3aa657" stroke="#fff" stroke-width="1"/><text x="98" y="437" class="tiny" text-anchor="start">KEYS</text>
+          <rect x="180" y="420" width="860" height="18" rx="3" fill="#dbeafe" stroke="#fff" stroke-width="1"/>
+          <rect x="312" y="420" width="80" height="18" rx="3" fill="#2f80ed" stroke="#fff" stroke-width="1"/><text x="98" y="465" class="tiny" text-anchor="start">TRPT</text>
+          <rect x="180" y="448" width="860" height="18" rx="3" fill="#dcfce7" stroke="#fff" stroke-width="1"/>
+          <rect x="356" y="448" width="80" height="18" rx="3" fill="#3aa657" stroke="#fff" stroke-width="1"/><text x="98" y="493" class="tiny" text-anchor="start">HARM</text>
+          <rect x="180" y="476" width="860" height="18" rx="3" fill="#dbeafe" stroke="#fff" stroke-width="1"/>
+          <rect x="400" y="476" width="80" height="18" rx="3" fill="#2f80ed" stroke="#fff" stroke-width="1"/><text x="98" y="521" class="tiny" text-anchor="start">PADS</text>
+          <rect x="180" y="504" width="860" height="18" rx="3" fill="#dcfce7" stroke="#fff" stroke-width="1"/>
+          <rect x="444" y="504" width="80" height="18" rx="3" fill="#3aa657" stroke="#fff" stroke-width="1"/><text x="98" y="549" class="tiny" text-anchor="start">FX</text>
+          <rect x="180" y="532" width="860" height="18" rx="3" fill="#dbeafe" stroke="#fff" stroke-width="1"/>
+          <rect x="488" y="532" width="80" height="18" rx="3" fill="#2f80ed" stroke="#fff" stroke-width="1"/>
+      <text x="96" y="640" class="label" text-anchor="start">After the take: press Stop twice, switch to Arrangement, listen, then save as 'APC Oh Long Johnson Practice 01'.</text>
+
+
+</svg>

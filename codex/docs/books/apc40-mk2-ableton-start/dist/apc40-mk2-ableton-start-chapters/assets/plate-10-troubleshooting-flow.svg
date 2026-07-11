@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-label="plate-10-troubleshooting-flow.svg">
+  <defs>
+    <style>
+      .title { font: 700 28px Arial, sans-serif; fill: #20242b; }
+      .subtitle { font: 400 16px Arial, sans-serif; fill: #6b7280; }
+      .label { font: 700 13px Arial, sans-serif; fill: #20242b; }
+      .small { font: 400 11px Arial, sans-serif; fill: #20242b; }
+      .tiny { font: 400 9px Arial, sans-serif; fill: #20242b; }
+      .white { fill: #fff; }
+      .mono { font: 700 10px Menlo, Consolas, monospace; fill: #20242b; }
+    </style>
+  </defs>
+  <rect width="100%" height="100%" fill="#f6f3eb"/>
+  <text x="34" y="42" class="title" text-anchor="start">Troubleshooting: when the APC does not behave</text><text x="36" y="66" class="subtitle" text-anchor="start">Fix recognition first, then native control, then manual mapping.</text>
+  <rect x="110" y="124" width="420" height="100" rx="8" fill="#fff" stroke="#b8b2a7" stroke-width="1"/>
+      <text x="134" y="158" class="label" text-anchor="start">1. USB connected and APC powered?</text>
+      <text x="134" y="190" class="small" text-anchor="start">Try another cable/port. Avoid hubs for first setup.</text>
+      <line x1="320" y1="228" x2="320" y2="270" stroke="#6b7280" stroke-width="2"/><rect x="610" y="124" width="420" height="100" rx="8" fill="#fff" stroke="#b8b2a7" stroke-width="1"/>
+      <text x="634" y="158" class="label" text-anchor="start">2. Does Live show APC40 mkII in Settings?</text>
+      <text x="634" y="190" class="small" text-anchor="start">Select Control Surface, Input, and Output manually.</text>
+      <line x1="820" y1="228" x2="820" y2="270" stroke="#6b7280" stroke-width="2"/><rect x="110" y="294" width="420" height="100" rx="8" fill="#fff" stroke="#b8b2a7" stroke-width="1"/>
+      <text x="134" y="328" class="label" text-anchor="start">3. Does the grid rectangle move in Session View?</text>
+      <text x="134" y="360" class="small" text-anchor="start">Native script is alive. Do not MIDI-map yet.</text>
+      <line x1="320" y1="398" x2="320" y2="440" stroke="#6b7280" stroke-width="2"/><rect x="610" y="294" width="420" height="100" rx="8" fill="#fff" stroke="#b8b2a7" stroke-width="1"/>
+      <text x="634" y="328" class="label" text-anchor="start">4. Do faders move track volumes?</text>
+      <text x="634" y="360" class="small" text-anchor="start">If no, check Output port and Remote On.</text>
+      <line x1="820" y1="398" x2="820" y2="440" stroke="#6b7280" stroke-width="2"/><rect x="110" y="464" width="420" height="100" rx="8" fill="#fff" stroke="#b8b2a7" stroke-width="1"/>
+      <text x="134" y="498" class="label" text-anchor="start">5. Do clips launch on the grid?</text>
+      <text x="134" y="530" class="small" text-anchor="start">Use Session View, loaded clips, Global Quantization 1 Bar.</text>
+      <rect x="610" y="464" width="420" height="100" rx="8" fill="#fff" stroke="#b8b2a7" stroke-width="1"/>
+      <text x="634" y="498" class="label" text-anchor="start">6. Still stuck?</text>
+      <text x="634" y="530" class="small" text-anchor="start">Close Live, unplug nonessential MIDI gear, reopen, then reconnect APC.</text>
+
+  <rect x="250" y="642" width="700" height="54" rx="8" fill="#fff7de" stroke="#e0b54b" stroke-width="1"/>
+  <text x="600" y="676" class="label" text-anchor="middle">Most APC problems are setup-state problems, not broken hardware.</text>
+</svg>

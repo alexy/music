@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Alexy Khrabrov" />
+  <meta name="author" content="Codex with ChatGPT 5.5" />
+  <meta name="dcterms.date" content="2026-07-11" />
+  <title>Channel Knobs: Pan, Sends, User</title>
+  <style>
+    div.sitenav { display: flex; flex-direction: row; flex-wrap: wrap; }
+    span.navlink { flex: 1; }
+    span.navlink-label { display: inline-block; min-width: 4em; }
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="book.css" />
+</head>
+<body>
+<nav id="sitenav">
+<div class="sitenav">
+<span class="navlink">
+<span class="navlink-label">Up:</span> <a href="chapter-001.html" accesskey="u" rel="up">APC40 MK2 Ableton Live 12 Getting Started</a>
+</span>
+<span class="navlink">
+<span class="navlink-label">Top:</span> <a href="index.html" accesskey="t" rel="top">APC40 MK2 Ableton Live 12 Getting Started</a>
+</span>
+</div>
+<div class="sitenav">
+<span class="navlink">
+<span class="navlink-label">Next:</span> <a href="chapter-013.html" accesskey="n" rel="next">Device Control Knobs</a>
+</span>
+<span class="navlink">
+<span class="navlink-label">Previous:</span> <a href="chapter-011.html" accesskey="p" rel="previous">Tracks, Faders, And Mutes</a>
+</span>
+</div>
+</nav>
+<h1 data-number="11" id="channel-knobs-pan-sends-user"><span
+class="header-section-number">11</span> Channel Knobs: Pan, Sends,
+User</h1>
+<p>The row of eight assignable knobs can do different things depending
+on mode.</p>
+<h2 data-number="11.1" id="pan-mode"><span
+class="header-section-number">11.1</span> Pan Mode</h2>
+<p>Press <code>Pan</code>. Now the eight assignable knobs control
+panning for the current eight tracks.</p>
+<p>Beginner pan map:</p>
+<table>
+<thead>
+<tr>
+<th>Track</th>
+<th>Pan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Drums</td>
+<td>center</td>
+</tr>
+<tr>
+<td>Percussion</td>
+<td>slightly right</td>
+</tr>
+<tr>
+<td>Bass</td>
+<td>center</td>
+</tr>
+<tr>
+<td>Keys</td>
+<td>slightly left</td>
+</tr>
+<tr>
+<td>Trumpet</td>
+<td>center or slightly right</td>
+</tr>
+<tr>
+<td>Harmony</td>
+<td>left/right spread</td>
+</tr>
+<tr>
+<td>Pads</td>
+<td>wide but not extreme</td>
+</tr>
+<tr>
+<td>FX</td>
+<td>whatever makes the transition audible</td>
+</tr>
+</tbody>
+</table>
+<p>Do not over-pan bass or kick. Keep low-frequency foundation
+centered.</p>
+<h2 data-number="11.2" id="sends-mode"><span
+class="header-section-number">11.2</span> Sends Mode</h2>
+<p>Press <code>Sends</code>. By default, the knobs control Send A for
+the current eight tracks. If Send A is reverb, each knob controls how
+much reverb each track receives.</p>
+<p>To select another send, the Akai manual describes this gesture:</p>
+<ol type="1">
+<li>Hold <code>Sends</code>.</li>
+<li>Press Track Selector 1 for Send A.</li>
+<li>Press Track Selector 2 for Send B.</li>
+<li>Release <code>Sends</code>.</li>
+<li>Turn the assignable knobs.</li>
+</ol>
+<p>Beginner return-track plan:</p>
+<table>
+<thead>
+<tr>
+<th>Return</th>
+<th>Effect</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Return A</td>
+<td>Reverb</td>
+<td>pads, trumpet, harmony, ending tail</td>
+</tr>
+<tr>
+<td>Return B</td>
+<td>Delay</td>
+<td>trumpet stab, vocal chop, FX throw</td>
+</tr>
+</tbody>
+</table>
+<h2 data-number="11.3" id="user-mode"><span
+class="header-section-number">11.3</span> User Mode</h2>
+<p>User mode is for manual MIDI mapping. Do not use it during the first
+setup. Use it only after:</p>
+<ol type="1">
+<li>native clip launch works;</li>
+<li>faders work;</li>
+<li>mutes work;</li>
+<li>device knobs work;</li>
+<li>you know what single parameter is missing from your normal
+workflow.</li>
+</ol>
+<p>Beginner User mode mapping:</p>
+<ol type="1">
+<li>Press <code>User</code>.</li>
+<li>In Live, press MIDI Map.</li>
+<li>Click a parameter, such as Auto Filter Frequency on the FX
+track.</li>
+<li>Turn Assignable Knob 8.</li>
+<li>Exit MIDI Map.</li>
+<li>Save the set as a template if the mapping is useful.</li>
+</ol>
+<p>Manual mappings live in the Live Set. They do not automatically
+become a global APC behavior for every project.</p>
+<figure>
+<img src="assets/plate-06-device-and-send-controls.svg"
+style="width:100.0%" alt="Device, pan, sends, and user mode diagram." />
+<figcaption aria-hidden="true">Device, pan, sends, and user mode
+diagram.</figcaption>
+</figure>
+</body>
+</html>

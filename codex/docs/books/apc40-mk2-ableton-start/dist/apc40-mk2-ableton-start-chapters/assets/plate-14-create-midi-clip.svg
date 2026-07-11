@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-label="plate-14-create-midi-clip.svg">
+  <defs>
+    <style>
+      .title { font: 700 28px Arial, sans-serif; fill: #20242b; }
+      .subtitle { font: 400 16px Arial, sans-serif; fill: #6b7280; }
+      .label { font: 700 13px Arial, sans-serif; fill: #20242b; }
+      .small { font: 400 11px Arial, sans-serif; fill: #20242b; }
+      .tiny { font: 400 9px Arial, sans-serif; fill: #20242b; }
+      .white { fill: #fff; }
+      .mono { font: 700 10px Menlo, Consolas, monospace; fill: #20242b; }
+    </style>
+  </defs>
+  <rect width="100%" height="100%" fill="#f6f3eb"/>
+  <text x="34" y="42" class="title" text-anchor="start">Creating and drawing a MIDI clip</text><text x="36" y="66" class="subtitle" text-anchor="start">Double-click an empty slot, then draw notes in the piano roll below.</text>
+
+    <rect x="34" y="86" width="1132" height="640" rx="10" fill="#ffffff" stroke="#b8b2a7" stroke-width="1"/>
+    <rect x="34" y="86" width="1132" height="42" rx="10" fill="#dedbd3" stroke="#b8b2a7" stroke-width="1"/>
+    <text x="60" y="113" class="label" text-anchor="start">Ableton Live 12 - Clip View</text>
+
+      <text x="70" y="158" class="small" text-anchor="start">1. Double-click the empty KICK slot in Scene 2. A one-bar empty clip appears and starts looping silently.</text>
+      <rect x="70" y="174" width="116" height="42" rx="5" fill="#dcfce7" stroke="#3aa657" stroke-width="1"/>
+      <text x="128" y="200" class="tiny" text-anchor="middle">1 Bar</text>
+      <text x="210" y="200" class="small" text-anchor="start">2. The bottom of the screen becomes Clip View: the piano roll.</text>
+      <rect x="70" y="240" width="1020" height="320" rx="10" fill="#20242b" stroke="#111" stroke-width="1"/>
+      <text x="92" y="268" style="font: 700 13px Arial, sans-serif; fill: #edf2f7;" text-anchor="start">Piano roll: time runs left to right, pitch runs bottom to top</text>
+      <rect x="92" y="292" width="52" height="38" rx="4" fill="#303945" stroke="#111" stroke-width="1"/><text x="118" y="316" style="font: 700 11px Arial; fill: #fff;" text-anchor="middle">C2</text><rect x="92" y="338" width="52" height="38" rx="4" fill="#303945" stroke="#111" stroke-width="1"/><text x="118" y="362" style="font: 700 11px Arial; fill: #fff;" text-anchor="middle">A#1</text><rect x="92" y="384" width="52" height="38" rx="4" fill="#303945" stroke="#111" stroke-width="1"/><text x="118" y="408" style="font: 700 11px Arial; fill: #fff;" text-anchor="middle">F#1</text><rect x="92" y="430" width="52" height="38" rx="4" fill="#303945" stroke="#111" stroke-width="1"/><text x="118" y="454" style="font: 700 11px Arial; fill: #fff;" text-anchor="middle">D1</text><rect x="92" y="476" width="52" height="38" rx="4" fill="#303945" stroke="#111" stroke-width="1"/><text x="118" y="500" style="font: 700 11px Arial; fill: #fff;" text-anchor="middle">C1</text>
+      <line x1="156" y1="292" x2="156" y2="512" stroke="#4a5462" stroke-width="2"/><line x1="214" y1="292" x2="214" y2="512" stroke="#2c333d" stroke-width="1"/><line x1="272" y1="292" x2="272" y2="512" stroke="#2c333d" stroke-width="1"/><line x1="330" y1="292" x2="330" y2="512" stroke="#2c333d" stroke-width="1"/><line x1="388" y1="292" x2="388" y2="512" stroke="#4a5462" stroke-width="2"/><line x1="446" y1="292" x2="446" y2="512" stroke="#2c333d" stroke-width="1"/><line x1="504" y1="292" x2="504" y2="512" stroke="#2c333d" stroke-width="1"/><line x1="562" y1="292" x2="562" y2="512" stroke="#2c333d" stroke-width="1"/><line x1="620" y1="292" x2="620" y2="512" stroke="#4a5462" stroke-width="2"/><line x1="678" y1="292" x2="678" y2="512" stroke="#2c333d" stroke-width="1"/><line x1="736" y1="292" x2="736" y2="512" stroke="#2c333d" stroke-width="1"/><line x1="794" y1="292" x2="794" y2="512" stroke="#2c333d" stroke-width="1"/><line x1="852" y1="292" x2="852" y2="512" stroke="#4a5462" stroke-width="2"/><line x1="910" y1="292" x2="910" y2="512" stroke="#2c333d" stroke-width="1"/><line x1="968" y1="292" x2="968" y2="512" stroke="#2c333d" stroke-width="1"/><line x1="1026" y1="292" x2="1026" y2="512" stroke="#2c333d" stroke-width="1"/>
+      <rect x="158" y="476" width="54" height="36" rx="4" fill="#3aa657" stroke="#0a0" stroke-width="1"/><rect x="390" y="476" width="54" height="36" rx="4" fill="#3aa657" stroke="#0a0" stroke-width="1"/><rect x="622" y="476" width="54" height="36" rx="4" fill="#3aa657" stroke="#0a0" stroke-width="1"/><rect x="854" y="476" width="54" height="36" rx="4" fill="#3aa657" stroke="#0a0" stroke-width="1"/>
+      <text x="92" y="540" style="font: 400 11px Arial, sans-serif; fill: #edf2f7;" text-anchor="start">3. Draw kick notes at C1 on steps 1, 5, 9, 13 (every quarter note). Enable Draw Mode with the B key, then click.</text>
+      <rect x="70" y="580" width="1020" height="100" rx="8" fill="#fff7de" stroke="#e0b54b" stroke-width="1"/>
+      <text x="94" y="612" class="label" text-anchor="start">Checkpoint</text>
+      <text x="94" y="638" class="small" text-anchor="start">Press the clip's play triangle (or the matching APC grid button). You should hear a steady four-on-the-floor kick.</text>
+      <text x="94" y="662" class="small" text-anchor="start">If you hear nothing: is the track's little speaker (Track Activator) on? Is the fader up? Is an instrument loaded?</text>
+
+
+</svg>

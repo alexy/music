@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Alexy Khrabrov" />
+  <meta name="author" content="Codex with ChatGPT 5.5" />
+  <meta name="dcterms.date" content="2026-07-11" />
+  <title>What The APC40 MK2 Is</title>
+  <style>
+    div.sitenav { display: flex; flex-direction: row; flex-wrap: wrap; }
+    span.navlink { flex: 1; }
+    span.navlink-label { display: inline-block; min-width: 4em; }
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="book.css" />
+</head>
+<body>
+<nav id="sitenav">
+<div class="sitenav">
+<span class="navlink">
+<span class="navlink-label">Up:</span> <a href="chapter-001.html" accesskey="u" rel="up">APC40 MK2 Ableton Live 12 Getting Started</a>
+</span>
+<span class="navlink">
+<span class="navlink-label">Top:</span> <a href="index.html" accesskey="t" rel="top">APC40 MK2 Ableton Live 12 Getting Started</a>
+</span>
+</div>
+<div class="sitenav">
+<span class="navlink">
+<span class="navlink-label">Next:</span> <a href="chapter-006.html" accesskey="n" rel="next">Cable And Power</a>
+</span>
+<span class="navlink">
+<span class="navlink-label">Previous:</span> <a href="chapter-004.html" accesskey="p" rel="previous">Source Video Pack</a>
+</span>
+</div>
+</nav>
+<h1 data-number="4" id="what-the-apc40-mk2-is"><span
+class="header-section-number">4</span> What The APC40 MK2 Is</h1>
+<p>The APC40 MK2 is not a keyboard. It is not primarily for playing
+melodies. It is a physical control surface for Ableton Live’s Session
+View and mixer. Ableton’s controller page describes the core idea: a 5
+by 8 RGB clip-launching grid, nine faders, eight channel control knobs,
+and eight device control knobs. The Akai manual explains the same
+surface in operational terms: the eight columns are tracks, the five
+rows are scenes, and the buttons at the right launch entire scenes.</p>
+<p>That gives you the whole mental model:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Physical APC zone</th>
+<th>Ableton job</th>
+<th>First-day meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8 by 5 clip grid</td>
+<td>Session View clip slots</td>
+<td>Start one loop on one track.</td>
+</tr>
+<tr>
+<td>5 scene buttons</td>
+<td>Session rows</td>
+<td>Start a whole musical section.</td>
+</tr>
+<tr>
+<td>Clip Stop buttons</td>
+<td>Track stops</td>
+<td>Stop the currently playing clip in a column.</td>
+</tr>
+<tr>
+<td>Track selectors</td>
+<td>Track focus</td>
+<td>Choose the track whose device you want to control.</td>
+</tr>
+<tr>
+<td>Track activators</td>
+<td>Mute/unmute</td>
+<td>Create dropouts without touching the mouse.</td>
+</tr>
+<tr>
+<td>Solo buttons</td>
+<td>Isolate a track</td>
+<td>Diagnose problems, not a normal performance move.</td>
+</tr>
+<tr>
+<td>Record-arm buttons</td>
+<td>Prepare tracks for recording</td>
+<td>Useful later; not central to APC-only playback.</td>
+</tr>
+<tr>
+<td>Track faders</td>
+<td>Mixer volumes</td>
+<td>Make the set feel alive.</td>
+</tr>
+<tr>
+<td>Channel knobs</td>
+<td>Pan, sends, or user mappings</td>
+<td>Use Pan and Sends first; avoid User at first.</td>
+</tr>
+<tr>
+<td>Device knobs</td>
+<td>Current device parameters</td>
+<td>Control macros, filters, delays, and racks.</td>
+</tr>
+<tr>
+<td>Crossfader</td>
+<td>A/B blend</td>
+<td>Performance transitions.</td>
+</tr>
+<tr>
+<td>Play, Record, Session</td>
+<td>Transport and recording</td>
+<td>Start Live, capture the performance.</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<img src="assets/plate-02-apc40-surface-overview.svg"
+style="width:100.0%" alt="APC40 MK2 zones used first." />
+<figcaption aria-hidden="true">APC40 MK2 zones used first.</figcaption>
+</figure>
+<h2 data-number="4.1" id="first-day-rule"><span
+class="header-section-number">4.1</span> First-Day Rule</h2>
+<p>For the first day, do not manually MIDI-map anything until the native
+APC script works. The APC40 MK2 is designed to correspond to Ableton
+Live automatically. Manual mapping is powerful, but it can hide whether
+the native script is working.</p>
+<p>Use this order:</p>
+<ol type="1">
+<li>Make Live recognize the APC40 MK2 as a Control Surface.</li>
+<li>Confirm the grid rectangle appears in Session View.</li>
+<li>Confirm clip launch buttons trigger clips.</li>
+<li>Confirm faders move track volumes.</li>
+<li>Confirm track activator buttons mute and unmute tracks.</li>
+<li>Confirm Device Control knobs move the selected device.</li>
+<li>Only then consider User mode or manual MIDI Map.</li>
+</ol>
+</body>
+</html>

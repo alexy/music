@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-label="plate-21-export-audio.svg">
+  <defs>
+    <style>
+      .title { font: 700 28px Arial, sans-serif; fill: #20242b; }
+      .subtitle { font: 400 16px Arial, sans-serif; fill: #6b7280; }
+      .label { font: 700 13px Arial, sans-serif; fill: #20242b; }
+      .small { font: 400 11px Arial, sans-serif; fill: #20242b; }
+      .tiny { font: 400 9px Arial, sans-serif; fill: #20242b; }
+      .white { fill: #fff; }
+      .mono { font: 700 10px Menlo, Consolas, monospace; fill: #20242b; }
+    </style>
+  </defs>
+  <rect width="100%" height="100%" fill="#f6f3eb"/>
+  <text x="34" y="42" class="title" text-anchor="start">Exporting your recorded performance</text><text x="36" y="66" class="subtitle" text-anchor="start">File &gt; Export Audio/Video. These settings produce one clean WAV of your take.</text>
+
+    <rect x="34" y="86" width="1132" height="640" rx="10" fill="#ffffff" stroke="#b8b2a7" stroke-width="1"/>
+    <rect x="34" y="86" width="1132" height="42" rx="10" fill="#dedbd3" stroke="#b8b2a7" stroke-width="1"/>
+    <text x="60" y="113" class="label" text-anchor="start">Ableton Live 12 - Export Audio/Video</text>
+
+      <rect x="300" y="150" width="600" height="470" rx="10" fill="#f7f7f5" stroke="#b8b2a7" stroke-width="1"/>
+      <text x="330" y="184" class="title" text-anchor="start">Export Audio/Video</text>
+      <text x="330" y="234" class="label" text-anchor="start">Rendered Track</text>
+          <rect x="540" y="214" width="330" height="32" rx="5" fill="#fff" stroke="#2f80ed" stroke-width="1"/>
+          <text x="554" y="235" class="small" text-anchor="start">Master</text><text x="330" y="282" class="label" text-anchor="start">Render Start</text>
+          <rect x="540" y="262" width="330" height="32" rx="5" fill="#fff" stroke="#2f80ed" stroke-width="1"/>
+          <text x="554" y="283" class="small" text-anchor="start">1.1.1</text><text x="330" y="330" class="label" text-anchor="start">Render Length</text>
+          <rect x="540" y="310" width="330" height="32" rx="5" fill="#fff" stroke="#2f80ed" stroke-width="1"/>
+          <text x="554" y="331" class="small" text-anchor="start">64 bars (to the end of your take)</text><text x="330" y="378" class="label" text-anchor="start">Sample Rate</text>
+          <rect x="540" y="358" width="330" height="32" rx="5" fill="#fff" stroke="#2f80ed" stroke-width="1"/>
+          <text x="554" y="379" class="small" text-anchor="start">44100</text><text x="330" y="426" class="label" text-anchor="start">Encode PCM</text>
+          <rect x="540" y="406" width="330" height="32" rx="5" fill="#fff" stroke="#2f80ed" stroke-width="1"/>
+          <text x="554" y="427" class="small" text-anchor="start">On - WAV, 16 bit</text><text x="330" y="474" class="label" text-anchor="start">Normalize</text>
+          <rect x="540" y="454" width="330" height="32" rx="5" fill="#fff" stroke="#2f80ed" stroke-width="1"/>
+          <text x="554" y="475" class="small" text-anchor="start">Off</text><text x="330" y="522" class="label" text-anchor="start">Encode MP3</text>
+          <rect x="540" y="502" width="330" height="32" rx="5" fill="#fff" stroke="#2f80ed" stroke-width="1"/>
+          <text x="554" y="523" class="small" text-anchor="start">On if you want a quick share file</text>
+      <rect x="700" y="566" width="170" height="38" rx="4" fill="#3aa657" stroke="#111" stroke-width="1"/><text x="785" y="588" class="tiny" text-anchor="middle">EXPORT</text>
+      <rect x="60" y="190" width="210" height="300" rx="8" fill="#fff" stroke="#b8b2a7" stroke-width="1"/>
+      <text x="80" y="220" class="label" text-anchor="start">Before export</text>
+      <text x="80" y="250" class="small" text-anchor="start">Select 1.1.1 to end</text><text x="80" y="276" class="small" text-anchor="start">of the recording in</text><text x="80" y="302" class="small" text-anchor="start">Arrangement View,</text><text x="80" y="328" class="small" text-anchor="start">or set the loop</text><text x="80" y="354" class="small" text-anchor="start">brace over the take.</text><text x="80" y="380" class="small" text-anchor="start"></text><text x="80" y="406" class="small" text-anchor="start">Listen once all the</text><text x="80" y="432" class="small" text-anchor="start">way through first.</text>
+      <rect x="930" y="190" width="220" height="300" rx="8" fill="#fff7de" stroke="#e0b54b" stroke-width="1"/>
+      <text x="950" y="220" class="label" text-anchor="start">Name it like a</text>
+      <text x="950" y="240" class="label" text-anchor="start">release</text>
+      <text x="950" y="262" class="small" text-anchor="start"></text><text x="950" y="288" class="small" text-anchor="start">dct-apc-practice-</text><text x="950" y="314" class="small" text-anchor="start">take01.wav</text><text x="950" y="340" class="small" text-anchor="start"></text><text x="950" y="366" class="small" text-anchor="start">Keep every take.</text><text x="950" y="392" class="small" text-anchor="start">Take 5 will embarrass</text><text x="950" y="418" class="small" text-anchor="start">take 1 - that is the</text><text x="950" y="444" class="small" text-anchor="start">whole point.</text>
+
+
+</svg>

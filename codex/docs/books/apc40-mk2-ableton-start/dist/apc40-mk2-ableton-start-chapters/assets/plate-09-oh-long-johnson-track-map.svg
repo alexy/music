@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-label="plate-09-oh-long-johnson-track-map.svg">
+  <defs>
+    <style>
+      .title { font: 700 28px Arial, sans-serif; fill: #20242b; }
+      .subtitle { font: 400 16px Arial, sans-serif; fill: #6b7280; }
+      .label { font: 700 13px Arial, sans-serif; fill: #20242b; }
+      .small { font: 400 11px Arial, sans-serif; fill: #20242b; }
+      .tiny { font: 400 9px Arial, sans-serif; fill: #20242b; }
+      .white { fill: #fff; }
+      .mono { font: 700 10px Menlo, Consolas, monospace; fill: #20242b; }
+    </style>
+  </defs>
+  <rect width="100%" height="100%" fill="#f6f3eb"/>
+  <text x="34" y="42" class="title" text-anchor="start">Kiffness exercise track: Oh Long Johnson</text><text x="36" y="66" class="subtitle" text-anchor="start">This track is chosen because it uses enough layers to justify the APC40 MK2 surface.</text>
+  <rect x="60" y="104" width="1080" height="560" rx="10" fill="#fff" stroke="#b8b2a7" stroke-width="1"/>
+  <text x="92" y="146" class="label" text-anchor="start">Practice target: recreate the structure, not the copyrighted recording.</text>
+  <rect x="96" y="190" width="160" height="34" rx="5" fill="#dcfce7" stroke="#b8b2a7" stroke-width="1"/>
+      <text x="118" y="212" class="label" text-anchor="start">1 DRUMS</text>
+      <text x="286" y="212" class="small" text-anchor="start">kick, snare, hi-hat, snare-off break</text><rect x="96" y="238" width="160" height="34" rx="5" fill="#fff0cf" stroke="#b8b2a7" stroke-width="1"/>
+      <text x="118" y="260" class="label" text-anchor="start">2 PERC</text>
+      <text x="286" y="260" class="small" text-anchor="start">darbuka, shaker, percussion fill</text><rect x="96" y="286" width="160" height="34" rx="5" fill="#dbeafe" stroke="#b8b2a7" stroke-width="1"/>
+      <text x="118" y="308" class="label" text-anchor="start">3 BASS</text>
+      <text x="286" y="308" class="small" text-anchor="start">main bass, bass hold, ending bass</text><rect x="96" y="334" width="160" height="34" rx="5" fill="#ede9fe" stroke="#b8b2a7" stroke-width="1"/>
+      <text x="118" y="356" class="label" text-anchor="start">4 KEYS</text>
+      <text x="286" y="356" class="small" text-anchor="start">keys, dub keys, short stabs</text><rect x="96" y="382" width="160" height="34" rx="5" fill="#dcfce7" stroke="#b8b2a7" stroke-width="1"/>
+      <text x="118" y="404" class="label" text-anchor="start">5 TRUMPET</text>
+      <text x="286" y="404" class="small" text-anchor="start">trumpet hook, open trumpet, stabs</text><rect x="96" y="430" width="160" height="34" rx="5" fill="#fff0cf" stroke="#b8b2a7" stroke-width="1"/>
+      <text x="118" y="452" class="label" text-anchor="start">6 HARMONY</text>
+      <text x="286" y="452" class="small" text-anchor="start">vocal harmony 1, vocal harmony 2, chop</text><rect x="96" y="478" width="160" height="34" rx="5" fill="#dbeafe" stroke="#b8b2a7" stroke-width="1"/>
+      <text x="118" y="500" class="label" text-anchor="start">7 PADS</text>
+      <text x="286" y="500" class="small" text-anchor="start">pads, wide pad, filtered pad tail</text><rect x="96" y="526" width="160" height="34" rx="5" fill="#ede9fe" stroke="#b8b2a7" stroke-width="1"/>
+      <text x="118" y="548" class="label" text-anchor="start">8 FX</text>
+      <text x="286" y="548" class="small" text-anchor="start">delay throw, riser, impact, verb tail</text>
+  <rect x="92" y="594" width="970" height="44" rx="8" fill="#fff7de" stroke="#e0b54b" stroke-width="1"/>
+  <text x="118" y="622" class="label" text-anchor="start">The goal is a legal, original practice set inspired by the visible layer logic, using your own sounds.</text>
+</svg>

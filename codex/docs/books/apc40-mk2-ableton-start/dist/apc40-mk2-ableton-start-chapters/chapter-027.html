@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Alexy Khrabrov" />
+  <meta name="author" content="Codex with ChatGPT 5.5" />
+  <meta name="dcterms.date" content="2026-07-11" />
+  <title>Troubleshooting</title>
+  <style>
+    div.sitenav { display: flex; flex-direction: row; flex-wrap: wrap; }
+    span.navlink { flex: 1; }
+    span.navlink-label { display: inline-block; min-width: 4em; }
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="book.css" />
+</head>
+<body>
+<nav id="sitenav">
+<div class="sitenav">
+<span class="navlink">
+<span class="navlink-label">Up:</span> <a href="chapter-001.html" accesskey="u" rel="up">APC40 MK2 Ableton Live 12 Getting Started</a>
+</span>
+<span class="navlink">
+<span class="navlink-label">Top:</span> <a href="index.html" accesskey="t" rel="top">APC40 MK2 Ableton Live 12 Getting Started</a>
+</span>
+</div>
+<div class="sitenav">
+<span class="navlink">
+<span class="navlink-label">Next:</span> <a href="chapter-028.html" accesskey="n" rel="next">What To Ignore For Now</a>
+</span>
+<span class="navlink">
+<span class="navlink-label">Previous:</span> <a href="chapter-026.html" accesskey="p" rel="previous">One-Page Performance Recipe</a>
+</span>
+</div>
+</nav>
+<h1 data-number="26" id="troubleshooting"><span
+class="header-section-number">26</span> Troubleshooting</h1>
+<figure>
+<img src="assets/plate-10-troubleshooting-flow.svg" style="width:100.0%"
+alt="Troubleshooting flow for APC40 MK2 setup." />
+<figcaption aria-hidden="true">Troubleshooting flow for APC40 MK2
+setup.</figcaption>
+</figure>
+<h2 data-number="26.1" id="apc-lights-up-but-live-does-nothing"><span
+class="header-section-number">26.1</span> APC Lights Up, But Live Does
+Nothing</h2>
+<p>Likely cause: Ableton has not loaded the native control surface.</p>
+<p>Fix:</p>
+<ol type="1">
+<li>Open Settings.</li>
+<li>Go to Link, Tempo and MIDI.</li>
+<li>Set Control Surface to <code>APC40 mkII</code>.</li>
+<li>Set Input to <code>APC40 mkII</code>.</li>
+<li>Set Output to <code>APC40 mkII</code>.</li>
+<li>Close Settings.</li>
+<li>Move the APC Bank arrows.</li>
+<li>Look for the Session ring.</li>
+</ol>
+<h2 data-number="26.2"
+id="grid-launches-clips-but-faders-do-nothing"><span
+class="header-section-number">26.2</span> Grid Launches Clips, But
+Faders Do Nothing</h2>
+<p>Likely cause: output feedback or control surface selection is
+wrong.</p>
+<p>Fix:</p>
+<ol type="1">
+<li>Confirm the Control Surface row has both Input and Output.</li>
+<li>Confirm <code>Remote</code> is On for APC input and output.</li>
+<li>Create a fresh set with one track and one clip.</li>
+<li>Test fader 1 on track volume.</li>
+</ol>
+<h2 data-number="26.3"
+id="faders-work-but-clip-buttons-do-nothing"><span
+class="header-section-number">26.3</span> Faders Work, But Clip Buttons
+Do Nothing</h2>
+<p>Likely cause: you are not in Session View, or the APC ring is not
+over clips.</p>
+<p>Fix:</p>
+<ol type="1">
+<li>Press Tab to switch to Session View.</li>
+<li>Put clips inside the visible APC ring.</li>
+<li>Use Bank arrows to move the ring.</li>
+<li>Press a clip button that corresponds to a loaded slot.</li>
+</ol>
+<h2 data-number="26.4" id="clips-start-late"><span
+class="header-section-number">26.4</span> Clips Start Late</h2>
+<p>Likely cause: Global Quantization.</p>
+<p>This is usually correct. If Global Quantization is
+<code>1 Bar</code>, clips wait until the next bar. To test immediate
+launching, temporarily set quantization to <code>None</code>. Then put
+it back to <code>1 Bar</code> for performance.</p>
+<h2 data-number="26.5" id="everything-is-too-loud"><span
+class="header-section-number">26.5</span> Everything Is Too Loud</h2>
+<p>Likely cause: all faders are high, plus returns are adding level.</p>
+<p>Fix:</p>
+<ol type="1">
+<li>Pull Master down slightly.</li>
+<li>Pull FX and returns down.</li>
+<li>Put kick, bass, and snare at sensible levels.</li>
+<li>Add pads, harmony, and FX only after the groove is stable.</li>
+</ol>
+<h2 data-number="26.6" id="manual-mapping-broke-something"><span
+class="header-section-number">26.6</span> Manual Mapping Broke
+Something</h2>
+<p>Likely cause: a User mode or MIDI Map assignment is overriding native
+behavior.</p>
+<p>Fix:</p>
+<ol type="1">
+<li>Enter MIDI Map Mode.</li>
+<li>Open the Mapping Browser.</li>
+<li>Delete suspicious mappings.</li>
+<li>Exit MIDI Map Mode.</li>
+<li>Save a clean template before experimenting again.</li>
+</ol>
+</body>
+</html>
