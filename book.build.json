@@ -7,7 +7,8 @@
   "cover": "codex/docs/books/apc40-mk2-ableton-start/cover.md",
   "css": "codex/docs/books/apc40-mk2-ableton-start/epub.css",
   "stem": "apc40-mk2-ableton-start",
-  "author": "Alexy Khrabrov; Codex with ChatGPT 5.5",
+  "author": "Alexy Khrabrov",
+  "headboardImage": "codex/docs/books/apc40-mk2-ableton-start/assets/apc40-mk2-ableton-start-headboard.png",
   "version": {
     "source": "file",
     "file": "codex/docs/books/apc40-mk2-ableton-start/VERSION"
@@ -29,10 +30,16 @@
     ]
   },
   "pdf": {
-    "separateCover": true
+    "separateCover": true,
+    "coverImage": "codex/docs/books/apc40-mk2-ableton-start/assets/apc40-mk2-ableton-start-cover.png",
+    "coverWidth": "6in",
+    "coverHeight": "9.6in",
+    "coverFit": "cover"
   },
   "epub": {
-    "titlePage": false
+    "titlePage": false,
+    "coverImage": "codex/docs/books/apc40-mk2-ableton-start/assets/apc40-mk2-ableton-start-cover.png",
+    "includeRenderedCover": false
   },
   "html": {
     "splitLevel": 1
@@ -46,6 +53,13 @@
     "codex/docs/books/apc40-mk2-ableton-start/cover.md",
     "codex/docs/books/apc40-mk2-ableton-start/epub.css",
     "codex/docs/books/apc40-mk2-ableton-start/assets/generate-assets.mjs",
+    "codex/docs/books/apc40-mk2-ableton-start/assets/COVER_ART.md",
+    "codex/docs/books/apc40-mk2-ableton-start/assets/render-cover-assets.py",
+    "codex/docs/books/apc40-mk2-ableton-start/assets/apc40-mk2-ableton-start-cover.png",
+    "codex/docs/books/apc40-mk2-ableton-start/assets/apc40-mk2-ableton-start-headboard.png",
+    "codex/docs/books/apc40-mk2-ableton-start/assets/cover-source/ableton-cover-art.png",
+    "codex/docs/books/apc40-mk2-ableton-start/assets/cover-source/ableton-headboard-art.png",
+    "codex/docs/books/apc40-mk2-ableton-start/assets/cover-source/firstpair-publisher-mask.png",
     "docs/tutorials/apc40-dont-cry-tonight-ableton-animated.html"
   ]
 }

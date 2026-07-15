@@ -23,6 +23,13 @@ The version comes from `VERSION`; the build stamp is
 Poppler, Ghostscript, and related tools are checked against FirstPair's
 Homebrew-backed toolchain lock before the build begins.
 
+The reader-facing portrait cover and wide library headboard live under
+`assets/`. `book.build.json` registers the portrait PNG as the PDF/EPUB cover
+and the 16:9 PNG as `headboardImage`; FirstPair uses those same files for the
+library card and detail-page hero. Their source art, exact First Pair Press
+publisher mask, prompt record, and deterministic renderer are documented in
+`assets/COVER_ART.md`.
+
 Resolve configuration without building:
 
 ```sh

@@ -2,6 +2,30 @@
 
 All notable changes to the music learning manuals are recorded here.
 
+## [apc40-mk2-ableton-start 0.2.1] - 2026-07-15
+
+### Added
+
+- Added a portrait book cover derived from the Kiffness performance image,
+  with exact title and author typography and the First Pair Press publisher
+  mask superimposed at the bottom center.
+- Added a wide companion headboard with a dark left field for the First Pair
+  detail-page title overlay.
+- Added the source artwork, publisher mask, prompt record, and deterministic
+  Pillow renderer used to produce both final PNGs.
+
+### Changed
+
+- Made Alexy Khrabrov the sole reader-facing author and First Pair Press the
+  publisher in the build configuration, metadata, PDF, EPUB, and HTML cover.
+- Registered the cover as the canonical PDF/EPUB and library-card image, and
+  registered the headboard as the First Pair book-detail hero.
+
+### Built
+
+- Rebuilt PDF, EPUB, MOBI, single-file HTML, chapter HTML, and the interactive
+  tutorial with the `0.2.1` source stamp.
+
 ## [apc40-mk2-ableton-start 0.2.0] - 2026-07-06
 
 ### Added

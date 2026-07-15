@@ -18,7 +18,7 @@
   #v(0.65em)
   #text(size: 11pt)[Alexy Khrabrov]
   #v(0.3em)
-  #text(size: 10pt, style: "italic")[Codex with ChatGPT 5.5]
+  #text(size: 10pt, style: "italic")[First Pair Press]
 ]
 ```
 
@@ -28,6 +28,6 @@
   <p style="font-size: 1.1em;">APC-only zero-to-one live-looping setup</p>
   <p style="margin-top: 4em;">{{KINDLE_NAME}}</p>
   <p>Alexy Khrabrov</p>
-  <p><em>Codex with ChatGPT 5.5</em></p>
+  <p><em>First Pair Press</em></p>
 </section>
 ```
