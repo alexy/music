@@ -73,3 +73,12 @@ central deployment machinery in this repository.
 When build behavior changes, update `book.build.json` and source-owned hooks,
 then run the unified build and its validators. When library identity or policy
 changes, update this file and the central catalog in the same logical change.
+
+## Additional Title: Professional Podcat Audio
+
+`books/professional-podcat-audio/` is a separate title package in this same Git
+repository. Its nested `FIRSTPAIR.md` and `book.build.json` own its independent
+`professional-podcat-audio` slug on the music shelf. Use that title directory
+as the unified builder and publisher input. This root contract and root build
+configuration continue to identify the APC40 book; do not change their slug or
+send the new book through the root publisher target.

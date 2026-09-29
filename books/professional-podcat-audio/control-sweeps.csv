@@ -1,0 +1,37 @@
+stage,control,candidate_settings,mic,prerequisite,listening_question
+Geometry,Distance,15 cm;20 cm;30 cm,Both,"Recalibrate safe capture, then match playback","Proximity bass, room, plosives"
+Geometry,Angle,0 degrees;15 degrees;30 degrees,Both,Keep distance fixed,Sibilance and breath
+Mic,Pattern,cardioid;omni;figure-eight,Both,Mute and allow settling; recalibrate,Room pickup
+Mic,Intermediate pattern,all remaining PSU pattern detents,Bees,Mark by icon/detent; fixed position,Room rejection
+Mic,Profile,67 Vintage;67 New;269 Vintage;269 New,Bees,Only after manufacturer confirms safe unpowered handling; otherwise as found,Voicing at equal loudness
+Mic,Profile,Vintage;Modern,Twin87,"Mute, allow about10s settling, recalibrate",Voicing at equal loudness
+Mic,Pad,off;-10 dB,Both,Bees internal only if procedure verified; power-safe changes,Mic overload vs added gain demand
+Mic,High-pass,off;on,Both,Bees internal only if verified; other filters off,Rumble/body
+Mic,S2,off;on,Bees,Internal verified procedure only,Low bass shaping
+Mic,RF group,as found;documented enabled/bypass group,Twin87,Optional interference troubleshooting; unpowered manual procedure only,"RF rejection, not routine tone control"
+PRE,Gain/output,reference;one gain step up + output reduced,Both,Safe peaks and matched listening; do not clip,Coloration
+PRE,LOW-Z,1200;300 ohms,Twin87,Level recalibration; Bees remains1200 baseline,Tone and sensitivity
+PRE,High-pass,OFF;80 Hz;200 Hz,Both,Other audio high-passes off,Rumble/body
+PRE,Air,OFF;+3 dB;+6 dB,Both,Match output; no assumed enhancement,Openness/noise
+PRE,Output pad,0;14 dB,Both,Compensated test; nominal attenuation depends on termination,Drive/headroom
+PRE,Polarity,normal;inverted,Both,Single isolated track only; avoid summing,"Waveform sign, no expected solo tone change"
+PRE,48V / LINE / DI / power,functional checks only,Both,"Correct source and mic power, never live sweep",Routing
+PRE,Insert / internal termination,leave as configured,Both,No routine internal service,No test required
+COMP,Circuit,hard bypass;compression out;compression in,Both,"Match loudness, check ADC peak",Color vs gain control
+COMP,Threshold,target0;target1;target3;target6 dB GR,Both,Record actual threshold mark,Reduction amount
+COMP,Ratio,1.5:1;2:1;3:1;4:1;6:1,Both,Label fixed-threshold vs equal-GR test,Level control
+COMP,Attack,0.5;1;2;3;6;12;25;50 ms,Both,Only attack changes within sweep,Consonants/peaks
+COMP,Recovery,25;50;100;400;800 ms;1.5 s;Auto1;Auto2,Both,Only recovery changes,Pumping and gaps
+COMP,SC HP,OFF;50 Hz;100 Hz;7 kHz,Both,"Detector filter, not audio high-pass",LF/sibilant triggering
+COMP,Makeup,minimum;matched-bypass level,Both,No calibrated dB scale; measure output,Level not tone preference
+COMP,Meter,COMP;OUTPUT,Both,Read correct scale,GR vs analog output
+COMP,Link / rear termination / power,unlinked;termination per manual;power on,Both,Functional check; no second COMP present,Routing/load
+M4,Input,rear3;optional front1TRS,Both,Front1 min gain/48Voff/DAWmono1; recalibrate,Monitor path/headroom
+M4,Monitoring,software;optional front1 direct mono,Both,Exactly one path; rear3 direct left only,Latency
+M4,Listening levels,headphones comfortable;monitor down,Both,Do not use listening controls to set capture,Comfort
+DAW,Buffer,128;256;512 samples in Live,Both,No buffer quality claim; GB app-managed,Latency and crackles
+DAW,Rate/depth,GB native/24-bit;Live48k/24-bit,Both,For direct A/B use same rate/layout,Workflow check
+DAW,EQ,flat;one band at a time,Both,Exact same recorded take and matched loudness,Corrective benefit
+DAW,Compressor,bypass;2:1 gentle;threshold sweep,Both,Exact same take; avoid double compression,Steadiness
+DAW,Limiter,bypass;TruePeak -1.5dB ceiling,Both,Post only; rendered-file loudness/peak check,Delivery protection
+DAW,Export,normalize off;24-bitWAV;specified layout,Both,Listen full exported file,No truncation or changed level

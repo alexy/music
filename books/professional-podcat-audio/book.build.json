@@ -1,0 +1,105 @@
+{
+  "$schema": "../../../firstpair/publishing/book.build.schema.json",
+  "schemaVersion": 1,
+  "bookRoot": ".",
+  "manuscript": "manuscript.md",
+  "metadata": "metadata.yaml",
+  "css": "epub.css",
+  "stem": "professional-podcat-audio",
+  "title": "Professional Podcat Audio",
+  "author": "Alexy Khrabrov",
+  "headboardImage": "assets/headboard.png",
+  "version": {
+    "source": "file",
+    "file": "VERSION"
+  },
+  "dist": "dist",
+  "buildDir": "build/firstpair",
+  "edition": "full",
+  "primaryFormat": "typst",
+  "mobi": false,
+  "tutorial": "tutorial.html",
+  "pandoc": {
+    "reader": "markdown+smart+raw_attribute+implicit_figures+table_captions+yaml_metadata_block",
+    "tocDepth": 2,
+    "numberSections": false,
+    "resourcePaths": [
+      ".",
+      "assets",
+      "${repoRoot}"
+    ]
+  },
+  "pdf": {
+    "separateCover": true,
+    "coverImage": "assets/cover.png",
+    "coverWidth": "7in",
+    "coverHeight": "10in",
+    "coverFit": "cover",
+    "variables": {
+      "fontsize": "11pt",
+      "mainfont": "Avenir Next",
+      "page-numbering": "1"
+    },
+    "args": [
+      "--include-before-body",
+      "${repoRoot}/scripts/pdf-layout.typ"
+    ]
+  },
+  "epub": {
+    "titlePage": false,
+    "coverImage": "assets/cover.png",
+    "includeRenderedCover": false
+  },
+  "html": {
+    "splitLevel": 1
+  },
+  "sourceFiles": [
+    ".gitignore",
+    "FIRSTPAIR.md",
+    "QA.md",
+    "README.md",
+    "VERSION",
+    "assets/beesneez-in-room.jpg",
+    "assets/comparison.png",
+    "assets/compressor-map.png",
+    "assets/cover.png",
+    "assets/export-map.png",
+    "assets/garageband-map.png",
+    "assets/hardware-stack.jpg",
+    "assets/headboard.png",
+    "assets/live-map.png",
+    "assets/mac-map.png",
+    "assets/meters.png",
+    "assets/monitoring.png",
+    "assets/placement.png",
+    "assets/preamp-map.png",
+    "assets/signal-chain.png",
+    "book.build.json",
+    "build.sh",
+    "chapters/01-foundations.md",
+    "chapters/02-hardware.md",
+    "chapters/03-daw.md",
+    "chapters/03-recall-cards.md",
+    "chapters/04-testing-and-recall.md",
+    "comparison-log.csv",
+    "control-sweeps.csv",
+    "epub.css",
+    "manuscript.md",
+    "metadata.yaml",
+    "presets.json",
+    "scripts/assemble-book.py",
+    "scripts/build-tutorial.py",
+    "scripts/build-vault.py",
+    "scripts/check-vault.py",
+    "scripts/generate-assets.py",
+    "scripts/make-presets.py",
+    "scripts/pdf-layout.typ",
+    "scripts/prepare-vault-source.py",
+    "scripts/qa-pdf.py",
+    "scripts/test-tutorial.cjs",
+    "scripts/validate-package.py",
+    "tutorial.html",
+    "vault-guide.md",
+    "vault.build.json"
+  ]
+}

@@ -1,0 +1,333 @@
+# Six microphone-and-chain recall cards
+
+These cards join the microphone-specific power and mode settings to three shared toolchain recipes. Complete the gain calibration every time you change mic, mode, distance or delivery. The suggested starting values are identical where no measurement justifies a difference. Save the final calibrated versions separately for each mic.
+
+## BeesNeez B67-269: mic settings for all three cards
+
+
+| Control | Set / verify |
+|---|---|
+| Power | Matching BeesNeez PSU ON; PRE-73 48V OFF; M4 48V OFF |
+| Mode | As found / internal mode unverified; 67 Vintage; 67 New; 269 Vintage; 269 New |
+| Pattern | Cardioid at PSU |
+| Pad | As found; OFF only if documented/verified |
+| Filter | As found; HPF OFF and S2 OFF only if verified |
+| Other internal state | Sound profile as found; do not assume a factory state |
+
+The four named profiles require internal switches. Use As found until your exact revision and safe unpowered handling procedure are confirmed by BeesNeez. This selection records a known state; it never authorizes opening or live-switching the microphone.
+
+### BEES / 01 / Raw reference
+
+Learn the sound of the mic and room. All processing off; match recorded levels for the comparison.
+
+**Placement:** 20 cm mouth-to-capsule; 15-30 degrees off axis; pop filter.
+
+**PRE-73 Premier**
+
+| Control | Set / verify |
+|---|---|
+| GAIN | 30 dB start; calibrate loud peaks near -12 dBFS |
+| OUTPUT | At/near maximum for clean low-drive start; trim only as needed |
+| HIGH PASS | OFF |
+| AIR EQ | OFF |
+| OUTPUT PAD | 0 dB |
+| LOW-Z | OFF / 1200 ohms |
+| LINE | OFF |
+| DI | OFF |
+| POLARITY | Normal |
+| POWER | ON |
+| 48V | OFF; BeesNeez uses its matching PSU |
+
+**COMP-54**
+
+| Control | Set / verify |
+|---|---|
+| POWER | ON |
+| BYPASS | ON / hard bypass |
+| COMP | OUT |
+| THRESHOLD | Highest marked threshold parked; inactive in bypass |
+| RATIO | 2:1 parked |
+| ATTACK | 6 ms parked |
+| RECOVERY | 100 ms parked |
+| SC HP | OFF |
+| MAKEUP GAIN | Minimum parked; no calibrated dB scale |
+| METER | COMP / gain reduction |
+| LINK | OUT / unlinked |
+| REAR 600 OHM TERM | Engaged if present, per matching manual; record actual state |
+
+**DAW:** All track and master processing OFF. Track fader 0 dB; pan center. Normalize OFF. Use the selected DAW card below; keep a separate saved session for this microphone.
+
+### BEES / 02 / Everyday spoken voice
+
+A gentle analog starting point after the raw reference passes. Preserve natural consonants.
+
+**Placement:** 15-20 cm mouth-to-capsule; 15-30 degrees off axis; pop filter.
+
+**PRE-73 Premier**
+
+| Control | Set / verify |
+|---|---|
+| GAIN | 30 dB start; recalibrate before compression |
+| OUTPUT | At/near maximum initially; trim to target |
+| HIGH PASS | 80 Hz; compare with OFF for low voices |
+| AIR EQ | OFF |
+| OUTPUT PAD | 0 dB |
+| LOW-Z | OFF / 1200 ohms |
+| LINE | OFF |
+| DI | OFF |
+| POLARITY | Normal |
+| POWER | ON |
+| 48V | OFF; BeesNeez uses its matching PSU |
+
+**COMP-54**
+
+| Control | Set / verify |
+|---|---|
+| POWER | ON |
+| BYPASS | OFF / circuit active |
+| COMP | IN |
+| THRESHOLD | Start highest marked threshold; lower to 2-3 dB gain reduction on loud phrases |
+| RATIO | 2:1 |
+| ATTACK | 6 ms |
+| RECOVERY | 100 ms |
+| SC HP | 50 Hz |
+| MAKEUP GAIN | Minimum initially; raise to loudness-match bypass, then verify digital peaks |
+| METER | COMP / gain reduction |
+| LINK | OUT / unlinked |
+| REAR 600 OHM TERM | Engaged if present, per matching manual; record actual state |
+
+**DAW:** Start with EQ flat and software compressor OFF. Use the optional DAW finishing settings only after listening. Use the selected DAW card below; keep a separate saved session for this microphone.
+
+### BEES / 03 / Expressive voice
+
+More distance and restrained compression for emphatic delivery. Still rehearse your loudest line.
+
+**Placement:** 25 cm mouth-to-capsule; 20-30 degrees off axis; pop filter.
+
+**PRE-73 Premier**
+
+| Control | Set / verify |
+|---|---|
+| GAIN | 30 dB start; recalibrate at the new distance |
+| OUTPUT | At/near maximum initially; trim to target |
+| HIGH PASS | 80 Hz; compare OFF if voice thins |
+| AIR EQ | OFF |
+| OUTPUT PAD | 0 dB |
+| LOW-Z | OFF / 1200 ohms |
+| LINE | OFF |
+| DI | OFF |
+| POLARITY | Normal |
+| POWER | ON |
+| 48V | OFF; BeesNeez uses its matching PSU |
+
+**COMP-54**
+
+| Control | Set / verify |
+|---|---|
+| POWER | ON |
+| BYPASS | OFF / circuit active |
+| COMP | IN |
+| THRESHOLD | Start highest marked threshold; lower to 3-4 dB gain reduction on emphatic phrases |
+| RATIO | 3:1 |
+| ATTACK | 12 ms |
+| RECOVERY | 400 ms; listen for slow recovery |
+| SC HP | 100 Hz; compare 50 Hz if plosives escape |
+| MAKEUP GAIN | Minimum initially; raise to loudness-match bypass, then verify digital peaks |
+| METER | COMP / gain reduction |
+| LINK | OUT / unlinked |
+| REAR 600 OHM TERM | Engaged if present, per matching manual; record actual state |
+
+**DAW:** Software compressor OFF initially. Edit peaks manually; optional final limiter is delivery protection, not input protection. Use the selected DAW card below; keep a separate saved session for this microphone.
+
+## United Studio Technologies UT Twin87: mic settings for all three cards
+
+
+| Control | Set / verify |
+|---|---|
+| Power | PRE-73 48V ON after XLR connected; M4 48V OFF |
+| Mode | Vintage; Modern |
+| Pattern | Cardioid |
+| Pad | OFF |
+| Filter | OFF |
+| Other internal state | Internal RF-filter group as found; factory bypass per manual; do not change for routine setup |
+
+Switch front Vintage/Modern selector; mute monitoring, wait about 10 seconds, then recalibrate. Modern output is hotter.
+
+### TWIN / 01 / Raw reference
+
+Learn the sound of the mic and room. All processing off; match recorded levels for the comparison.
+
+**Placement:** 20 cm mouth-to-capsule; 15-30 degrees off axis; pop filter.
+
+**PRE-73 Premier**
+
+| Control | Set / verify |
+|---|---|
+| GAIN | 30 dB start; calibrate loud peaks near -12 dBFS |
+| OUTPUT | At/near maximum for clean low-drive start; trim only as needed |
+| HIGH PASS | OFF |
+| AIR EQ | OFF |
+| OUTPUT PAD | 0 dB |
+| LOW-Z | OFF / 1200 ohms |
+| LINE | OFF |
+| DI | OFF |
+| POLARITY | Normal |
+| POWER | ON |
+| 48V | ON after XLR is connected |
+
+**COMP-54**
+
+| Control | Set / verify |
+|---|---|
+| POWER | ON |
+| BYPASS | ON / hard bypass |
+| COMP | OUT |
+| THRESHOLD | Highest marked threshold parked; inactive in bypass |
+| RATIO | 2:1 parked |
+| ATTACK | 6 ms parked |
+| RECOVERY | 100 ms parked |
+| SC HP | OFF |
+| MAKEUP GAIN | Minimum parked; no calibrated dB scale |
+| METER | COMP / gain reduction |
+| LINK | OUT / unlinked |
+| REAR 600 OHM TERM | Engaged if present, per matching manual; record actual state |
+
+**DAW:** All track and master processing OFF. Track fader 0 dB; pan center. Normalize OFF. Use the selected DAW card below; keep a separate saved session for this microphone.
+
+### TWIN / 02 / Everyday spoken voice
+
+A gentle analog starting point after the raw reference passes. Preserve natural consonants.
+
+**Placement:** 15-20 cm mouth-to-capsule; 15-30 degrees off axis; pop filter.
+
+**PRE-73 Premier**
+
+| Control | Set / verify |
+|---|---|
+| GAIN | 30 dB start; recalibrate before compression |
+| OUTPUT | At/near maximum initially; trim to target |
+| HIGH PASS | 80 Hz; compare with OFF for low voices |
+| AIR EQ | OFF |
+| OUTPUT PAD | 0 dB |
+| LOW-Z | OFF / 1200 ohms |
+| LINE | OFF |
+| DI | OFF |
+| POLARITY | Normal |
+| POWER | ON |
+| 48V | ON after XLR is connected |
+
+**COMP-54**
+
+| Control | Set / verify |
+|---|---|
+| POWER | ON |
+| BYPASS | OFF / circuit active |
+| COMP | IN |
+| THRESHOLD | Start highest marked threshold; lower to 2-3 dB gain reduction on loud phrases |
+| RATIO | 2:1 |
+| ATTACK | 6 ms |
+| RECOVERY | 100 ms |
+| SC HP | 50 Hz |
+| MAKEUP GAIN | Minimum initially; raise to loudness-match bypass, then verify digital peaks |
+| METER | COMP / gain reduction |
+| LINK | OUT / unlinked |
+| REAR 600 OHM TERM | Engaged if present, per matching manual; record actual state |
+
+**DAW:** Start with EQ flat and software compressor OFF. Use the optional DAW finishing settings only after listening. Use the selected DAW card below; keep a separate saved session for this microphone.
+
+### TWIN / 03 / Expressive voice
+
+More distance and restrained compression for emphatic delivery. Still rehearse your loudest line.
+
+**Placement:** 25 cm mouth-to-capsule; 20-30 degrees off axis; pop filter.
+
+**PRE-73 Premier**
+
+| Control | Set / verify |
+|---|---|
+| GAIN | 30 dB start; recalibrate at the new distance |
+| OUTPUT | At/near maximum initially; trim to target |
+| HIGH PASS | 80 Hz; compare OFF if voice thins |
+| AIR EQ | OFF |
+| OUTPUT PAD | 0 dB |
+| LOW-Z | OFF / 1200 ohms |
+| LINE | OFF |
+| DI | OFF |
+| POLARITY | Normal |
+| POWER | ON |
+| 48V | ON after XLR is connected |
+
+**COMP-54**
+
+| Control | Set / verify |
+|---|---|
+| POWER | ON |
+| BYPASS | OFF / circuit active |
+| COMP | IN |
+| THRESHOLD | Start highest marked threshold; lower to 3-4 dB gain reduction on emphatic phrases |
+| RATIO | 3:1 |
+| ATTACK | 12 ms |
+| RECOVERY | 400 ms; listen for slow recovery |
+| SC HP | 100 Hz; compare 50 Hz if plosives escape |
+| MAKEUP GAIN | Minimum initially; raise to loudness-match bypass, then verify digital peaks |
+| METER | COMP / gain reduction |
+| LINK | OUT / unlinked |
+| REAR 600 OHM TERM | Engaged if present, per matching manual; record actual state |
+
+**DAW:** Software compressor OFF initially. Edit peaks manually; optional final limiter is delivery protection, not input protection. Use the selected DAW card below; keep a separate saved session for this microphone.
+
+## M4 settings for every card
+
+| Control | Set / verify |
+|---|---|
+| CABLE | COMP balanced main output → rear LINE IN 3, balanced TRS |
+| INPUT 1 GAIN | Fully counterclockwise / unused |
+| INPUT 2 GAIN | Fully counterclockwise / unused |
+| 48V 1 + 2 | OFF |
+| MON 1 + 2 | OFF |
+| MON 3-4 | OFF (software monitoring route) |
+| INPUT MONITOR MIX | PLAYBACK side |
+| MONITOR VOLUME | Down during setup; speakers muted while recording |
+| HEADPHONES | Start down, raise to comfortable level |
+| USB / POWER | Connected to Mac; interface on |
+
+## GarageBand for Mac settings for every card
+
+| Control | Set / verify |
+|---|---|
+| Audio input/output | MOTU M4 / MOTU M4 |
+| Track | Audio microphone track; mono Input 3 |
+| Monitoring | ON for software path; headphones only |
+| Recording depth | 24-bit, Settings > Advanced |
+| Sample rate | GarageBand-managed; verify export, normally 44.1 kHz |
+| Track fader / pan | 0 dB / center |
+| Track / master effects | OFF for raw comparison |
+| Metronome / count-in | OFF |
+| Noise Gate | OFF |
+| Export | WAV or AIFF; 24-bit; export at full volume/auto-normalize OFF |
+
+
+Optional: Channel EQ high-pass 70 Hz, 12 dB/oct if available (OFF if PRE HP already sufficient); 250 Hz -2 dB Q1 only if muddy; other bands 0. Compressor only if needed: threshold -18 dB, ratio 2:1, attack 20 ms, gain 0 dB; lower threshold gradually for gentle control and level-match bypass. Reverb/echo/gate OFF. No claim of LUFS or true-peak verification from the GarageBand meter.
+
+## Ableton Live 12 Lite settings for every card
+
+| Control | Set / verify |
+|---|---|
+| Driver / device | CoreAudio / MOTU M4 input and output |
+| Sample rate / depth | 48 kHz / 24-bit |
+| Buffer | 128 samples start; 256 if clicks |
+| Input Config | Enable mono 3 |
+| Track | Audio From Ext. In > 3; mono |
+| Monitor | Auto with track armed for rehearsal/record; disarm for playback |
+| Audio To | Main; Main Out 1/2 |
+| Track fader / pan | 0 dB / center |
+| Warp / effects | Warp OFF; all effects OFF for raw comparison |
+| Metronome / loop / sends | OFF / OFF / sends -inf |
+| Export | WAV PCM, 48 kHz, 24-bit; Normalize OFF; Triangular dither for final PCM; Convert to Mono OFF for stereo master (use mono only when required) |
+
+
+Optional: Channel EQ low/mid/high 0 dB, mid frequency 250 Hz, output 0 dB; HP80 off if PRE HP sufficient, otherwise on. Compressor only if needed: -18 dB threshold, 2:1 ratio, attack20 ms, release120 ms, Auto release OFF, RMS/Log, 6 dB knee, makeup OFF, lookahead0 ms, Out0 dB, Dry/Wet100%, external sidechain/detector EQ OFF; adjust to 1-3 dB GR. Current Limiter: ceiling mode True Peak, ceiling -1.5 dB, input gain0, Maximize OFF, Auto release ON, lookahead3 ms, L/R, Link100%; Main fader0 dB, no devices after Limiter. Measure exported file; use available controls and -2 dB sample-peak headroom if older limiter lacks True Peak.
+
+## Write your calibrated recall
+
+Record the take filename, PRE gain detent and OUTPUT mark, COMP threshold mark and MAKEUP mark, observed loudest input peak, usual and maximum gain reduction, actual DAW plug-in settings, output channel layout, LUFS and true peak. A suggested recipe becomes your preset only after this record is complete.
