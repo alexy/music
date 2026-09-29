@@ -82,3 +82,14 @@ repository. Its nested `FIRSTPAIR.md` and `book.build.json` own its independent
 as the unified builder and publisher input. This root contract and root build
 configuration continue to identify the APC40 book; do not change their slug or
 send the new book through the root publisher target.
+
+## GitHub Pages Tutorials
+
+The separate tutorial site at `https://alexy.github.io/music/` is served from
+the GitHub repository's `master` branch, `/docs` directory. Its homepage comes
+from `README.md` through `scripts/build-pages-readme.sh`. Use `--tutorials-only`
+to refresh the homepage and tutorial copies without changing book downloads.
+The Podcast Audio tutorial source is
+`books/professional-podcast-audio/tutorial.html`; its Pages copy is
+`docs/tutorials/professional-podcast-audio.html`. Publishing this companion
+tutorial does not publish the book package to the FirstPair library.

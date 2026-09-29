@@ -4,6 +4,12 @@ set -euo pipefail
 repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$repo_root"
 
+mode="${1:-all}"
+case "$mode" in
+  all|--tutorials-only) ;;
+  *) echo 'Usage: scripts/build-pages-readme.sh [--tutorials-only]' >&2; exit 2 ;;
+esac
+
 # Version stamps follow the unified publishing convention:
 # <version>-<short-git-hash>, read from each book's dist/VERSION.md
 # (written by the book build scripts). Falls back to the bare VERSION
@@ -30,6 +36,7 @@ trap 'rm -rf "$tmpdir"' EXIT
 mkdir -p docs/assets docs/downloads docs/tutorials
 
 cp codex/docs/assets/mpk-garageband-learning.svg docs/assets/mpk-garageband-learning.svg
+if [[ "$mode" != --tutorials-only ]]; then
 cp "codex/docs/book/dist/kiffness-mpk-mini-manual (${version}).pdf" \
   "docs/downloads/kiffness-mpk-mini-manual-${version}.pdf"
 cp "codex/docs/book/dist/kiffness-mpk-mini-manual (${version}).epub" \
@@ -42,6 +49,7 @@ cp "$apc_book_dir/dist/apc40-mk2-ableton-start (${apc_version}).epub" \
   "docs/downloads/apc40-mk2-ableton-start-${apc_version}.epub"
 cp "$apc_book_dir/dist/apc40-mk2-ableton-start (${apc_version}).mobi" \
   "docs/downloads/apc40-mk2-ableton-start-${apc_version}.mobi"
+fi
 cp codex/docs/what-is-love-garageband-animated.html \
   docs/tutorials/what-is-love-garageband-animated.html
 cp codex/docs/dont-cry-tonight-garageband-animated.html \
@@ -54,6 +62,8 @@ cp codex/docs/mpk-mini-mk3-ableton-loop-lab.html \
   docs/tutorials/mpk-mini-mk3-ableton-loop-lab.html
 cp codex/docs/apc40-dont-cry-tonight-ableton-animated.html \
   docs/tutorials/apc40-dont-cry-tonight-ableton-animated.html
+cp books/professional-podcast-audio/tutorial.html \
+  docs/tutorials/professional-podcast-audio.html
 
 python3 - "$version" "$apc_version" > "$tmpdir/pages-readme.md" <<'PY'
 from pathlib import Path
@@ -78,6 +88,8 @@ replacements = {
     "codex/docs/mpk-mini-mk3-garageband-loop-lab.html": "tutorials/mpk-mini-mk3-garageband-loop-lab.html",
     "codex/docs/mpk-mini-mk3-ableton-loop-lab.html": "tutorials/mpk-mini-mk3-ableton-loop-lab.html",
     "codex/docs/apc40-dont-cry-tonight-ableton-animated.html": "tutorials/apc40-dont-cry-tonight-ableton-animated.html",
+    "books/professional-podcast-audio/tutorial.html": "tutorials/professional-podcast-audio.html",
+    "books/professional-podcast-audio/README.md": "https://github.com/alexy/music/blob/master/books/professional-podcast-audio/README.md",
     "codex/docs/WhatIsLoveGarageBandFigures.md": "https://github.com/alexy/music/blob/master/codex/docs/WhatIsLoveGarageBandFigures.md",
     "codex/docs/DontCryTonightGarageBandFigures.md": "https://github.com/alexy/music/blob/master/codex/docs/DontCryTonightGarageBandFigures.md",
     "codex/CHANGELOG.md": "https://github.com/alexy/music/blob/master/codex/CHANGELOG.md",
@@ -85,6 +97,13 @@ replacements = {
 
 for old, new in replacements.items():
     text = text.replace(old, new)
+
+# Keep earlier release links valid when only the tutorials are being published.
+text = re.sub(
+    r"codex/docs/(?:book|books/[^/]+)/dist/([^/\s]+)%20\(([^)]+)\)\.(pdf|epub|mobi)",
+    r"downloads/\1-\2.\3",
+    text,
+)
 
 text = re.sub(r"## Repository Layout.*?## Build", "## Build", text, flags=re.S)
 print(text)

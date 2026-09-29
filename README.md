@@ -8,8 +8,8 @@ gear, goals, musical references, taste, and next practice session.
 
 ## Deliverables
 
-- [Professional Podcast Audio — book, tutorial and mic comparison kit](books/professional-podcast-audio/README.md)
-
+- [Professional Podcast Audio — interactive microphone and Mac tutorial](books/professional-podcast-audio/tutorial.html)
+- [Professional Podcast Audio — book and mic comparison kit](books/professional-podcast-audio/README.md)
 - [Latest PDF manual](codex/docs/book/dist/kiffness-mpk-mini-manual%20(0.3.2-dd45fa).pdf)
 - [Latest EPUB manual](codex/docs/book/dist/kiffness-mpk-mini-manual%20(0.3.2-dd45fa).epub)
 - [Latest MOBI manual](codex/docs/book/dist/kiffness-mpk-mini-manual%20(0.3.2-dd45fa).mobi)
@@ -120,6 +120,12 @@ To regenerate the GitHub Pages homepage from this README:
 
 ```sh
 scripts/build-pages-readme.sh
+```
+
+To update the homepage and tutorials while keeping the current book downloads:
+
+```sh
+scripts/build-pages-readme.sh --tutorials-only
 ```
 
 ## Rights
