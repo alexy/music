@@ -1,4 +1,4 @@
-# Hardware research for Professional Podcat Audio
+# Hardware research for Professional Podcast Audio
 
 Research date: 2026-09-29. Manufacturer documents are the technical basis; recommendations below are explicitly starting points, not manufacturer-prescribed voice presets or measurements of this room. No recordings were made and no physical setting was changed.
 

@@ -1,4 +1,4 @@
-# Professional Podcat Audio: publishing integration
+# Professional Podcast Audio: publishing integration
 
 Research and implementation inspection: 29 September 2026. The actual source
 Git root is `/Users/alexy/src/music`. No `~/src/First Press` directory exists;
@@ -9,8 +9,8 @@ the established source contract points to `/Users/alexy/src/firstpair`.
 The root `FIRSTPAIR.md` and `book.build.json` identify the existing
 `apc40-mk2-ableton-start` title. They must not be replaced with the podcast
 book's identity. The added title package is
-`books/professional-podcat-audio/`, with its own contract/configuration and
-`slug: professional-podcat-audio`, `shelf: music`, `default_edition: full`.
+`books/professional-podcast-audio/`, with its own contract/configuration and
+`slug: professional-podcast-audio`, `shelf: music`, `default_edition: full`.
 
 This nested title root is supported by the actual shared implementation:
 
@@ -26,13 +26,13 @@ This nested title root is supported by the actual shared implementation:
   discover the real Git root, so no nested Git repository is necessary.
 - The tutorial is a standalone HTML artifact, copied into the dist directory
   by the shared builder. `VERSION.md` records `tutorial_file`; the publisher
-  exposes it at `/learn/professional-podcat-audio/` after a separately
+  exposes it at `/learn/professional-podcast-audio/` after a separately
   authorized publication.
 
 ## Local book build
 
 ```sh
-cd /Users/alexy/src/music/books/professional-podcat-audio
+cd /Users/alexy/src/music/books/professional-podcast-audio
 ./build.sh book
 ```
 
@@ -62,7 +62,7 @@ The `history` profile is the closest currently supported profile for a manual
 with visual and documentary evidence; the profile name does not describe the
 subject matter of the book. A title-owned `nativeDriver` preserves chapter
 navigation, illustration links, worksheets, and the publisher-compatible
-`professional-podcat-audio/_data/units.jsonl` ledger. FirstPair composes the
+`professional-podcast-audio/_data/units.jsonl` ledger. FirstPair composes the
 complete guide and deterministic first-open workspace and seals the finished
 file inventory. The title adapter copies the canonical FirstPair Reader
 plugin byte-for-byte and leaves it disabled.
@@ -75,7 +75,7 @@ both the expected chapter ledger and `FIRSTPAIR-VAULT-MANIFEST.json`, allowing
 the shared validator to verify the sealed package during publisher dry-runs.
 
 ```sh
-cd /Users/alexy/src/music/books/professional-podcat-audio
+cd /Users/alexy/src/music/books/professional-podcast-audio
 ./build.sh prepare-vault
 ./build.sh plan-vault
 # Commit the complete source tree when ready; fully quit Obsidian.
@@ -120,15 +120,15 @@ The non-writing publisher dry-run is exempt and can inspect a local build.
 From `/Users/alexy/src/firstpair`:
 
 ```sh
-npm run library:publish -- /Users/alexy/src/music/books/professional-podcat-audio \
+npm run library:publish -- /Users/alexy/src/music/books/professional-podcast-audio \
   --dry-run --no-build --no-smoke --no-deploy --no-icloud
 ```
 
 After a successful vault build add:
 
 ```sh
---vault-dir '/Users/alexy/src/music/books/professional-podcat-audio/dist-obsidian/Professional Podcat Audio' \
---vault-guide '/Users/alexy/src/music/books/professional-podcat-audio/dist-obsidian/Professional Podcat Audio/Guide.md'
+--vault-dir '/Users/alexy/src/music/books/professional-podcast-audio/dist-obsidian/Professional Podcast Audio' \
+--vault-guide '/Users/alexy/src/music/books/professional-podcast-audio/dist-obsidian/Professional Podcast Audio/Guide.md'
 ```
 
 The present request authorizes building the book and tutorial using the

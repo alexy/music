@@ -28,6 +28,8 @@ The track fader controls playback; it does not rescue an overloaded microphone, 
 
 # GarageBand: a complete spoken-word session
 
+![GarageBand recording controls, drawn as a function map so the sequence remains legible across point releases.](assets/garageband-map.png)
+
 ## Build your clean template
 
 1. Choose **File → New → Empty Project**. Create an Audio track for microphone or line input.
@@ -82,9 +84,13 @@ If hardware compression already controls the take, leave the software Compressor
 
 Save the final project. Set the intended region/cycle range, choose **Share → Export Song to Disk**, select **WAVE** and **24-bit uncompressed** when offered. Export the intended range, not an accidental empty tail. GarageBand exports stereo; a mono voice centered in that export is expected. Keep automatic full-volume export disabled. Listen to the exported file from start to finish. [Apple: export songs](https://support.apple.com/guide/garageband/export-songs-to-disk-or-icloud-gbnd7cbf5ed9/mac).
 
+![Separate export choices from checks on the resulting file.](assets/export-map.png)
+
 Call this file `episode-001_edit-master.wav`. A clean, balanced export with headroom is a valuable deliverable even before loudness finishing. To use the book's fully specified final limiter, import this master into Live, disable Warp and follow the finishing procedure below. Do not recompress an already controlled voice just because the second DAW offers another compressor.
 
 # Ableton Live 12 Lite: precise capture and finishing
+
+![Live routing and recording controls. This is an original teaching diagram rather than a screenshot.](assets/live-map.png)
 
 ## Configure the project
 

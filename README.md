@@ -8,7 +8,7 @@ gear, goals, musical references, taste, and next practice session.
 
 ## Deliverables
 
-- [Professional Podcat Audio — book, tutorial and mic comparison kit](books/professional-podcat-audio/README.md)
+- [Professional Podcast Audio — book, tutorial and mic comparison kit](books/professional-podcast-audio/README.md)
 
 - [Latest PDF manual](codex/docs/book/dist/kiffness-mpk-mini-manual%20(0.3.2-dd45fa).pdf)
 - [Latest EPUB manual](codex/docs/book/dist/kiffness-mpk-mini-manual%20(0.3.2-dd45fa).epub)
